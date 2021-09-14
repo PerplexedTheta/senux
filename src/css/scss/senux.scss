@@ -1,0 +1,16 @@
+// senux.scss, Senux Project, Jake Deery, 2021
+
+// this scss file just contains import rules to various aspects of the overall
+// site css structures
+
+//
+//
+// senux imports
+@import 'senux/senux-generic.scss'; // rules for all elements/regularly used elements
+@import 'senux/senux-page.scss'; // rules for page area
+@import 'senux/senux-opac.scss'; // rules for opac overrides
+@import 'senux/senux-credits.scss'; // rules for footer area
+@import 'senux/senux-header.scss'; // rules for header area
+@import 'senux/senux-nav.scss'; // rules for navbar
+@import 'senux/senux-misc.scss'; // rule for misc
+@import 'senux/senux-after.scss'; // anything else

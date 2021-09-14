@@ -1,0 +1,16 @@
+// build.scss, Senux Project, Jake Deery, 2021
+
+// this scss file just contains import rules to various aspects of the overall
+// site css structures
+
+//
+//
+// library imports
+@use "sass:math";
+
+//
+//
+// custom imports
+@import 'scss/variables.scss';
+@import 'scss/senux.scss';
+@import 'scss/customisations.scss';

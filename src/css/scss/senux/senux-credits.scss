@@ -1,0 +1,29 @@
+// senux-credits.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// credits
+#opaccredits, #koha_url, #report_a_problem {
+	margin: 0;
+	padding: 1rem;
+
+	background-color: $senuxHue3;
+
+	p {
+		padding: 0;
+		color: $senuxText3;
+	}
+
+	a {
+		color: $senuxText3;
+
+		&:hover, &:focus {
+			color: darken($senuxText3, 15%)
+		}
+	}
+}
+@media (min-width: 992px) {
+	#opaccredits, #koha_url, #report_a_problem {
+		padding: 1rem 5rem;
+	}
+}

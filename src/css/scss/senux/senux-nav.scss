@@ -1,0 +1,127 @@
+// senux-nav.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// navbar
+
+//
+// logo
+#logo {
+	display: none;
+	background: transparent url('//senux.vo.llownd.net/content/bitmaps/koha-white-logo.png') no-repeat left center;
+
+	&:hover, &:focus {
+		background: transparent url('//senux.vo.llownd.net/content/bitmaps/koha-cloudy-logo.png') no-repeat left center
+	}
+
+	@media(min-width: $breakpoint-pc) {
+		display: initial;
+	}
+}
+
+img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
+	display: none
+}
+
+//
+// navbar
+.navbar-expand {
+	background-color: $msBlack;
+	padding: .5rem 1rem;
+	border: none
+}
+
+#cart-list-nav, #members {
+	li {
+		a {
+			color: lighten($msBlack, 85%);
+			text-decoration: none;
+			text-shadow: none;
+
+			i.fa {
+				color: lighten($msBlack, 85%)
+			}
+
+			&:hover, &:focus,
+			&:active, &.active {
+				color: lighten($msBlack, 65%);
+
+				i.fa {
+					color: lighten($msBlack, 65%)
+				}
+			}
+		}
+
+		a.dropdown-item {
+			background-color: $msWhite;
+			color: $msBlack;
+
+			&:hover, &:focus,
+			&:active, &.active {
+				background-color: $senuxHue2;
+				color: $msBlack
+			}
+		}
+
+		&::before {
+			content: none
+		}
+	}
+
+	.divider-vertical, .clearsh {
+		display: none
+	}
+}
+
+#user-menu {
+	display: block;
+	padding: .5rem
+}
+
+#loggedinuser-menu {
+	p {
+		a.login-link {
+			color: $msBlue;
+
+			&:hover, &:focus,
+			&:active, &.active {
+				color: darken($msBlue, 15%)
+			}
+		}
+	}
+
+	a#logout.logout {
+		color: $msRed;
+
+		&:hover, &:focus,
+		&:active, &.active {
+			color: darken($msRed, 15%)
+		}
+	}
+}
+
+.dropdown-menu {
+	background-color: $msWhite;
+	color: $msBlack
+}
+
+.navbar .nav > li {
+	&::before {
+		content: none
+	}
+}
+
+//
+//
+// mobile overrides
+@media only screen and (max-width:1100px) {
+	.hmplabel, .hlplabel, .srchlabel {
+		display: none
+	}
+}
+
+@media (max-width:767px) {
+	#opac-main .maincontent {
+		width: 74.46808510638297%
+	}
+}

@@ -1,0 +1,360 @@
+// senux-opac.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// opac overrides
+.search_history {
+	display: none
+}
+
+//
+//
+// main page
+.maincontent {
+	h1, h2, h3,
+	h4, h5 {
+		&::after {
+			content: "";
+			display: block;
+			max-width: 33%;
+			border-bottom: .25rem solid $senuxHue3;
+			border-radius: .33rem;
+		}
+	}
+}
+
+#opacnav, #opacnavbottom,
+#OpacNavRight {
+	.btn {
+		width: 100%;
+		margin-bottom: .33rem
+	}
+
+	h3, h4, h5 {
+		&::after {
+			content: "";
+			display: block;
+			max-width: 33%;
+			border-bottom: .25rem solid $senuxHue3;
+			border-radius: .33rem;
+		}
+	}
+}
+
+// news
+#news {
+	border: 1px solid $senuxHue3;
+	border-radius: .33rem;
+}
+
+.newsheader {
+	a {
+		text-decoration: none;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+}
+
+.newsfooter {
+	border: none
+}
+
+// hide rss because its old & branch select unless its required
+#news-branch-select {
+	display: none;
+}
+
+#rssnews-container {
+	display: none;
+}
+
+//
+//
+// account page
+.selections-toolbar.toolbar {
+	background: transparent
+}
+
+//
+//
+// adv search
+#advsearch_limits label, #subtypes label,
+.hint {
+	color: $msBlack
+}
+
+//
+//
+// search results
+.returntosearch {
+	padding: 0 1rem
+}
+
+@media(min-width: $breakpoint-pc) {
+	.returntosearch {
+		padding: 0
+	}
+}
+
+#numresults, #selections {
+	color: $msBlack
+}
+
+.shelves {
+	ul {
+		padding-left: 0
+	}
+}
+
+.shelves, .tags {
+	li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+.pagination ul > li {
+	&::before {
+		content: none
+	}
+}
+
+//
+// search facets
+#facetcontainer {
+	border: 1px solid darken($msWhite, 33%);
+	border-right-color: transparent;
+	border-radius: .33rem
+}
+
+#menu, #search-facets {
+	margin: 0;
+	border: none
+}
+
+#menu h2, #search-facets h2 {
+	margin: 0;
+
+	a {
+		color: $msBlack;
+		text-decoration: none;
+		border-bottom: 1px solid darken($msWhite, 33%);
+		border-right: 1px solid darken($msWhite, 33%)
+	}
+}
+
+//
+// bookbag form
+#bookbag_form {
+	border-bottom: 1px solid darken($msWhite, 33%)
+}
+
+//
+// floating toolbar
+#floating {
+	border: 1px solid darken($msWhite, 33%);
+	border-radius: .33rem
+}
+
+#toolbar.toolbar,
+#toolbar.toolbar.clearfix {
+	background: $msWhite;
+	border: 1px solid transparent;
+	border-bottom: 1px solid darken($msWhite, 33%)
+}
+
+#selections-toolbar,
+.selections-toolbar {
+	background: $msWhite;
+	border: 1px solid transparent
+}
+
+// underlined links
+#CheckAll, #CheckNone,
+.CheckAll, .CheckNone,
+#menu a, #search-facets a {
+	text-decoration: underline;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		text-decoration: none
+	}
+}
+
+//
+// results text of importance
+.results_summary.availability,
+.results_summary.online_resources {
+	font-weight: bold;
+
+	.label {
+		font-weight: bold
+	}
+
+	a {
+		font-weight: bold
+	}
+}
+
+//
+// suggestions box
+.suggestion {
+	background-color: $msWhite;
+	color: $msBlack;
+	border: 1px solid transparent;
+	border-radius: .33rem
+}
+
+//
+//
+// details page
+.no-image {
+	display: none
+}
+
+#action, .actions,
+.toolbar, .view{
+	color: $msBlack;
+
+	i.fa {
+		color: $msBlack
+	}
+
+	a {
+		color: $msBlue;
+
+		i.fa {
+			color: $msBlue
+		}
+
+		&:hover, &:focus {
+			color: darken($msBlue, 33%);
+			
+			i.fa {
+			color: darken($msBlue, 33%)
+			}
+		}
+	}
+}
+
+#action {
+	background-color: $msWhite;
+	border-color: transparent;
+	border-radius: .33rem;
+
+	li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+.nav_pages, .pagination_list {
+	li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+//
+// holds
+.hold-options, .holdrow {
+	li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+//
+// views
+#views {
+	border-bottom: 1px solid darken($msWhite, 33%)
+}
+
+.view {
+	color: $msBlack;
+
+	border-top: 1px solid darken($msWhite, 33%);
+	border-right: 1px solid darken($msWhite, 33%);
+	border-bottom: none;
+	border-left: 1px solid darken($msWhite, 33%);
+	border-radius: .33rem .33rem 0 0
+}
+
+.current-view {
+	background-color: $msWhite
+}
+
+//
+// socials
+#social_networks {
+	a {
+		border-radius: .33rem;
+
+		&:hover, &:focus,
+		&:active, &.active {
+			border-color: darken($msWhite, 33%)
+		}
+	}
+}
+
+//
+// view tabs
+a#Normalview, a#MARCview,
+a#ISBDview {
+	text-decoration: underline;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		text-decoration: none;
+	}
+}
+
+//
+//
+// course search
+.dataTables_filter input,
+.dataTables_filter label {
+	font-size: 1rem
+}
+
+//
+// browser
+#userbrowser {
+	ul li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+//
+//
+// results menu
+.pg_menu li {
+	&::before {
+		content: none
+	}
+}
+
+.pg_menu .pg_link a,
+.pg_menu .pg_link span {
+	&:hover, &:focus,
+	&:active, &.active {
+		background-color: $msBlue;
+		color: $msWhite
+	}
+}
+
+#a_listResults {
+	&:hover, &:focus,
+	&:active, &.active {
+		background-color: $msBlue;
+		color: $msWhite
+	}
+}

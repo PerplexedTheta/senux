@@ -1,0 +1,204 @@
+// senux-page.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// main block
+
+//
+// main area
+.main {
+	margin: 0;
+	padding: 1rem;
+	background-color: $white
+}
+@media (min-width: 992px) {
+	.main {
+		padding: 1rem 5rem
+	}
+}
+
+//
+// breadcrumbs
+.breadcrumb {
+	margin: .5rem 0 .9375rem;
+	background-color: $msWhite;
+	border: 1px solid transparent;
+	border-radius: .33rem
+}
+
+.breadcrumb-item {
+	&::before {
+		content: none
+	}
+}
+
+.breadcrumb-item + .breadcrumb-item {
+	&::before {
+		content: '\00BB';
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
+//
+// ui tabs
+.ui-tabs .ui-tabs-nav li {
+	&::before {
+		content: none
+	}
+
+	background: $msWhite;
+	border-color: darken($msWhite, 33%);
+	border-radius: .33rem .33rem 0 0;
+
+	&.ui-tabs-active {
+		border-color: darken($msWhite, 33%);
+		border-radius: .33rem .33rem 0 0
+	}
+}
+
+.ui-tabs .ui-tabs-panel {
+	border-color: darken($msWhite, 33%);
+	border-radius: .33rem
+}
+
+.ui-widget-content, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	a {
+		background-color: transparent;
+		color: $msBlack;
+
+		&:link, &:visited {
+			background-color: transparent;
+			color: $msBlack
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: $msBlack
+		}
+	}
+}
+
+.ui-widget-content, .ui-tabs .ui-state-default {
+	a {
+		color: $msBlue;
+
+		&:link, &:visited {
+			color: $msBlue
+		}
+
+		&:hover {
+			background-color: $msBlue;
+			color: $msWhite
+		}
+	}
+}
+
+//
+// tables
+// default
+.table {
+	border: none
+}
+
+.table-bordered, .table-bordered td,
+.table-bordered th {
+	border: 1px solid lighten($msBlack, 33%)
+}
+
+.table thead th {
+	background-color: darken($msWhite, 5%);
+	border-bottom: 1px solid lighten($msBlack, 33%)
+}
+
+.table tbody tr {
+	background-color: $white
+}
+
+.table .sorting {
+	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $msWhite
+}
+
+.table .sorting_asc {
+	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $msWhite
+}
+
+.table .sorting_desc {
+	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $msWhite
+}
+
+.table .nosort, .table .nosort.sorting,
+.table .nosort.sorting_asc, .table .nosort.sorting_desc {
+	background-color: $msWhite
+}
+
+// striped
+.table-striped tbody > tr > td,
+.table-striped tbody > tr > th {
+	background-color: $msWhite
+}
+
+.table-striped tbody > tr:nth-child(2n+1) > td,
+.table-striped tbody > tr:nth-child(2n+1) > th {
+	background-color: $white;
+}
+
+//
+// items tables
+#items, #items td,
+#items th {
+	font-size: 1rem
+}
+
+//
+// menus
+.menu-collapse {
+	border-right: 1px solid darken($msWhite, 33%);
+
+	li {
+		&::before {
+			content: none
+		}
+	}
+}
+
+#menu li {
+	&::before {
+		content: none
+	}
+
+	a {
+		border-radius: .33rem 0 0 .33rem;
+		border: 1px solid darken($msWhite, 33%);
+		border-right: 1px solid transparent;
+
+		&:hover, &:focus,
+		&:active, &.active {
+			background-color: $msBlue;
+			color: $msWhite
+		}
+	}
+}
+
+//
+// recolour things
+legend, .legend {
+	color: $msBlack;
+	border-bottom: none
+}
+
+legend::after, .legend::after {
+	content: '';
+	display: block;
+	max-width: 33%;
+	border-bottom: .25rem solid $senuxHue3;
+	border-radius: .33rem
+}
+
+.results_summary {
+	color: $msBlack
+}
+
+caption, h5 {
+	color: $msBlack
+}

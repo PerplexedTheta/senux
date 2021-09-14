@@ -1,0 +1,308 @@
+// senux-generic.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// generic
+
+html {
+	font-size: 16px
+}
+
+body {
+	color: $msBlack;
+	background-color: $senuxHue3
+}
+
+body::after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+	content: url('//senux.vo.llownd.net/content/bitmaps/koha-white-logo.png') url('//senux.vo.llownd.net/content/bitmaps/koha-cloudy-logo.png')
+}
+
+//
+// generic content
+p {
+	padding: 0 0 .75em;
+	margin: 0;
+	color: $msBlack
+}
+
+h1, h2, h3,
+h4, h5, h6,
+.h1, .h2, .h3,
+.h4, .h5, .h6 {
+	color: $msBlack
+}
+
+a {
+	color: $msBlue;
+	text-decoration: underline;
+
+	&:link, &:visited {
+		background-color: transparent;
+		color: $msBlue;
+		text-decoration: underline
+	}
+
+	&:hover, &:focus,
+	&:active, &.active {
+		color: darken($msBlue, 15%);
+		text-decoration: none
+	}
+}
+
+label {
+	color: $msBlack
+}
+
+ul {
+	list-style-type: none
+}
+
+ul li::before {
+	content: '\00BB';
+	margin-right: 10px;
+	margin-left: -20px
+}
+
+hr {
+	border-top: 1px solid darken($msWhite, 33%)
+}
+
+//
+// specify page fonts
+.fonts-loaded body, .fonts-loaded button,
+.fonts-loaded input, .fonts-loaded optgroup,
+.fonts-loaded option, .fonts-loaded select,
+.fonts-loaded textarea {
+	font-family: 'Century Gothic', 'CenturyGothic', 'Helvetica Neue', 'Helvetica', sans-serif;
+
+	body, button, input,
+	optgroup, option, select,
+	textarea {
+		font-family: 'Century Gothic', 'CenturyGothic', 'Helvetica Neue', 'Helvetica', sans-serif
+	}
+}
+
+//
+// main content
+#wrapper {
+	overflow: hidden;
+	width: 100%;
+	margin: auto;
+	padding: 0
+}
+
+.container-fluid {
+	width: 100%;
+	margin: auto;
+	padding: 0
+}
+
+//
+// buttons
+.btn, input[type="submit"].btn {
+	background-image: none;
+	text-shadow: none;
+	text-decoration: none;
+
+	padding: .45rem 1.125rem;
+	font-size: 1rem;
+	border: 1px solid transparent;
+	border-radius: .33rem;
+	cursor: pointer;
+	white-space: normal;
+	word-wrap: break-word;
+	font-weight: 400;
+	box-shadow: 0 0 0 1px transparent;
+
+	color: $msBlack;
+	background-color: $msWhite;
+	border: 1px solid darken($msWhite, 33%);
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none;
+		text-shadow: none;
+		text-decoration: none;
+
+		color: $msWhite;
+		background-color: $msCharcoal;
+		border: 1px solid lighten($msCharcoal, 33%);
+		box-shadow: 0 0 0 1px lighten($msCharcoal, 33%)
+	}
+}
+
+.btn-primary, #loginModal input[type="submit"],
+.btn-primary:not(:disabled):not(.disabled),
+.btn-success, .btn-success:not(:disabled):not(.disabled) {
+	background-image: none;
+	text-shadow: none;
+	text-decoration: none;
+
+	color: $msWhite;
+	background-color: $msCharcoal;
+	border: 1px solid lighten($msCharcoal, 33%);
+	box-shadow: 0 0 0 1px lighten($msCharcoal, 33%);
+	
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none;
+		text-shadow: none;
+		text-decoration: none;
+
+		color: $msBlack;
+		background-color: $msWhite;
+		border: 1px solid darken($msWhite, 33%);
+		box-shadow: 0 0 0 1px transparent
+	}
+}
+
+.btn-default, .btn-secondary,
+.btn-default:not(:disabled):not(.disabled), 
+.btn-secondary:not(:disabled):not(.disabled),
+#searchsubmit.btn.btn-primary {
+	background-image: none;
+	text-shadow: none;
+	text-decoration: none;
+
+	color: $msBlack;
+	background-color: $msWhite;
+	border: 1px solid darken($msWhite, 33%);
+	box-shadow: 0 0 0 1px transparent;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none;
+		text-shadow: none;
+		text-decoration: none;
+
+		color: $msWhite;
+		background-color: $msCharcoal;
+		border: 1px solid lighten($msCharcoal, 33%);
+		box-shadow: 0 0 0 1px lighten($msCharcoal, 33%)
+	}
+}
+
+.btn-link,
+.btn-link:not(:disabled):not(.disabled) {
+	background-image: none;
+	text-shadow: none;
+	text-decoration: none;
+
+	color: inherit;
+	background-color: transparent;
+	border: 1px solid transparent;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none;
+		text-shadow: none;
+		text-decoration: none;
+
+		color: inherit;
+		background-color: transparent;
+		border: 1px solid darken($msWhite, 33%);
+		box-shadow: 0 0 0 1px transparent
+	}
+}
+
+.btn-danger,
+.btn-danger:not(:disabled):not(.disabled) {
+	background-image: none;
+	text-shadow: none;
+	text-decoration: none;
+
+	color: $msWhite;
+	background-color: $msRed;
+	border: 1px solid $msWhite;
+	
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none;
+		text-shadow: none;
+		text-decoration: none;
+
+		color: $msWhite;
+		background-color: darken($msRed, 15%);
+		border: 1px solid darken($msRed, 10%);
+		box-shadow: 0 0 0 1px $msRed
+	}
+}
+
+.input-append .add-on:last-child, .input-append .btn:last-child,
+.input-append .btn-group:last-child > .dropdown-toggle {
+	border-radius: .33rem
+}
+
+//
+// input fields
+input[type="text"], input[type="password"],
+input[type="email"], input[type="url"],
+input[type="time"], input[type="date"],
+input[type="datetime-local"], input[type="tel"],
+input[type="number"], input[type="search-md"],
+input[type="search"], select, textarea,
+.form-control {
+	padding: 0.375rem 0.75rem;
+	outline: none;
+	font-weight: 300;
+	font-size: 1.1rem;
+	height: auto;
+	line-height: normal;
+	background-image: none;
+	text-shadow: none;
+	border: 1px solid darken($msWhite, 33%);
+	box-shadow: none;
+	border-radius: .33rem;
+
+	&:hover, &:active,
+	&.active {
+		background-image: none;
+		text-shadow: none;
+		
+		border: 1px solid $msWhite, 66%;
+		box-shadow: 0 0 0 1px darken($senuxHue2, 33%)
+	}
+
+	&:focus {
+		background-image: none;
+		text-shadow: none;
+		
+		border: 1px solid $senuxHue2;
+		box-shadow: 0 0 0 1px lighten($senuxHue2, 33%)
+	}
+
+	&:disabled {
+		background-color: rgba(224,224,224,1);
+	}
+}
+
+input[type="text"], input[type="password"],
+input[type="email"], input[type="url"],
+input[type="time"], input[type="date"],
+input[type="datetime-local"], input[type="tel"],
+input[type="number"], input[type="search-md"],
+input[type="search"], textarea {
+	&:read-only {
+		background-color: rgba(224,224,224,1);
+	}
+}
+
+//
+// accessibility - screen reader text
+.sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0
+}
