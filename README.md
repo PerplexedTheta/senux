@@ -1,2 +1,2 @@
-# SENUX - Super Exciting New User eXperience!
+# SENUX - Super Exciting Not-so-new User eXperience (for Koha)!
 Coming soon(tm)
