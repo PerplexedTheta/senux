@@ -30,13 +30,11 @@
 	&::before {
 		content: none
 	}
-}
 
-.breadcrumb-item + .breadcrumb-item {
-	&::before {
-		content: '\00BB';
-		margin-right: auto;
-		margin-left: auto;
+	&.active {
+		a, a:link, a:visited {
+			color: $msBlack
+		}
 	}
 }
 
@@ -185,14 +183,6 @@
 legend, .legend {
 	color: $msBlack;
 	border-bottom: none
-}
-
-legend::after, .legend::after {
-	content: '';
-	display: block;
-	max-width: 33%;
-	border-bottom: .25rem solid $senuxHue3;
-	border-radius: .33rem
 }
 
 .results_summary {

@@ -62,4 +62,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 		$('#opac-auth').children('p').eq(0).text('Please enter the login details provided to you by the Library team');
 		$('#nologininstructions').html('<p style=\"padding:1rem 0\">If you don\'t have a student ID card or password, visit the Library counter, where we will be able to provide these to you. Please note: if you need a student ID card, please bring photo ID and proof of enrolment to be issued with a new card.<\/p>');
 	}
+
+	// remove 'powered by koha' regardless of syspref
+	$('#koha_url').remove();
+
 });
