@@ -62,11 +62,7 @@
 }
 
 // hide rss because its old & branch select unless its required
-#news-branch-select {
-	display: none;
-}
-
-#rssnews-container {
+#news-branch-select, #rssnews-container, .rsssearchlink {
 	display: none;
 }
 
@@ -186,9 +182,16 @@
 
 //
 // results text of importance
+.available, .intransit, .unavailable,
+.notforloan, .damaged, .withdrawn,
+.checkedout {
+	font-weight: bold
+}
+
 .results_summary.availability,
 .results_summary.online_resources {
 	font-weight: bold;
+	border-radius: .33rem;
 
 	.label {
 		font-weight: bold
@@ -196,6 +199,21 @@
 
 	a {
 		font-weight: bold
+	}
+}
+
+.results_summary.online_resources {
+	background: $onlineAccessBg;
+	color: onlineAccessText;
+	padding: .25rem;
+	padding-left: 1rem;
+
+	.label {
+		color: $onlineAccessText;
+	}
+
+	a {
+		color: $onlineAccessLink;
 	}
 }
 

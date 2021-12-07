@@ -72,7 +72,12 @@ $moreSearchText: $userText2;
 $moreSearchLink: $userText2;
 $moreSearchLinkHov: lighten($userText2, 15%);
 
-// 6. footer variables
+// 6. opac-wide variables
+$onlineAccessBg: lighten($msGold, 33%);
+$onlineAccessText: $defaultText;
+$onlineAccessLink: $defaultLink;
+
+// 7. footer variables
 $footerBg: $userHue3;
 $footerText: $userText3;
 $footerLink: $footerText;

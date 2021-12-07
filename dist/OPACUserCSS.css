@@ -600,11 +600,7 @@ caption, h5 {
   border: none;
 }
 
-#news-branch-select {
-  display: none;
-}
-
-#rssnews-container {
+#news-branch-select, #rssnews-container, .rsssearchlink {
   display: none;
 }
 
@@ -702,9 +698,16 @@ caption, h5 {
   text-decoration: none;
 }
 
+.available, .intransit, .unavailable,
+.notforloan, .damaged, .withdrawn,
+.checkedout {
+  font-weight: bold;
+}
+
 .results_summary.availability,
 .results_summary.online_resources {
   font-weight: bold;
+  border-radius: 0.33rem;
 }
 .results_summary.availability .label,
 .results_summary.online_resources .label {
@@ -713,6 +716,19 @@ caption, h5 {
 .results_summary.availability a,
 .results_summary.online_resources a {
   font-weight: bold;
+}
+
+.results_summary.online_resources {
+  background: #fbedb1;
+  color: onlineAccessText;
+  padding: 0.25rem;
+  padding-left: 1rem;
+}
+.results_summary.online_resources .label {
+  color: #231f20;
+}
+.results_summary.online_resources a {
+  color: #2b579a;
 }
 
 .suggestion {
