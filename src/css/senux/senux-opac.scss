@@ -17,7 +17,7 @@
 			content: "";
 			display: block;
 			max-width: 33%;
-			border-bottom: .25rem solid $senuxHue3;
+			border-bottom: .25rem solid $defaultText;
 			border-radius: .33rem;
 		}
 	}
@@ -35,7 +35,7 @@
 			content: "";
 			display: block;
 			max-width: 33%;
-			border-bottom: .25rem solid $senuxHue3;
+			border-bottom: .25rem solid $defaultText;
 			border-radius: .33rem;
 		}
 	}
@@ -43,7 +43,7 @@
 
 // news
 #news {
-	border: 1px solid $senuxHue3;
+	border: 1px solid $defaultBorder;
 	border-radius: .33rem;
 }
 
@@ -82,7 +82,7 @@
 // adv search
 #advsearch_limits label, #subtypes label,
 .hint {
-	color: $msBlack
+	color: $defaultText
 }
 
 //
@@ -99,7 +99,7 @@
 }
 
 #numresults, #selections {
-	color: $msBlack
+	color: $defaultText
 }
 
 .shelves {
@@ -125,7 +125,7 @@
 //
 // search facets
 #facetcontainer {
-	border: 1px solid darken($msWhite, 33%);
+	border: 1px solid $defaultBorder;
 	border-right-color: transparent;
 	border-radius: .33rem
 }
@@ -139,36 +139,36 @@
 	margin: 0;
 
 	a {
-		color: $msBlack;
+		color: $defaultText;
 		text-decoration: none;
-		border-bottom: 1px solid darken($msWhite, 33%);
-		border-right: 1px solid darken($msWhite, 33%)
+		border-bottom: 1px solid $defaultBorder;
+		border-right: 1px solid $defaultBorder
 	}
 }
 
 //
 // bookbag form
 #bookbag_form {
-	border-bottom: 1px solid darken($msWhite, 33%)
+	border-bottom: 1px solid $defaultBorder
 }
 
 //
 // floating toolbar
 #floating {
-	border: 1px solid darken($msWhite, 33%);
+	border: 1px solid $defaultBorder;
 	border-radius: .33rem
 }
 
 #toolbar.toolbar,
 #toolbar.toolbar.clearfix {
-	background: $msWhite;
+	background: $defaultBg;
 	border: 1px solid transparent;
-	border-bottom: 1px solid darken($msWhite, 33%)
+	border-bottom: 1px solid $defaultBorder
 }
 
 #selections-toolbar,
 .selections-toolbar {
-	background: $msWhite;
+	background: $defaultBg;
 	border: 1px solid transparent
 }
 
@@ -202,8 +202,8 @@
 //
 // suggestions box
 .suggestion {
-	background-color: $msWhite;
-	color: $msBlack;
+	background-color: $defaultBg;
+	color: $defaultText;
 	border: 1px solid transparent;
 	border-radius: .33rem
 }
@@ -217,31 +217,31 @@
 
 #action, .actions,
 .toolbar, .view{
-	color: $msBlack;
+	color: $defaultText;
 
 	i.fa {
-		color: $msBlack
+		color: $defaultText
 	}
 
 	a {
-		color: $msBlue;
+		color: $defaultLink;
 
 		i.fa {
-			color: $msBlue
+			color: $defaultLink
 		}
 
 		&:hover, &:focus {
-			color: darken($msBlue, 33%);
-			
+			color: darken($defaultLink, 33%);
+
 			i.fa {
-			color: darken($msBlue, 33%)
+			color: darken($defaultLink, 33%)
 			}
 		}
 	}
 }
 
 #action {
-	background-color: $msWhite;
+	background-color: $defaultBg;
 	border-color: transparent;
 	border-radius: .33rem;
 
@@ -273,21 +273,31 @@
 //
 // views
 #views {
-	border-bottom: 1px solid darken($msWhite, 33%)
+	border-bottom: 1px solid $defaultBorder
 }
 
 .view {
-	color: $msBlack;
+	color: $defaultText;
 
-	border-top: 1px solid darken($msWhite, 33%);
-	border-right: 1px solid darken($msWhite, 33%);
+	border-top: 1px solid $defaultBorder;
+	border-right: 1px solid $defaultBorder;
 	border-bottom: none;
-	border-left: 1px solid darken($msWhite, 33%);
+	border-left: 1px solid $defaultBorder;
 	border-radius: .33rem .33rem 0 0
 }
 
 .current-view {
-	background-color: $msWhite
+	background-color: $defaultBg
+}
+
+// moresearches menu
+#export .dropdown-menu, #moresearches_menu .dropdown-menu {
+	a, a:link, a:visited {
+		&:hover, &:focus {
+			background-color: $dropdownLinkHovBg;
+			color: $dropdownLinkHov
+		}
+	}
 }
 
 //
@@ -298,7 +308,7 @@
 
 		&:hover, &:focus,
 		&:active, &.active {
-			border-color: darken($msWhite, 33%)
+			border-color: $defaultBorder
 		}
 	}
 }
@@ -346,15 +356,31 @@ a#ISBDview {
 .pg_menu .pg_link span {
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $msBlue;
-		color: $msWhite
+		background-color: $defaultLink;
+		color: $defaultBg
 	}
 }
 
 #a_listResults {
+	color: $defaultLink;
+
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $msBlue;
-		color: $msWhite
+		background-color: $defaultLink;
+		color: $defaultBg
 	}
+}
+
+//
+//
+// serials
+#libraryfilter, #subscriptionidfilter {
+	margin-bottom: .5rem
+}
+
+//
+//
+// languages
+#changelanguage {
+	display: none
 }

@@ -7,18 +7,18 @@
 	margin: 0;
 	padding: 1rem;
 
-	background-color: $senuxHue3;
+	background-color: $footerBg;
 
 	p {
 		padding: 0;
-		color: $senuxText3;
+		color: $footerText;
 	}
 
 	a {
-		color: $senuxText3;
+		color: $footerLink;
 
 		&:hover, &:focus {
-			color: darken($senuxText3, 15%)
+			color: darken($footerLink, 15%)
 		}
 	}
 }

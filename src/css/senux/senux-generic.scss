@@ -9,8 +9,8 @@ html {
 }
 
 body {
-	color: $msBlack;
-	background-color: $senuxHue3
+	color: $defaultText;
+	background-color: $defaultBg
 }
 
 body::after {
@@ -27,35 +27,35 @@ body::after {
 p {
 	padding: 0 0 .75em;
 	margin: 0;
-	color: $msBlack
+	color: $defaultText
 }
 
 h1, h2, h3,
 h4, h5, h6,
 .h1, .h2, .h3,
 .h4, .h5, .h6 {
-	color: $msBlack
+	color: $defaultText
 }
 
 a {
-	color: $msBlue;
+	color: $defaultLink;
 	text-decoration: underline;
 
 	&:link, &:visited {
 		background-color: transparent;
-		color: $msBlue;
+		color: $defaultLink;
 		text-decoration: underline
 	}
 
 	&:hover, &:focus,
 	&:active, &.active {
-		color: darken($msBlue, 15%);
+		color: darken($defaultLink, 15%);
 		text-decoration: none
 	}
 }
 
 label {
-	color: $msBlack
+	color: $defaultText
 }
 
 ul {
@@ -69,7 +69,7 @@ ul li::before {
 }
 
 hr {
-	border-top: 1px solid darken($msWhite, 33%)
+	border-top: 1px solid $defaultBorder
 }
 
 //
@@ -119,9 +119,9 @@ hr {
 	font-weight: 400;
 	box-shadow: 0 0 0 1px transparent;
 
-	color: $msBlack;
-	background-color: $msWhite;
-	border: 1px solid darken($msWhite, 33%);
+	color: $btnPriText;
+	background-color: $btnPriBg;
+	border: 1px solid $btnPriBorder;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -129,24 +129,25 @@ hr {
 		text-shadow: none;
 		text-decoration: none;
 
-		color: $msWhite;
-		background-color: $msCharcoal;
-		border: 1px solid lighten($msCharcoal, 33%);
-		box-shadow: 0 0 0 1px lighten($msCharcoal, 33%)
+		color: $btnPriTextHov;
+		background-color: $btnPriBgHov;
+		border: 1px solid $btnPriBorderHov;
+		box-shadow: 0 0 0 1px $btnPriBorderHov
 	}
 }
 
 .btn-primary, #loginModal input[type="submit"],
 .btn-primary:not(:disabled):not(.disabled),
-.btn-success, .btn-success:not(:disabled):not(.disabled) {
+.btn-success, .btn-success:not(:disabled):not(.disabled),
+#searchsubmit.btn.btn-primary {
 	background-image: none;
 	text-shadow: none;
 	text-decoration: none;
 
-	color: $msWhite;
-	background-color: $msCharcoal;
-	border: 1px solid lighten($msCharcoal, 33%);
-	box-shadow: 0 0 0 1px lighten($msCharcoal, 33%);
+	color: $btnPriText;
+	background-color: $btnPriBg;
+	border: 1px solid $btnPriBorder;
+	box-shadow: 0 0 0 1px $btnPriBorder;
 	
 
 	&:hover, &:focus,
@@ -155,25 +156,24 @@ hr {
 		text-shadow: none;
 		text-decoration: none;
 
-		color: $msBlack;
-		background-color: $msWhite;
-		border: 1px solid darken($msWhite, 33%);
-		box-shadow: 0 0 0 1px transparent
+		color: $btnPriTextHov;
+		background-color: $btnPriBgHov;
+		border: 1px solid $btnPriBorderHov;
+		box-shadow: 0 0 0 1px $btnPriBorderHov
 	}
 }
 
 .btn-default, .btn-secondary,
 .btn-default:not(:disabled):not(.disabled), 
-.btn-secondary:not(:disabled):not(.disabled),
-#searchsubmit.btn.btn-primary {
+.btn-secondary:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
 	text-decoration: none;
 
-	color: $msBlack;
-	background-color: $msWhite;
-	border: 1px solid darken($msWhite, 33%);
-	box-shadow: 0 0 0 1px transparent;
+	color: $btnSecText;
+	background-color: $btnSecBg;
+	border: 1px solid $btnSecBorder;
+	box-shadow: 0 0 0 1px $btnSecBorder;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -181,22 +181,27 @@ hr {
 		text-shadow: none;
 		text-decoration: none;
 
-		color: $msWhite;
-		background-color: $msCharcoal;
-		border: 1px solid lighten($msCharcoal, 33%);
-		box-shadow: 0 0 0 1px lighten($msCharcoal, 33%)
+		color: $btnSecTextHov;
+		background-color: $btnSecBgHov;
+		border: 1px solid $btnSecBorderHov;
+		box-shadow: 0 0 0 1px $btnSecBorderHov
 	}
 }
 
-.btn-link,
+.btn-link, .dt-button,
 .btn-link:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
 	text-decoration: none;
 
-	color: inherit;
+	color: $defaultLink;
 	background-color: transparent;
 	border: 1px solid transparent;
+
+	i.fa {
+		color: $defaultLink;
+		background-color: transparent;
+	}
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -204,14 +209,27 @@ hr {
 		text-shadow: none;
 		text-decoration: none;
 
-		color: inherit;
+		color: darken($defaultLink, 15%);
 		background-color: transparent;
-		border: 1px solid darken($msWhite, 33%);
-		box-shadow: 0 0 0 1px transparent
+		border: 1px solid $defaultBorder;
+		box-shadow: 0 0 0 1px transparent;
+
+		i.fa {
+			color: darken($defaultLink, 15%);
+			background-color: transparent;
+		}
 	}
 }
 
-.btn-danger,
+.dt-button::before {
+	color: $defaultLink
+}
+
+.dt-button:hover::before {
+	color: darken($defaultLink, 15%)
+}
+
+.btn-danger, input[type="submit"].btn-danger,
 .btn-danger:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
@@ -257,8 +275,8 @@ input[type="search"], select, textarea,
 	line-height: normal;
 	background-image: none;
 	text-shadow: none;
-	border: 1px solid darken($msWhite, 33%);
-	box-shadow: none;
+	border: 1px solid $inputBorder;
+	box-shadow: $inputShadow;
 	border-radius: .33rem;
 
 	&:hover, &:active,
@@ -266,16 +284,16 @@ input[type="search"], select, textarea,
 		background-image: none;
 		text-shadow: none;
 		
-		border: 1px solid $msWhite, 66%;
-		box-shadow: 0 0 0 1px darken($senuxHue2, 33%)
+		border: 1px solid $inputBorderHov;
+		box-shadow: 0 0 0 1px $inputShadowHov
 	}
 
 	&:focus {
 		background-image: none;
 		text-shadow: none;
 		
-		border: 1px solid $senuxHue2;
-		box-shadow: 0 0 0 1px lighten($senuxHue2, 33%)
+		border: 1px solid $inputBorderFoc;
+		box-shadow: 0 0 0 1px $inputShadowFoc
 	}
 
 	&:disabled {

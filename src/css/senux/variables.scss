@@ -1,0 +1,36 @@
+// variables.scss, Senux Project, Jake Deery, 2021
+
+//
+//
+// vars
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+
+
+
+$msBlack: rgba(35,31,32,1);
+$msWhite: rgba(243,242,241,1);
+
+$msCharcoal: rgba(59,58,57,1);
+$msCloudy: rgba(243,242,241,1);
+
+$msRed: rgba(177,55,25,1);
+$msGold: rgba(242,200,17,1);
+$msGreen: rgba(15,112,59,1);
+$msBlue: rgba(43,87,154,1);
+$msLagoon: rgba(3,120,124,1);
+$msPurple: rgba(101,102,163,1);
+$msMagenta: rgba(135,68,125,1);
+
+
+
+$senuxHue1: rgba(0,127,255,1); // hue1
+$senuxHue2: rgba(128,191,255,1); // hue2
+$senuxHue3: rgba(85,86,86,1); // hue3
+
+$senuxText1: lighten($senuxHue1, 45%); // text for hue1
+$senuxText2: darken($senuxHue2, 65%); // text for hue2
+$senuxText3: lighten($senuxHue3, 50%); // text for hue3
+
+
+$breakpoint-pc: 992px;

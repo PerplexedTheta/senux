@@ -9,7 +9,8 @@
 .main {
 	margin: 0;
 	padding: 1rem;
-	background-color: $white
+	color: $mainText;
+	background-color: $mainBg;
 }
 @media (min-width: 992px) {
 	.main {
@@ -21,7 +22,8 @@
 // breadcrumbs
 .breadcrumb {
 	margin: .5rem 0 .9375rem;
-	background-color: $msWhite;
+	color: $defaultText;
+	background-color: $defaultBg;
 	border: 1px solid transparent;
 	border-radius: .33rem
 }
@@ -31,9 +33,21 @@
 		content: none
 	}
 
+	a, a:link, a:visited {
+		color: $defaultLink;
+
+		&:hover, &:focus {
+			color: darken($defaultLink, 15%)
+		}
+	}
+
 	&.active {
 		a, a:link, a:visited {
-			color: $msBlack
+			color: $defaultText;
+
+			a:hover, a:focus {
+				color: rgb(0,0,0)
+			}
 		}
 	}
 }
@@ -45,49 +59,43 @@
 		content: none
 	}
 
-	background: $msWhite;
-	border-color: darken($msWhite, 33%);
+	background: $defaultBg;
+	color: $defaultText;
+	border-color: darken($defaultBg, 33%);
 	border-radius: .33rem .33rem 0 0;
 
 	&.ui-tabs-active {
-		border-color: darken($msWhite, 33%);
+		background: $white;
+		color: $defaultText;
+		border-color: darken($defaultBg, 33%);
 		border-radius: .33rem .33rem 0 0
 	}
 }
 
 .ui-tabs .ui-tabs-panel {
-	border-color: darken($msWhite, 33%);
+	border-color: darken($defaultBg, 33%);
 	border-radius: .33rem
 }
 
-.ui-widget-content, .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-	a {
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	a, a:link, a:visited {
 		background-color: transparent;
-		color: $msBlack;
+		color: $defaultLink;
 
-		&:link, &:visited {
+		&:hover, &:focus {
 			background-color: transparent;
-			color: $msBlack
-		}
-
-		&:hover {
-			background-color: transparent;
-			color: $msBlack
+			color: darken($defaultLink, 15%)
 		}
 	}
 }
 
-.ui-widget-content, .ui-tabs .ui-state-default {
-	a {
-		color: $msBlue;
+.ui-tabs .ui-state-default {
+	a, a:link, a:visited {
+		color: $defaultLink;
 
-		&:link, &:visited {
-			color: $msBlue
-		}
-
-		&:hover {
-			background-color: $msBlue;
-			color: $msWhite
+		&:hover, &:focus {
+			background: darken($defaultBg, 15%);
+			color: darken($defaultLink, 15%)
 		}
 	}
 }
@@ -101,12 +109,12 @@
 
 .table-bordered, .table-bordered td,
 .table-bordered th {
-	border: 1px solid lighten($msBlack, 33%)
+	border: 1px solid lighten($defaultText, 33%)
 }
 
 .table thead th {
-	background-color: darken($msWhite, 5%);
-	border-bottom: 1px solid lighten($msBlack, 33%)
+	background-color: darken($defaultBg, 5%);
+	border-bottom: 1px solid lighten($defaultText, 33%)
 }
 
 .table tbody tr {
@@ -114,31 +122,47 @@
 }
 
 .table .sorting {
-	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $msWhite
+	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $defaultBg
 }
 
 .table .sorting_asc {
-	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $msWhite
+	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $defaultBg
 }
 
 .table .sorting_desc {
-	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $msWhite
+	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $defaultBg
 }
 
 .table .nosort, .table .nosort.sorting,
 .table .nosort.sorting_asc, .table .nosort.sorting_desc {
-	background-color: $msWhite
+	background-color: $defaultBg
 }
 
 // striped
 .table-striped tbody > tr > td,
 .table-striped tbody > tr > th {
-	background-color: $msWhite
+	background-color: $defaultBg;
+
+	a, a:link, a:visited, a.btn.btn-link {
+		color: $defaultLink;
+
+		&:hover, &:focus {
+			color: darken($defaultLink, 15%)
+		}
+	}
 }
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
 	background-color: $white;
+
+	a, a:link, a:visited, a.btn.btn-link {
+		color: $defaultLink;
+
+		&:hover, &:focus {
+			color: darken($defaultLink, 15%)
+		}
+	}
 }
 
 //
@@ -151,7 +175,7 @@
 //
 // menus
 .menu-collapse {
-	border-right: 1px solid darken($msWhite, 33%);
+	border-right: 1px solid darken($defaultBg, 33%);
 
 	li {
 		&::before {
@@ -166,14 +190,15 @@
 	}
 
 	a {
+		color: $defaultLink;
 		border-radius: .33rem 0 0 .33rem;
-		border: 1px solid darken($msWhite, 33%);
+		border: 1px solid darken($defaultBg, 33%);
 		border-right: 1px solid transparent;
 
 		&:hover, &:focus,
 		&:active, &.active {
-			background-color: $msBlue;
-			color: $msWhite
+			background-color: $defaultLink;
+			color: $defaultBg
 		}
 	}
 }
@@ -181,14 +206,14 @@
 //
 // recolour things
 legend, .legend {
-	color: $msBlack;
+	color: $defaultText;
 	border-bottom: none
 }
 
 .results_summary {
-	color: $msBlack
+	color: $defaultText
 }
 
 caption, h5 {
-	color: $msBlack
+	color: $defaultText
 }

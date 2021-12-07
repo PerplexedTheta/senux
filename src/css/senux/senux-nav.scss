@@ -26,40 +26,48 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 //
 // navbar
 .navbar-expand {
-	background-color: $msBlack;
+	background-color: $navbarBg;
 	padding: .5rem 1rem;
 	border: none
 }
 
-#cart-list-nav, #members {
+#cart-list-nav, #members, #header_langmenu {
 	li {
 		a {
-			color: lighten($msBlack, 85%);
+			color: $navbarLink;
 			text-decoration: none;
 			text-shadow: none;
 
 			i.fa {
-				color: lighten($msBlack, 85%)
+				color: $navbarLink
 			}
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: lighten($msBlack, 65%);
+				color: $navbarLinkHov;
 
 				i.fa {
-					color: lighten($msBlack, 65%)
+					color: $navbarLinkHov
 				}
 			}
 		}
 
 		a.dropdown-item {
-			background-color: $msWhite;
-			color: $msBlack;
+			background-color: $dropdownBg;
+			color: $dropdownText;
+
+			i.fa {
+				color: $dropdownText;
+			}
 
 			&:hover, &:focus,
 			&:active, &.active {
-				background-color: $senuxHue2;
-				color: $msBlack
+				background-color: $dropdownLinkHovBg;
+				color: $dropdownLinkHov;
+
+				i.fa {
+					color: $dropdownLinkHov;
+				}
 			}
 		}
 
@@ -79,30 +87,32 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 }
 
 #loggedinuser-menu {
+	background-color: $navbarUsermenuBg;
+
 	p {
 		a.login-link {
-			color: $msBlue;
+			color: $navbarUsermenuLink;
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: darken($msBlue, 15%)
+				color: $navbarUsermenuLinkHov
 			}
 		}
 	}
 
 	a#logout.logout {
-		color: $msRed;
+		color: $navbarUsermenuLogout;
 
 		&:hover, &:focus,
 		&:active, &.active {
-			color: darken($msRed, 15%)
+			color: $navbarUsermenuLogoutHov
 		}
 	}
 }
 
 .dropdown-menu {
-	background-color: $msWhite;
-	color: $msBlack
+	background-color: $dropdownBg;
+	color: $dropdownText
 }
 
 .navbar .nav > li {

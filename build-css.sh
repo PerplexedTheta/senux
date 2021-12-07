@@ -17,5 +17,6 @@ if ! hash sass 2>/dev/null; then
 	exit 1
 fi
 
-sass ../src/css/build.scss:./OPACUserCSS.css --style compressed
-echo "File built and outputted to dist folder (-1 level)"
+sass src/css/build.scss:dist/OPACUserCSS.css
+sass src/css/build.scss:dist/OPACUserCSS.min.css --style compressed
+echo "File built and outputted to ./dist folder"

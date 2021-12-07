@@ -8,17 +8,17 @@
 #opacheader {
 	margin: 0;
 	padding: 2.5rem 1rem;
-	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='57.74' height='100' viewBox='0 0 34.64101615137755 60' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='100%25' height='100%25' fill='rgba(0, 127, 255,1)'/%3E%3Cpath d='M51.96 30L51.96 50L34.64 60L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 30L17.32 50L0 60L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 0L34.64 20L17.32 30L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 60L34.64 80L17.32 90L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 60L17.32 50L17.32 30L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 60L-17.32 50L-17.32 30L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 30L0 20L0 0L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 90L0 80L0 60L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+	background: $headerBg;
 
 	h1, h3 {
 		display: inline-block;
-		color: $senuxText1;
+		color: $headerText;
 
 		&::after {
 			content: '';
 			display: block;
 			max-width: 33%;
-			border-bottom: .25rem solid $senuxText1;
+			border-bottom: .25rem solid $headerText;
 			border-radius: .33rem;
 		}
 	}
@@ -61,16 +61,16 @@
 #opac-main-search {
 	margin: 0;
 	padding: 0;
-	background-color: $senuxHue2;
+	background-color: $mainSearchBg;
 
 	label {
-		color: $senuxText2;
+		color: $mainSearchText;
 
 		&::after {
 			content: '';
 			display: block;
 			max-width: 33%;
-			border-bottom: .25rem solid $senuxText2;
+			border-bottom: .25rem solid $mainSearchText;
 			border-radius: .33rem;
 		}
 	}
@@ -100,13 +100,14 @@
 	width: 100%;
 	margin: 0;
 	padding: 1rem;
-	background-color: $senuxHue2;
+	color: $moreSearchText;
+	background-color: $moreSearchBg;
 
 	a {
-		color: $senuxText2;
+		color: $moreSearchLink;
 
 		&:hover, &:focus {
-			color: lighten($senuxText2, 15%)
+			color: $moreSearchLinkHov;
 		}
 	}
 
@@ -121,6 +122,6 @@
 // dropdown items
 .dropdown-item {
 	&:hover, &:focus {
-		background-color: darken($msWhite, 33%)
+		background-color: $dropdownBgHov
 	}
 }
