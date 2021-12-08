@@ -282,7 +282,7 @@ input[type=time], input[type=date],
 input[type=datetime-local], input[type=tel],
 input[type=number], input[type=search-md],
 input[type=search], select, textarea,
-.form-control {
+.form-control, .dataTables_filter input[type=search] {
   padding: 0.375rem 0.75rem;
   outline: none;
   font-weight: 300;
@@ -313,7 +313,7 @@ input[type=search]:active,
 input[type=search].active, select:hover, select:active, select.active, textarea:hover, textarea:active, textarea.active,
 .form-control:hover,
 .form-control:active,
-.form-control.active {
+.form-control.active, .dataTables_filter input[type=search]:hover, .dataTables_filter input[type=search]:active, .dataTables_filter input[type=search].active {
   background-image: none;
   text-shadow: none;
   border: 1px solid #a59e96;
@@ -325,7 +325,7 @@ input[type=time]:focus, input[type=date]:focus,
 input[type=datetime-local]:focus, input[type=tel]:focus,
 input[type=number]:focus, input[type=search-md]:focus,
 input[type=search]:focus, select:focus, textarea:focus,
-.form-control:focus {
+.form-control:focus, .dataTables_filter input[type=search]:focus {
   background-image: none;
   text-shadow: none;
   border: 1px solid #3498ff;
@@ -337,7 +337,7 @@ input[type=time]:disabled, input[type=date]:disabled,
 input[type=datetime-local]:disabled, input[type=tel]:disabled,
 input[type=number]:disabled, input[type=search-md]:disabled,
 input[type=search]:disabled, select:disabled, textarea:disabled,
-.form-control:disabled {
+.form-control:disabled, .dataTables_filter input[type=search]:disabled {
   background-color: #e0e0e0;
 }
 

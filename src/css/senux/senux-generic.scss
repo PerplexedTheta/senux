@@ -266,7 +266,7 @@ input[type="time"], input[type="date"],
 input[type="datetime-local"], input[type="tel"],
 input[type="number"], input[type="search-md"],
 input[type="search"], select, textarea,
-.form-control {
+.form-control, .dataTables_filter input[type="search"] {
 	padding: 0.375rem 0.75rem;
 	outline: none;
 	font-weight: 300;
