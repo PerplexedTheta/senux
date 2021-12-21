@@ -18,7 +18,7 @@
 			display: block;
 			max-width: 33%;
 			border-bottom: .25rem solid $defaultText;
-			border-radius: .33rem;
+			border-radius: $defaultRadius;
 		}
 	}
 }
@@ -36,7 +36,7 @@
 			display: block;
 			max-width: 33%;
 			border-bottom: .25rem solid $defaultText;
-			border-radius: .33rem;
+			border-radius: $defaultRadius;
 		}
 	}
 }
@@ -44,7 +44,7 @@
 // news
 #news {
 	border: 1px solid $defaultBorder;
-	border-radius: .33rem;
+	border-radius: $defaultRadius;
 }
 
 .newsheader {
@@ -123,7 +123,7 @@
 #facetcontainer {
 	border: 1px solid $defaultBorder;
 	border-right-color: transparent;
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 #menu, #search-facets {
@@ -152,7 +152,7 @@
 // floating toolbar
 #floating {
 	border: 1px solid $defaultBorder;
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 #toolbar.toolbar,
@@ -191,7 +191,7 @@
 .results_summary.availability,
 .results_summary.online_resources {
 	font-weight: bold;
-	border-radius: .33rem;
+	border-radius: $defaultRadius;
 
 	.label {
 		font-weight: bold
@@ -223,7 +223,7 @@
 	background-color: $defaultBg;
 	color: $defaultText;
 	border: 1px solid transparent;
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 //
@@ -261,7 +261,7 @@
 #action {
 	background-color: $defaultBg;
 	border-color: transparent;
-	border-radius: .33rem;
+	border-radius: $defaultRadius;
 
 	li {
 		&::before {
@@ -301,7 +301,7 @@
 	border-right: 1px solid $defaultBorder;
 	border-bottom: none;
 	border-left: 1px solid $defaultBorder;
-	border-radius: .33rem .33rem 0 0
+	border-radius: $defaultRadius .33rem 0 0
 }
 
 .current-view {
@@ -322,7 +322,7 @@
 // socials
 #social_networks {
 	a {
-		border-radius: .33rem;
+		border-radius: $defaultRadius;
 
 		&:hover, &:focus,
 		&:active, &.active {

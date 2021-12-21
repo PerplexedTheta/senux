@@ -15,8 +15,9 @@ $userText3: $senuxText3;
 // 2.1 page variables
 $defaultBg: $msWhite;
 $defaultText: $msBlack;
-$defaultBorder: darken($defaultBg, 15%);
 $defaultLink: $msBlue;
+$defaultBorder: darken($defaultBg, 15%);
+$defaultRadius: .33rem;
 
 // 3. generic variables
 $mainBg: #ffffff;

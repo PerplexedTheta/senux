@@ -25,7 +25,7 @@
 	color: $defaultText;
 	background-color: $defaultBg;
 	border: 1px solid transparent;
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 .breadcrumb-item {
@@ -62,19 +62,19 @@
 	background: $defaultBg;
 	color: $defaultText;
 	border-color: darken($defaultBg, 33%);
-	border-radius: .33rem .33rem 0 0;
+	border-radius: $defaultRadius .33rem 0 0;
 
 	&.ui-tabs-active {
 		background: $white;
 		color: $defaultText;
 		border-color: darken($defaultBg, 33%);
-		border-radius: .33rem .33rem 0 0
+		border-radius: $defaultRadius .33rem 0 0
 	}
 }
 
 .ui-tabs .ui-tabs-panel {
 	border-color: darken($defaultBg, 33%);
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
@@ -191,7 +191,7 @@
 
 	a {
 		color: $defaultLink;
-		border-radius: .33rem 0 0 .33rem;
+		border-radius: $defaultRadius 0 0 .33rem;
 		border: 1px solid darken($defaultBg, 33%);
 		border-right: 1px solid transparent;
 

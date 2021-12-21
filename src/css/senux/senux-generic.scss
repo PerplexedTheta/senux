@@ -112,7 +112,7 @@ hr {
 	padding: .45rem 1.125rem;
 	font-size: 1rem;
 	border: 1px solid transparent;
-	border-radius: .33rem;
+	border-radius: $defaultRadius;
 	cursor: pointer;
 	white-space: normal;
 	word-wrap: break-word;
@@ -255,7 +255,7 @@ hr {
 
 .input-append .add-on:last-child, .input-append .btn:last-child,
 .input-append .btn-group:last-child > .dropdown-toggle {
-	border-radius: .33rem
+	border-radius: $defaultRadius
 }
 
 //
@@ -277,7 +277,7 @@ input[type="search"], select, textarea,
 	text-shadow: none;
 	border: 1px solid $inputBorder;
 	box-shadow: $inputShadow;
-	border-radius: .33rem;
+	border-radius: $defaultRadius;
 
 	&:hover, &:active,
 	&.active {

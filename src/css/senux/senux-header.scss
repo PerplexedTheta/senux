@@ -19,7 +19,7 @@
 			display: block;
 			max-width: 33%;
 			border-bottom: .25rem solid $headerText;
-			border-radius: .33rem;
+			border-radius: $defaultRadius
 		}
 	}
 
@@ -71,7 +71,7 @@
 			display: block;
 			max-width: 33%;
 			border-bottom: .25rem solid $mainSearchText;
-			border-radius: .33rem;
+			border-radius: $defaultRadius;
 		}
 	}
 }
