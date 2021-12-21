@@ -534,8 +534,10 @@ input[type=search]:read-only, textarea:read-only {
 #menu li a {
   color: #2b579a;
   border-radius: 0.33rem 0 0 0.33rem;
-  border: 1px solid #a59e96;
+  border-top: 1px solid #a59e96;
   border-right: 1px solid transparent;
+  border-bottom: 1px solid #a59e96;
+  border-left: 1px solid #a59e96;
 }
 #menu li a:hover, #menu li a:focus, #menu li a:active, #menu li a.active {
   background-color: #2b579a;
