@@ -301,7 +301,7 @@
 	border-right: 1px solid $defaultBorder;
 	border-bottom: none;
 	border-left: 1px solid $defaultBorder;
-	border-radius: $defaultRadius .33rem 0 0
+	border-radius: $defaultRadius $defaultRadius 0 0
 }
 
 .current-view {
