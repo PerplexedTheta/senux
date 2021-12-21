@@ -543,6 +543,13 @@ input[type=search]:read-only, textarea:read-only {
   background-color: #2b579a;
   color: #f3f2f1;
 }
+#menu li.active a {
+  border-radius: 0.33rem 0 0 0.33rem;
+  border-top: 1px solid #a59e96;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid #a59e96;
+  border-left: 1px solid #a59e96;
+}
 
 legend, .legend {
   color: #231f20;
