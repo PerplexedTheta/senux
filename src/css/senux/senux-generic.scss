@@ -78,12 +78,12 @@ hr {
 .fonts-loaded input, .fonts-loaded optgroup,
 .fonts-loaded option, .fonts-loaded select,
 .fonts-loaded textarea {
-	font-family: 'Century Gothic', 'CenturyGothic', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: $defaultFonts;
 
 	body, button, input,
 	optgroup, option, select,
 	textarea {
-		font-family: 'Century Gothic', 'CenturyGothic', 'Helvetica Neue', 'Helvetica', sans-serif
+		font-family: $defaultFonts
 	}
 }
 
