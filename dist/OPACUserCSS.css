@@ -920,10 +920,6 @@ a#ISBDview.active {
     padding: 2.5rem 5rem;
   }
 }
-.mobile_only {
-  display: initial;
-}
-
 @media (min-width: 992px) {
   .mobile_only {
     display: none;

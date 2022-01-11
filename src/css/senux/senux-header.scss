@@ -35,10 +35,7 @@
 	}
 }
 
-// Only show on mobile
-.mobile_only {
-	display: initial
-}
+// mobile-only class
 @media (min-width: 992px) {
 	.mobile_only {
 		display: none
