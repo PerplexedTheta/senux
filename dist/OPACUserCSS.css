@@ -1116,4 +1116,8 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
   margin: 0 1rem;
 }
 
+.flipster--coverflow .flipster__item::before {
+  content: none;
+}
+
 /*# sourceMappingURL=OPACUserCSS.css.map */

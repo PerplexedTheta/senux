@@ -18,3 +18,10 @@
 		margin: 0 1rem
 	}
 }
+
+// coverflow plugin
+.flipster--coverflow .flipster__item {
+	&::before {
+		content: none
+	}
+}
