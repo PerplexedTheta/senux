@@ -920,6 +920,15 @@ a#ISBDview.active {
     padding: 2.5rem 5rem;
   }
 }
+.mobile_only {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .mobile_only {
+    display: initial;
+  }
+}
 #opacheader_logo {
   margin: 0 1rem 0 0;
   padding: 0 1rem;
