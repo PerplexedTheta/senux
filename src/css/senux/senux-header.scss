@@ -37,11 +37,11 @@
 
 // Only show on mobile
 .mobile_only {
-	display: none
+	display: initial
 }
 @media (min-width: 992px) {
 	.mobile_only {
-		display: initial
+		display: none
 	}
 }
 
