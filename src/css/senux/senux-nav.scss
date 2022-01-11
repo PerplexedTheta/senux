@@ -9,7 +9,7 @@
 //
 // logo
 #logo {
-	display: none;
+	display: $navbarLogoDisplayMobile;
 	background: $navbarLogo;
 
 	&:hover, &:focus {
