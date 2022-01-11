@@ -573,6 +573,8 @@ caption, h5 {
   content: "";
   display: block;
   max-width: 33%;
+}
+.maincontent h4::after, .maincontent h5::after {
   border-bottom: 0.25rem solid #231f20;
   border-radius: 0.33rem;
 }

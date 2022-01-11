@@ -18,9 +18,14 @@
 		&::after {
 			content: "";
 			display: block;
-			max-width: 33%;
+			max-width: 33%
+		}
+	}
+
+	h4, h5 {
+		&::after {
 			border-bottom: .25rem solid $defaultText;
-			border-radius: $defaultRadius;
+			border-radius: $defaultRadius
 		}
 	}
 }
