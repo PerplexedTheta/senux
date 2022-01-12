@@ -615,10 +615,6 @@ caption, h5 {
   display: none;
 }
 
-.selections-toolbar.toolbar {
-  background: transparent;
-}
-
 #advsearch_limits label, #subtypes label,
 .hint {
   color: #231f20;
