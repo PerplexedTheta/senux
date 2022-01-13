@@ -601,10 +601,10 @@ caption, h5 {
 }
 
 .newsheader a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 .newsheader a:hover, .newsheader a:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .newsfooter {
@@ -661,9 +661,12 @@ caption, h5 {
 }
 #menu h2 a, #search-facets h2 a {
   color: #231f20;
-  text-decoration: none;
+  text-decoration: underline;
   border-bottom: 1px solid #d0ccc8;
   border-right: 1px solid #d0ccc8;
+}
+#menu h2 a:hover, #menu h2 a:focus, #search-facets h2 a:hover, #search-facets h2 a:focus {
+  text-decoration: none;
 }
 
 #bookbag_form {

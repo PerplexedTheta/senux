@@ -41,18 +41,18 @@ h4, h5, h6,
 
 a {
 	color: $defaultLink;
-	text-decoration: underline;
+	text-decoration: $defaultLinkDecoration;
 
 	&:link, &:visited {
 		background-color: transparent;
 		color: $defaultLink;
-		text-decoration: underline
+		text-decoration: $defaultLinkDecoration
 	}
 
 	&:hover, &:focus,
 	&:active, &.active {
 		color: darken($defaultLink, 15%);
-		text-decoration: none
+		text-decoration: $defaultLinkHovDecoration
 	}
 }
 

@@ -56,10 +56,10 @@
 
 .newsheader {
 	a {
-		text-decoration: none;
+		text-decoration: $defaultLinkDecoration;
 
 		&:hover, &:focus {
-			text-decoration: underline;
+			text-decoration: $defaultLinkHovDecoration
 		}
 	}
 }
@@ -136,9 +136,13 @@
 
 	a {
 		color: $defaultText;
-		text-decoration: none;
+		text-decoration: $defaultLinkDecoration;
 		border-bottom: 1px solid $defaultBorder;
-		border-right: 1px solid $defaultBorder
+		border-right: 1px solid $defaultBorder;
+
+		&:hover, &:focus {
+			text-decoration: $defaultLinkHovDecoration
+		}
 	}
 }
 
@@ -172,11 +176,11 @@
 #CheckAll, #CheckNone,
 .CheckAll, .CheckNone,
 #menu a, #search-facets a {
-	text-decoration: underline;
+	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: none
+		text-decoration: $defaultLinkHovDecoration
 	}
 }
 
@@ -335,11 +339,11 @@
 // view tabs
 a#Normalview, a#MARCview,
 a#ISBDview {
-	text-decoration: underline;
+	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: none;
+		text-decoration: $defaultLinkHovDecoration
 	}
 }
 
