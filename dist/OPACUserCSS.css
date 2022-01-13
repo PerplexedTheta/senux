@@ -953,14 +953,7 @@ a#ISBDview.active {
   background-color: #80bfff;
 }
 #opac-main-search label {
-  color: #001a34;
-}
-#opac-main-search label::after {
-  content: "";
-  display: block;
-  max-width: 33%;
-  border-bottom: 0.25rem solid #001a34;
-  border-radius: 0.33rem;
+  display: none;
 }
 
 #searchform {
@@ -1091,7 +1084,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 }
 
 @media only screen and (max-width: 1100px) {
-  .hmplabel, .hlplabel, .srchlabel {
+  .hmplabel, .helplabel, .srchlabel {
     display: none;
   }
 }

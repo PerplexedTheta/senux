@@ -74,15 +74,7 @@
 	background-color: $mainSearchBg;
 
 	label {
-		color: $mainSearchText;
-
-		&::after {
-			content: '';
-			display: block;
-			max-width: 33%;
-			border-bottom: .25rem solid $mainSearchText;
-			border-radius: $defaultRadius;
-		}
+		display: none
 	}
 }
 
