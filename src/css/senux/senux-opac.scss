@@ -104,20 +104,6 @@
 	}
 }
 
-.shelves, .tags {
-	li {
-		&::before {
-			content: none
-		}
-	}
-}
-
-.pagination ul > li {
-	&::before {
-		content: none
-	}
-}
-
 //
 // search facets
 #facetcontainer {
@@ -266,30 +252,6 @@
 	background-color: $defaultBg;
 	border-color: transparent;
 	border-radius: $defaultRadius;
-
-	li {
-		&::before {
-			content: none
-		}
-	}
-}
-
-.nav_pages, .pagination_list {
-	li {
-		&::before {
-			content: none
-		}
-	}
-}
-
-//
-// holds
-.hold-options, .holdrow {
-	li {
-		&::before {
-			content: none
-		}
-	}
 }
 
 //
@@ -353,25 +315,6 @@ a#ISBDview {
 .dataTables_filter input,
 .dataTables_filter label {
 	font-size: 1rem
-}
-
-//
-// browser
-#userbrowser {
-	ul li {
-		&::before {
-			content: none
-		}
-	}
-}
-
-//
-//
-// results menu
-.pg_menu li {
-	&::before {
-		content: none
-	}
 }
 
 .pg_menu .pg_link a,

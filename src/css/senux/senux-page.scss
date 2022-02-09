@@ -57,10 +57,6 @@
 //
 // ui tabs
 .ui-tabs .ui-tabs-nav li {
-	&::before {
-		content: none
-	}
-
 	background: $defaultBg;
 	color: $defaultText;
 	border-color: darken($defaultBg, 33%);
@@ -178,19 +174,9 @@
 // menus
 .menu-collapse {
 	border-right: 1px solid darken($defaultBg, 33%);
-
-	li {
-		&::before {
-			content: none
-		}
-	}
 }
 
 #menu li {
-	&::before {
-		content: none
-	}
-
 	a {
 		color: $defaultLink;
 		border-radius: $defaultRadius 0 0 $defaultRadius;

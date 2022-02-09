@@ -61,13 +61,7 @@ label {
 }
 
 ul {
-	list-style-type: none
-}
-
-ul li::before {
-	content: '\00BB';
-	margin-right: 10px;
-	margin-left: -20px
+	list-style-type: $defaultBullet
 }
 
 hr {

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   font-size: 16px;
 }
@@ -49,13 +48,7 @@ label {
 }
 
 ul {
-  list-style-type: none;
-}
-
-ul li::before {
-  content: "»";
-  margin-right: 10px;
-  margin-left: -20px;
+  list-style-type: circle;
 }
 
 hr {
@@ -403,9 +396,6 @@ input[type=search]:read-only, textarea:read-only {
   border-color: #a59e96;
   border-radius: 0.33rem 0.33rem 0 0;
 }
-.ui-tabs .ui-tabs-nav li::before {
-  content: none;
-}
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   background: white;
   color: #231f20;
@@ -524,13 +514,7 @@ input[type=search]:read-only, textarea:read-only {
 .menu-collapse {
   border-right: 1px solid #a59e96;
 }
-.menu-collapse li::before {
-  content: none;
-}
 
-#menu li::before {
-  content: none;
-}
 #menu li a {
   color: #2b579a;
   border-radius: 0.33rem 0 0 0.33rem;
@@ -635,14 +619,6 @@ caption, h5 {
 
 .shelves ul {
   padding-left: 0;
-}
-
-.shelves li::before, .tags li::before {
-  content: none;
-}
-
-.pagination ul > li::before {
-  content: none;
 }
 
 #facetcontainer {
@@ -784,17 +760,6 @@ caption, h5 {
   border-color: transparent;
   border-radius: 0.33rem;
 }
-#action li::before {
-  content: none;
-}
-
-.nav_pages li::before, .pagination_list li::before {
-  content: none;
-}
-
-.hold-options li::before, .holdrow li::before {
-  content: none;
-}
 
 #views {
   border-bottom: 1px solid #d0ccc8;
@@ -840,14 +805,6 @@ a#ISBDview.active {
 .dataTables_filter input,
 .dataTables_filter label {
   font-size: 1rem;
-}
-
-#userbrowser ul li::before {
-  content: none;
-}
-
-.pg_menu li::before {
-  content: none;
 }
 
 .pg_menu .pg_link a:hover, .pg_menu .pg_link a:focus, .pg_menu .pg_link a:active, .pg_menu .pg_link a.active,
