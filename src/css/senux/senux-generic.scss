@@ -107,17 +107,16 @@ hr {
 
 	padding: .45rem 1.125rem;
 	font-size: 1rem;
-	border: .066rem solid transparent;
 	border-radius: $defaultRadius;
 	cursor: pointer;
 	white-space: normal;
 	word-wrap: break-word;
 	font-weight: 400;
-	box-shadow: 0 0 0 .33rem transparent;
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
 	border: .066rem solid $btnPriBorder;
+	box-shadow: 0 0 0 .33rem $btnPriShadow;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -128,7 +127,7 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: .066rem solid $btnPriBorderHov;
-		box-shadow: 0 0 0 .33rem $btnPriBorderHov
+		box-shadow: 0 0 0 .33rem $btnPriShadowHov
 	}
 }
 
@@ -143,7 +142,7 @@ hr {
 	color: $btnPriText;
 	background-color: $btnPriBg;
 	border: .066rem solid $btnPriBorder;
-	box-shadow: 0 0 0 .33rem transparent;
+	box-shadow: 0 0 0 .33rem $btnPriShadow;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -154,7 +153,7 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: .066rem solid $btnPriBorderHov;
-		box-shadow: 0 0 0 .33rem $btnPriBorderHov
+		box-shadow: 0 0 0 .33rem $btnPriShadowHov
 	}
 }
 
@@ -168,7 +167,7 @@ hr {
 	color: $btnSecText;
 	background-color: $btnSecBg;
 	border: .066rem solid $btnSecBorder;
-	box-shadow: 0 0 0 .33rem transparent;
+	box-shadow: 0 0 0 .33rem $btnSecShadow;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -179,7 +178,7 @@ hr {
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
 		border: .066rem solid $btnSecBorderHov;
-		box-shadow: 0 0 0 .33rem $btnSecBorderHov
+		box-shadow: 0 0 0 .33rem $btnSecShadowHov
 	}
 }
 
@@ -270,9 +269,10 @@ input[type="search"], select, textarea,
 	line-height: normal;
 	background-image: none;
 	text-shadow: none;
+	border-radius: $defaultRadius;
+
 	border: .066rem solid $inputBorder;
 	box-shadow: $inputShadow;
-	border-radius: $defaultRadius;
 
 	&:hover, &:active,
 	&.active {
