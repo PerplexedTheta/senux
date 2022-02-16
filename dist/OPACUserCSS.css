@@ -121,7 +121,7 @@ hr {
   color: #e6f2ff;
   background-color: #007fff;
   border: 0.066rem solid #4da5ff;
-  box-shadow: 0 0 0 0.33rem 0.066rem solid #4da5ff;
+  box-shadow: 0 0 0 0.33rem #4da5ff;
 }
 .btn:hover, .btn:focus, .btn:active, .btn.active, input[type=submit].btn:hover, input[type=submit].btn:focus, input[type=submit].btn:active, input[type=submit].btn.active {
   background-image: none;
@@ -130,7 +130,7 @@ hr {
   color: #007fff;
   background-color: #e6f2ff;
   border: 0.066rem solid #99ccff;
-  box-shadow: 0 0 0 0.33rem 0.066rem solid #99ccff;
+  box-shadow: 0 0 0 0.33rem #99ccff;
 }
 
 .btn-primary, #loginModal input[type=submit],
@@ -143,7 +143,7 @@ hr {
   color: #e6f2ff;
   background-color: #007fff;
   border: 0.066rem solid #4da5ff;
-  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem 0.066rem solid #4da5ff;
+  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem #4da5ff;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, #loginModal input[type=submit]:hover, #loginModal input[type=submit]:focus, #loginModal input[type=submit]:active, #loginModal input[type=submit].active,
 .btn-primary:not(:disabled):not(.disabled):hover,
@@ -164,7 +164,7 @@ hr {
   color: #007fff;
   background-color: #e6f2ff;
   border: 0.066rem solid #99ccff;
-  box-shadow: 0 0 0 0.33rem 0.066rem solid #99ccff;
+  box-shadow: 0 0 0 0.33rem #99ccff;
 }
 
 .btn-default, .btn-secondary,
@@ -176,7 +176,7 @@ hr {
   color: #231f20;
   background-color: #f3f2f1;
   border: 0.066rem solid #d0ccc8;
-  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem 0.066rem solid #d0ccc8;
+  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem #d0ccc8;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active,
 .btn-default:not(:disabled):not(.disabled):hover,
@@ -193,7 +193,7 @@ hr {
   color: #f3f2f1;
   background-color: #231f20;
   border: 0.066rem solid #4c4345;
-  box-shadow: 0 0 0 0.33rem 0.066rem solid #4c4345;
+  box-shadow: 0 0 0 0.33rem #4c4345;
 }
 
 .btn-link, .dt-button,
