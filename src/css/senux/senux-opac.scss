@@ -84,6 +84,10 @@
 //
 //
 // search results
+.selections {
+	color: $msBlack
+}
+
 .returntosearch {
 	padding: 0 1rem
 }
@@ -148,14 +152,14 @@
 #toolbar.toolbar,
 #toolbar.toolbar.clearfix {
 	background: $defaultBg;
-	border: transparent;
+	border: .066rem solid transparent;
 	border-bottom: $defaultBorder
 }
 
 #selections-toolbar,
 .selections-toolbar {
 	background: $defaultBg;
-	border: transparent
+	border: .066rem solid transparent
 }
 
 // underlined links
@@ -212,7 +216,7 @@
 .suggestion {
 	background-color: $defaultBg;
 	color: $defaultText;
-	border: transparent;
+	border: .066rem solid transparent;
 	border-radius: $defaultRadius
 }
 

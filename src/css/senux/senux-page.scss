@@ -26,7 +26,7 @@
 	margin: .5rem 0 .9375rem;
 	color: $defaultText;
 	background-color: $defaultBg;
-	border: transparent;
+	border: .066rem solid transparent;
 	border-radius: $defaultRadius
 }
 
@@ -173,7 +173,7 @@
 //
 // menus
 .menu-collapse {
-	border-right: darken($defaultBg, 33%);
+	border-right: $defaultBorder
 }
 
 #menu li {

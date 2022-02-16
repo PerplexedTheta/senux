@@ -203,7 +203,7 @@ hr {
   text-decoration: none;
   color: #2b579a;
   background-color: transparent;
-  border: transparent;
+  border: 0.066rem solid transparent;
 }
 .btn-link i.fa, .dt-button i.fa,
 .btn-link:not(:disabled):not(.disabled) i.fa {
@@ -369,7 +369,7 @@ input[type=search]:read-only, textarea:read-only {
   margin: 0.5rem 0 0.9375rem;
   color: #231f20;
   background-color: #f3f2f1;
-  border: transparent;
+  border: 0.066rem solid transparent;
   border-radius: 0.33rem;
 }
 
@@ -511,7 +511,7 @@ input[type=search]:read-only, textarea:read-only {
 }
 
 .menu-collapse {
-  border-right: #a59e96;
+  border-right: 0.066rem solid #d0ccc8;
 }
 
 #menu li a {
@@ -603,6 +603,10 @@ caption, h5 {
   color: #231f20;
 }
 
+.selections {
+  color: #231f20;
+}
+
 .returntosearch {
   padding: 0 1rem;
 }
@@ -656,14 +660,14 @@ caption, h5 {
 #toolbar.toolbar,
 #toolbar.toolbar.clearfix {
   background: #f3f2f1;
-  border: transparent;
+  border: 0.066rem solid transparent;
   border-bottom: 0.066rem solid #d0ccc8;
 }
 
 #selections-toolbar,
 .selections-toolbar {
   background: #f3f2f1;
-  border: transparent;
+  border: 0.066rem solid transparent;
 }
 
 #CheckAll, #CheckNone,
@@ -719,7 +723,7 @@ caption, h5 {
 .suggestion {
   background-color: #f3f2f1;
   color: #231f20;
-  border: transparent;
+  border: 0.066rem solid transparent;
   border-radius: 0.33rem;
 }
 
