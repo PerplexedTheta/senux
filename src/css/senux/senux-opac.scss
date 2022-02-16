@@ -112,7 +112,7 @@
 // search facets
 #facetcontainer {
 	border: $defaultBorder;
-	border-right-color: transparent;
+	border-right: .066rem solid transparent;
 	border-radius: $defaultRadius
 }
 
@@ -254,7 +254,7 @@
 
 #action {
 	background-color: $defaultBg;
-	border-color: transparent;
+	border: .066rem solid transparent;
 	border-radius: $defaultRadius;
 }
 

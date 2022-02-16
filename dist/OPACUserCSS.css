@@ -517,10 +517,10 @@ input[type=search]:read-only, textarea:read-only {
 #menu li a {
   color: #2b579a;
   border-radius: 0.33rem 0 0 0.33rem;
-  border-top: #a59e96;
-  border-right: transparent;
-  border-bottom: #a59e96;
-  border-left: #a59e96;
+  border-top: 0.066rem solid #a59e96;
+  border-right: 0.066rem solid transparent;
+  border-bottom: 0.066rem solid #a59e96;
+  border-left: 0.066rem solid #a59e96;
 }
 #menu li a:hover, #menu li a:focus, #menu li a:active, #menu li a.active {
   background-color: #2b579a;
@@ -529,7 +529,7 @@ input[type=search]:read-only, textarea:read-only {
 #menu li.active a {
   border-radius: 0.33rem 0 0 0.33rem;
   border-top: #a59e96;
-  border-right: transparent;
+  border-right: 0.066rem solid transparent;
   border-bottom: #a59e96;
   border-left: #a59e96;
 }
@@ -626,7 +626,7 @@ caption, h5 {
 
 #facetcontainer {
   border: 0.066rem solid #d0ccc8;
-  border-right-color: transparent;
+  border-right: 0.066rem solid transparent;
   border-radius: 0.33rem;
 }
 
@@ -760,7 +760,7 @@ caption, h5 {
 
 #action {
   background-color: #f3f2f1;
-  border-color: transparent;
+  border: 0.066rem solid transparent;
   border-radius: 0.33rem;
 }
 
