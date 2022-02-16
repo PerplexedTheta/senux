@@ -50,7 +50,7 @@
 
 // news
 #news {
-	border: .066rem solid $defaultBorder;
+	border: $defaultBorder;
 	border-radius: $defaultRadius;
 }
 
@@ -107,7 +107,7 @@
 //
 // search facets
 #facetcontainer {
-	border: .066rem solid $defaultBorder;
+	border: $defaultBorder;
 	border-right-color: transparent;
 	border-radius: $defaultRadius
 }
@@ -123,8 +123,8 @@
 	a {
 		color: $defaultText;
 		text-decoration: $defaultLinkDecoration;
-		border-bottom: .066rem solid $defaultBorder;
-		border-right: .066rem solid $defaultBorder;
+		border-bottom: $defaultBorder;
+		border-right: $defaultBorder;
 
 		&:hover, &:focus {
 			text-decoration: $defaultLinkHovDecoration
@@ -135,27 +135,27 @@
 //
 // bookbag form
 #bookbag_form {
-	border-bottom: .066rem solid $defaultBorder
+	border-bottom: $defaultBorder
 }
 
 //
 // floating toolbar
 #floating {
-	border: .066rem solid $defaultBorder;
+	border: $defaultBorder;
 	border-radius: $defaultRadius
 }
 
 #toolbar.toolbar,
 #toolbar.toolbar.clearfix {
 	background: $defaultBg;
-	border: .066rem solid transparent;
-	border-bottom: .066rem solid $defaultBorder
+	border: transparent;
+	border-bottom: $defaultBorder
 }
 
 #selections-toolbar,
 .selections-toolbar {
 	background: $defaultBg;
-	border: .066rem solid transparent
+	border: transparent
 }
 
 // underlined links
@@ -212,7 +212,7 @@
 .suggestion {
 	background-color: $defaultBg;
 	color: $defaultText;
-	border: .066rem solid transparent;
+	border: transparent;
 	border-radius: $defaultRadius
 }
 
@@ -257,16 +257,16 @@
 //
 // views
 #views {
-	border-bottom: .066rem solid $defaultBorder
+	border-bottom: $defaultBorder
 }
 
 .view {
 	color: $defaultText;
 
-	border-top: .066rem solid $defaultBorder;
-	border-right: .066rem solid $defaultBorder;
+	border-top: $defaultBorder;
+	border-right: $defaultBorder;
 	border-bottom: none;
-	border-left: .066rem solid $defaultBorder;
+	border-left: $defaultBorder;
 	border-radius: $defaultRadius $defaultRadius 0 0
 }
 

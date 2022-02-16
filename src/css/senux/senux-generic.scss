@@ -65,7 +65,7 @@ ul {
 }
 
 hr {
-	border-top: .066rem solid $defaultBorder
+	border-top: $defaultBorder
 }
 
 //
@@ -115,8 +115,8 @@ hr {
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: .066rem solid $btnPriBorder;
-	box-shadow: 0 0 0 .33rem $btnPriShadow;
+	border: $btnPriBorder;
+	box-shadow: $btnPriShadow;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -126,8 +126,8 @@ hr {
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: .066rem solid $btnPriBorderHov;
-		box-shadow: 0 0 0 .33rem $btnPriShadowHov
+		border: $btnPriBorderHov;
+		box-shadow: $btnPriShadowHov
 	}
 }
 
@@ -141,7 +141,7 @@ hr {
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: .066rem solid $btnPriBorder;
+	border: $btnPriBorder;
 	box-shadow: 0 0 0 .33rem $btnPriShadow;
 
 	&:hover, &:focus,
@@ -152,8 +152,8 @@ hr {
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: .066rem solid $btnPriBorderHov;
-		box-shadow: 0 0 0 .33rem $btnPriShadowHov
+		border: $btnPriBorderHov;
+		box-shadow: $btnPriShadowHov
 	}
 }
 
@@ -166,7 +166,7 @@ hr {
 
 	color: $btnSecText;
 	background-color: $btnSecBg;
-	border: .066rem solid $btnSecBorder;
+	border: $btnSecBorder;
 	box-shadow: 0 0 0 .33rem $btnSecShadow;
 
 	&:hover, &:focus,
@@ -177,8 +177,8 @@ hr {
 
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
-		border: .066rem solid $btnSecBorderHov;
-		box-shadow: 0 0 0 .33rem $btnSecShadowHov
+		border: $btnSecBorderHov;
+		box-shadow: $btnSecShadowHov
 	}
 }
 
@@ -190,7 +190,7 @@ hr {
 
 	color: $defaultLink;
 	background-color: transparent;
-	border: .066rem solid transparent;
+	border: transparent;
 
 	i.fa {
 		color: $defaultLink;
@@ -205,7 +205,7 @@ hr {
 
 		color: darken($defaultLink, 15%);
 		background-color: transparent;
-		border: .066rem solid $defaultBorder;
+		border: $defaultBorder;
 		box-shadow: 0 0 0 .33rem transparent;
 
 		i.fa {
@@ -231,7 +231,7 @@ hr {
 
 	color: $msWhite;
 	background-color: $msRed;
-	border: .066rem solid $msWhite;
+	border: $msWhite;
 	
 
 	&:hover, &:focus,
@@ -242,7 +242,7 @@ hr {
 
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
-		border: .066rem solid darken($msRed, 10%);
+		border: darken($msRed, 10%);
 		box-shadow: 0 0 0 .33rem $msRed
 	}
 }
@@ -271,7 +271,7 @@ input[type="search"], select, textarea,
 	text-shadow: none;
 	border-radius: $defaultRadius;
 
-	border: .066rem solid $inputBorder;
+	border: $inputBorder;
 	box-shadow: $inputShadow;
 
 	&:hover, &:active,
@@ -279,16 +279,16 @@ input[type="search"], select, textarea,
 		background-image: none;
 		text-shadow: none;
 		
-		border: .066rem solid $inputBorderHov;
-		box-shadow: 0 0 0 .33rem $inputShadowHov
+		border: $inputBorderHov;
+		box-shadow: $inputShadowHov
 	}
 
 	&:focus {
 		background-image: none;
 		text-shadow: none;
 		
-		border: .066rem solid $inputBorderFoc;
-		box-shadow: 0 0 0 .33rem $inputShadowFoc
+		border: $inputBorderFoc;
+		box-shadow: $inputShadowFoc
 	}
 
 	&:disabled {

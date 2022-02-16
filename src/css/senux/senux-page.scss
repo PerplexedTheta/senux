@@ -26,7 +26,7 @@
 	margin: .5rem 0 .9375rem;
 	color: $defaultText;
 	background-color: $defaultBg;
-	border: .066rem solid transparent;
+	border: transparent;
 	border-radius: $defaultRadius
 }
 
@@ -107,12 +107,12 @@
 
 .table-bordered, .table-bordered td,
 .table-bordered th {
-	border: .066rem solid lighten($defaultText, 33%)
+	border: lighten($defaultText, 33%)
 }
 
 .table thead th {
 	background-color: darken($defaultBg, 5%);
-	border-bottom: .066rem solid lighten($defaultText, 33%)
+	border-bottom: lighten($defaultText, 33%)
 }
 
 .table tbody tr {
@@ -173,17 +173,17 @@
 //
 // menus
 .menu-collapse {
-	border-right: .066rem solid darken($defaultBg, 33%);
+	border-right: darken($defaultBg, 33%);
 }
 
 #menu li {
 	a {
 		color: $defaultLink;
 		border-radius: $defaultRadius 0 0 $defaultRadius;
-		border-top: .066rem solid darken($defaultBg, 33%);
-		border-right: .066rem solid transparent;
-		border-bottom: .066rem solid darken($defaultBg, 33%);
-		border-left: .066rem solid darken($defaultBg, 33%);
+		border-top: darken($defaultBg, 33%);
+		border-right: transparent;
+		border-bottom: darken($defaultBg, 33%);
+		border-left: darken($defaultBg, 33%);
 
 		&:hover, &:focus,
 		&:active, &.active {
@@ -194,10 +194,10 @@
 
 	&.active a {
 		border-radius: $defaultRadius 0 0 $defaultRadius;
-		border-top: .066rem solid darken($defaultBg, 33%);
-		border-right: .066rem solid transparent;
-		border-bottom: .066rem solid darken($defaultBg, 33%);
-		border-left: .066rem solid darken($defaultBg, 33%)
+		border-top: darken($defaultBg, 33%);
+		border-right: transparent;
+		border-bottom: darken($defaultBg, 33%);
+		border-left: darken($defaultBg, 33%)
 	}
 }
 
