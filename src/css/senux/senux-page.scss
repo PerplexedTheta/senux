@@ -193,11 +193,11 @@
 	}
 
 	&.active a {
-		border-radius: $defaultRadius 0 0 $defaultRadius;
-		border-top: darken($defaultBg, 33%);
+		border-radius: $defaultRadius;
+		border-top: .066rem solid darken($defaultBg, 33%);
 		border-right: .066rem solid transparent;
-		border-bottom: darken($defaultBg, 33%);
-		border-left: darken($defaultBg, 33%)
+		border-bottom: .066rem solid darken($defaultBg, 33%);
+		border-left: .066rem solid darken($defaultBg, 33%)
 	}
 }
 

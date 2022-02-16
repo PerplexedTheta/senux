@@ -527,11 +527,11 @@ input[type=search]:read-only, textarea:read-only {
   color: #f3f2f1;
 }
 #menu li.active a {
-  border-radius: 0.33rem 0 0 0.33rem;
-  border-top: #a59e96;
+  border-radius: 0.33rem;
+  border-top: 0.066rem solid #a59e96;
   border-right: 0.066rem solid transparent;
-  border-bottom: #a59e96;
-  border-left: #a59e96;
+  border-bottom: 0.066rem solid #a59e96;
+  border-left: 0.066rem solid #a59e96;
 }
 
 legend, .legend {
