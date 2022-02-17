@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// build.scss, Senux Project, Jake Deery, 2021
+
+// this scss file just contains import rules to various aspects of the overall
+// site css structures
+
+//
+//
+// metadata & library imports
+@use "sass:math";
+
+//
+//
+// custom imports
+@import '../../variables.sample.scss';
+@import 'senux/senux.scss';
+@import '../../customisations.sample.scss';
