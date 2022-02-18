@@ -33,6 +33,16 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 	border: none
 }
 
+#cartDetails {
+	top: auto;
+	right: auto;
+	bottom: 1rem;
+	left: 1rem;
+	border: $defaultBorder;
+	box-shadow: $defaultShadow;
+	border-radius: $defaultRadius
+}
+
 #cart-list-nav, #members, #header_langmenu {
 	li {
 		a {
