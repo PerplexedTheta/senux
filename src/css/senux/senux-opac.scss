@@ -113,13 +113,13 @@
 
 	.page-link {
 		background-color: $white;
-		color: $defaultLink
-	}
+		color: $defaultLink;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		background-color: $defaultLink;
-		color: $defaultBg
+		&:hover, &:focus,
+		&:active, &.active {
+			background-color: $defaultLink;
+			color: $defaultBg
+		}
 	}
 }
 

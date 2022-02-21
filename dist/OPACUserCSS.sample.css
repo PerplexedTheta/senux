@@ -629,7 +629,7 @@ caption, h5 {
   background-color: white;
   color: #2b579a;
 }
-.page-item:hover, .page-item:focus, .page-item:active, .page-item.active {
+.page-item .page-link:hover, .page-item .page-link:focus, .page-item .page-link:active, .page-item .page-link.active {
   background-color: #2b579a;
   color: #f3f2f1;
 }
