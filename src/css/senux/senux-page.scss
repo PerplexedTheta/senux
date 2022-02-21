@@ -179,6 +179,7 @@
 #menu li {
 	a {
 		color: $defaultLink;
+		background-color: $defaultBg;
 		border-radius: $defaultRadius 0 0 $defaultRadius;
 		border-top: .066rem solid darken($defaultBg, 33%);
 		border-right: .066rem solid transparent;

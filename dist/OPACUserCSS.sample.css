@@ -516,6 +516,7 @@ input[type=search]:read-only, textarea:read-only {
 
 #menu li a {
   color: #2b579a;
+  background-color: #f3f2f1;
   border-radius: 0.33rem 0 0 0.33rem;
   border-top: 0.066rem solid #a59e96;
   border-right: 0.066rem solid transparent;
