@@ -629,7 +629,15 @@ caption, h5 {
   background-color: white;
   color: #2b579a;
 }
+.page-item .page-link i.fa {
+  background-color: white;
+  color: #2b579a;
+}
 .page-item .page-link:hover, .page-item .page-link:focus, .page-item .page-link:active, .page-item .page-link.active {
+  background-color: #2b579a;
+  color: #f3f2f1;
+}
+.page-item .page-link:hover i.fa, .page-item .page-link:focus i.fa, .page-item .page-link:active i.fa, .page-item .page-link.active i.fa {
   background-color: #2b579a;
   color: #f3f2f1;
 }
@@ -658,6 +666,7 @@ caption, h5 {
 }
 #menu h2 a, #search-facets h2 a {
   color: #231f20;
+  background-color: #f3f2f1;
   text-decoration: underline;
   border-bottom: 0.066rem solid #d0ccc8;
   border-right: 0.066rem solid #d0ccc8;

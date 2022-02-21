@@ -115,10 +115,20 @@
 		background-color: $white;
 		color: $defaultLink;
 
+		i.fa {
+			background-color: $white;
+			color: $defaultLink
+		}
+
 		&:hover, &:focus,
 		&:active, &.active {
 			background-color: $defaultLink;
-			color: $defaultBg
+			color: $defaultBg;
+
+			i.fa {
+				background-color: $defaultLink;
+				color: $defaultBg
+			}
 		}
 	}
 }
@@ -151,6 +161,7 @@
 
 	a {
 		color: $defaultText;
+		background-color: $defaultBg;
 		text-decoration: $defaultLinkDecoration;
 		border-bottom: $defaultBorder;
 		border-right: $defaultBorder;
