@@ -19,7 +19,8 @@ if [[ ! $(command -v minify) ]]; then
 fi
 
 if [[ $1 == "--sample-run" ]]; then
-	minify ${SCRIPT_DIR}/dist/OPACUserJS.sample.js > ${SCRIPT_DIR}/dist/OPACUserJS.sample.min.js
+	# we do nothing here
+	echo -n ''
 else
 	minify ${SCRIPT_DIR}/dist/OPACUserJS.js > ${SCRIPT_DIR}/dist/OPACUserJS.min.js
 fi
