@@ -103,6 +103,20 @@
 	}
 }
 
+.page-item {
+	&.disabled {
+		.page-link {
+			background-color: $defaultLink;
+			color: $defaultBg
+		}
+	}
+
+	.page-link {
+		background-color: $white;
+		color: $defaultLink
+	}
+}
+
 #numresults, #selections {
 	color: $defaultText
 }

@@ -621,6 +621,15 @@ caption, h5 {
     padding: 0;
   }
 }
+.page-item.disabled .page-link {
+  background-color: #2b579a;
+  color: #f3f2f1;
+}
+.page-item .page-link {
+  background-color: white;
+  color: #2b579a;
+}
+
 #numresults, #selections {
   color: #231f20;
 }
