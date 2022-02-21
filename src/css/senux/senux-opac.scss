@@ -358,3 +358,42 @@ a#ISBDview {
 #changelanguage {
 	display: none
 }
+
+//
+//
+// inlibro changes
+#inlibro-carrousel {
+	padding: 1rem
+}
+
+#inlibro-carrousel .slider img {
+	height: 250px!important
+}
+
+#inlibro-carrousel hr {
+	display: none
+}
+
+#inlibro-carrousel button {
+	background-image: none!important;
+	text-shadow: none!important;
+	text-decoration: none!important;
+
+	color: $btnPriText!important;
+	background-color: $btnPriBg!important;
+	border: $btnPriBorder!important;
+	border-radius: $defaultRadius!important;
+	box-shadow: 0 0 0 .33rem $btnPriShadow!important;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		background-image: none!important;
+		text-shadow: none!important;
+		text-decoration: none!important;
+
+		color: $btnPriTextHov!important;
+		background-color: $btnPriBgHov!important;
+		border: $btnPriBorderHov!important;
+		box-shadow: $btnPriShadowHov!important
+	}
+}

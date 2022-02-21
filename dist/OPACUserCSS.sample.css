@@ -840,6 +840,38 @@ a#ISBDview.active {
   display: none;
 }
 
+#inlibro-carrousel {
+  padding: 1rem;
+}
+
+#inlibro-carrousel .slider img {
+  height: 250px !important;
+}
+
+#inlibro-carrousel hr {
+  display: none;
+}
+
+#inlibro-carrousel button {
+  background-image: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  color: #e6f2ff !important;
+  background-color: #007fff !important;
+  border: 0.066rem solid #4da5ff !important;
+  border-radius: 0.33rem !important;
+  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem transparent !important;
+}
+#inlibro-carrousel button:hover, #inlibro-carrousel button:focus, #inlibro-carrousel button:active, #inlibro-carrousel button.active {
+  background-image: none !important;
+  text-shadow: none !important;
+  text-decoration: none !important;
+  color: #007fff !important;
+  background-color: #e6f2ff !important;
+  border: 0.066rem solid #99ccff !important;
+  box-shadow: 0 0 0 0.33rem #99ccff !important;
+}
+
 #opaccredits, #koha_url, #report_a_problem {
   margin: 0;
   padding: 1rem;
