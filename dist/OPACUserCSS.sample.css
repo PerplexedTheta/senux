@@ -603,6 +603,11 @@ caption, h5 {
   color: #231f20;
 }
 
+#location, #sortby, pubrange,
+#langfilter {
+  border: 0.066rem solid #d0ccc8;
+}
+
 .selections {
   color: #231f20;
 }

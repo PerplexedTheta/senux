@@ -81,6 +81,11 @@
 	color: $defaultText
 }
 
+#location, #sortby, pubrange,
+#langfilter {
+	border: $defaultBorder
+}
+
 //
 //
 // search results
