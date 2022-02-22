@@ -54,6 +54,14 @@
 	}
 }
 
+.breadcrumb-item + .breadcrumb-item {
+	&::before {
+		height: auto;
+		background: none;
+		content: "/"
+	}
+}
+
 //
 // ui tabs
 .ui-tabs .ui-tabs-nav li {
