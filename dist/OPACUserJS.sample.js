@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// comment this out if you don't use saml
 	$('#loginModal').html('<div class=\"modal-dialog\"> <div class=\"modal-content\"> <div class=\"modal-header\"> <h2 class=\"modal-title\" id=\"modalLoginLabel\">Log in to your account<\/h2> <button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button> <\/div><div id=\"modalAuth\" class=\"modal-body\"> <h3>Academic student or staff?<\/h3> <p><a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to institution login &raquo;<\/a><\/p><h3>Academic associate?<\/h3> <p><a href=\"\/cgi-bin\/koha\/opac-user.pl\" class=\"btn btn-primary\">Go to local Koha login &raquo;<\/a><\/p><\/div><\/div><\/div>');
 
+	// disable borrower contact method dropdown if it is readonly
+	if($('select[name="borrower_primary_contact_method"]').attr('readonly') == "readonly") {
+		$('select[name="borrower_primary_contact_method"]').removeAttr('readonly');
+		$('select[name="borrower_primary_contact_method"]').attr('disabled', 'disabled');
+	}
+
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
 });
