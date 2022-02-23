@@ -334,13 +334,14 @@ input[type=search]:disabled, select:disabled, textarea:disabled,
 .form-control:disabled, .dataTables_filter input[type=search]:disabled {
   background-color: #e0e0e0;
 }
+
 input[type=text]:read-only, input[type=password]:read-only,
 input[type=email]:read-only, input[type=url]:read-only,
 input[type=time]:read-only, input[type=date]:read-only,
 input[type=datetime-local]:read-only, input[type=tel]:read-only,
 input[type=number]:read-only, input[type=search-md]:read-only,
-input[type=search]:read-only, select:read-only, textarea:read-only,
-.form-control:read-only, .dataTables_filter input[type=search]:read-only {
+input[type=search]:read-only, textarea:read-only,
+input[type=search]:read-only {
   background-color: #e0e0e0;
 }
 
