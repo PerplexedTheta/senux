@@ -203,7 +203,7 @@ hr {
   text-decoration: none;
   color: #2b579a;
   background-color: transparent;
-  border: 0.066rem solid #d0ccc8;
+  border: transparent;
 }
 .btn-link i.fa, .dt-button i.fa,
 .btn-link:not(:disabled):not(.disabled) i.fa {

@@ -49,7 +49,7 @@ $btnSecBorderHov: .066rem solid lighten($msBlack, 15%);
 $btnSecShadowHov: 0 0 0 .33rem lighten($msBlack, 15%);
 $btnLinkText: $defaultLink;
 $btnLinkBg: transparent;
-$btnLinkBorder: .066rem solid darken($msWhite, 15%);
+$btnLinkBorder: transparent;
 $btnLinkShadow: 0 0 0 .33rem transparent;
 $btnLinkTextHov: $defaultLinkHov;
 $btnLinkBgHov: transparent;
