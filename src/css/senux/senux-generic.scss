@@ -188,13 +188,13 @@ hr {
 	text-shadow: none;
 	text-decoration: none;
 
-	color: $defaultLink;
-	background-color: transparent;
-	border: .066rem solid transparent;
+	color: $btnLinkText;
+	background-color: $btnLinkBg;
+	border: $btnLinkBorder;
 
 	i.fa {
-		color: $defaultLink;
-		background-color: transparent;
+		color: $btnLinkText;
+		background-color: $btnLinkBg
 	}
 
 	&:hover, &:focus,
@@ -203,14 +203,14 @@ hr {
 		text-shadow: none;
 		text-decoration: none;
 
-		color: darken($defaultLink, 15%);
-		background-color: transparent;
-		border: $defaultBorder;
-		box-shadow: 0 0 0 .33rem transparent;
+		color: $btnLinkTextHov;
+		background-color: $btnLinkBgHov;
+		border: $btnLinkBorderHov;
+		box-shadow: $btnLinkShadowHov;
 
 		i.fa {
-			color: darken($defaultLink, 15%);
-			background-color: transparent;
+			color: $btnLinkTextHov;
+			background-color: $btnLinkBgHov
 		}
 	}
 }

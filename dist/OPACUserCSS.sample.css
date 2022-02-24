@@ -203,7 +203,7 @@ hr {
   text-decoration: none;
   color: #2b579a;
   background-color: transparent;
-  border: 0.066rem solid transparent;
+  border: 0.066rem solid #d0ccc8;
 }
 .btn-link i.fa, .dt-button i.fa,
 .btn-link:not(:disabled):not(.disabled) i.fa {
@@ -220,8 +220,8 @@ hr {
   text-decoration: none;
   color: #1a355e;
   background-color: transparent;
-  border: 0.066rem solid #d0ccc8;
-  box-shadow: 0 0 0 0.33rem transparent;
+  border: 0.066rem solid #99ccff;
+  box-shadow: 0 0 0 0.33rem #99ccff;
 }
 .btn-link:hover i.fa, .btn-link:focus i.fa, .btn-link:active i.fa, .btn-link.active i.fa, .dt-button:hover i.fa, .dt-button:focus i.fa, .dt-button:active i.fa, .dt-button.active i.fa,
 .btn-link:not(:disabled):not(.disabled):hover i.fa,
