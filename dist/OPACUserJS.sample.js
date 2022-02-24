@@ -42,10 +42,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
-
-	// begin handling links
-	linkEventHandler();
-
 });
 
 
@@ -114,7 +110,7 @@ function facetPublicationDateRange() {
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
-	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style="display:none"><p>- between -</p><input minlength="4" maxlength="4" placeholder="1921" name="yr-start" type="number"><p>- and -</p><input minlength="4" maxlength="4" type="number" placeholder="' + currentYear + '" name="yr-end"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href="#facetYrRefine" class="btn btn-primary mt-2">Refine</a></div><\/li>');
+	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"display:none\"><p>- between -</p><input placeholder=\"1921\" name=\"yr-start\" type=\"number\"><p>- and -</p><input type=\"number\" placeholder=\"' + currentYear + '\" name=\"yr-end\"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine<\/a><\/div><\/li>');
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
