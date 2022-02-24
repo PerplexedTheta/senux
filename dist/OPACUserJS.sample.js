@@ -121,7 +121,11 @@ function facetPublicationDateRange() {
 		event.preventDefault(); // disable usual behaviour
 		event.stopImmediatePropagation();
 
-		facetPublicationDateRangeSubmitHandler(); // run the code
+		if($(this).parents('h3').siblings('ul').css('display') == 'none') $(this).parents('h3').siblings('ul').show(); // see facetAccordeon for how this code works
+		else $(this).parents('h3').siblings('ul').hide();
+
+		$(this).find('i.fa').toggleClass('fa-chevron-down');
+		$(this).find('i.fa').toggleClass('fa-chevron-left');
 	});
 
 	$('a[href="#facetYrRefine"]').on('click', function(event) {
