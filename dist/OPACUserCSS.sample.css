@@ -694,6 +694,17 @@ caption, h5 {
   float: right;
 }
 
+#yr_id p {
+  text-align: center;
+}
+#yr_id input, #yr_id a.btn {
+  width: 100%;
+}
+
+#facet-yr-error {
+  color: #b13719;
+}
+
 #bookbag_form {
   border-bottom: 0.066rem solid #d0ccc8;
 }
