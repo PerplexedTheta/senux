@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	//
 	// site-wide logic (MAIN FUNC)
 
-	// hide unavailable items behind a link
-	hideUnavailableResults();
-
 	// nav menus
 	$('#cart-list-nav').html('<li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-main.pl\" class=\"nav-link\" title=\"Homepage\" id=\"hmpmenu\"><i class=\"fa fa-home fa-icon-white\"><\/i><\/a><\/li><li class=\"nav-item\"><a href=\"#openFolder\" class=\"nav-link\" title=\"Cart\" id=\"bkbmenu\" role=\"button\"><i id=\"carticon\" class=\"fa fa-shopping-cart fa-icon-black\"><\/i> <span class=\"cartlabel\">Cart<\/span><\/a><\/li><li class=\"nav-item\"><a href=\"#\" class=\"nav-link\" title=\"Help\" id=\"helpmenu\"><i class=\"fa fa-info-circle fa-icon-white\"><\/i> <span class=\"helplabel\">Help<\/span><\/a><\/li><li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-search.pl\" class=\"nav-link\" title=\"Help\" id=\"srchmenu\"><i class=\"fa fa-search fa-icon-white\"><\/i> <span class=\"srchlabel\">Search<\/span><\/a><\/li>');
 
@@ -63,27 +60,6 @@ function showGdprBanner() {
 	return;
 }
 
-//
-// function to handle link actions
-function linkEventHandler() {
-	// bookbag link handler
-	$('a[href="#openFolder"]').on('click', function(event) {
-		event.preventDefault();
-		basketWindowHandler();
-	});
-
-	// facet link handler
-	$('a[href="#expandFacet"]').on('click', function(event) {
-		event.preventDefault();
-
-		if($(this).parents('h3').siblings('ul').css('display') == 'none') $(this).parents('h3').siblings('ul').show();
-		else $(this).parents('h3').siblings('ul').hide();
-
-		$(this).find('i.fa').toggleClass('fa-chevron-down');
-		$(this).find('i.fa').toggleClass('fa-chevron-left');
-	});
-	return;
-}
 
 //
 // handle the basked a bit differently
@@ -100,6 +76,12 @@ function basketWindowHandler() {
 	var loc = "/cgi-bin/koha/opac-basket.pl?" + strCookie;
 	var basket = open(loc, "basket", optWin);
 	if (window.focus) basket.focus();
+
+	// bookbag link handler
+	$('a[href="#openFolder"]').on('click', function(event) {
+		event.preventDefault();
+		basketWindowHandler();
+	});
 	return;
 }
 
@@ -112,31 +94,14 @@ function scrollToThis(element) {
 	$("#scrolltocontent").click(function (event) {
 		event.preventDefault();
 
-		var content = $(element);
-		if (content.length > 0) {
+		var content = $(element); // based on passed param
+		if (content.length > 0) { // jump to element
 			$('html,body').animate({
 				scrollTop: content.first().offset().top
 			}, 'slow');
 
-			content.first().find(':focusable').eq(0).focus();
+			content.first().find(':focusable').eq(0).focus(); // focus it
 		}
-	});
-	return;
-}
-
-
-//
-// function to hide unavailable items behind link
-function hideUnavailableResults() {
-	$('#bookbag_form tbody tr').each(function() {
-        	$(this).find('.results_summary.availability .unavailable:gt(0)').hide();
-		$(this).find('.results_summary.availability .unavailable .AvailabilityLabel').append(' <a href="#showUnavailable">Click here to show unavailable items</a>');
-	});
-
-	$('a[href="#showUnavailable"]').on('click', function(event) {
-		event.preventDefault(); // prevent the url from changing
-		$(this).closest('.results_summary.availability').find('.unavailable:gt(0)').show();
-		$(this).remove();
 	});
 	return;
 }
@@ -148,17 +113,15 @@ function facetPublicationDateRange() {
 	// vars
 	var currentYear = new Date().getFullYear();
 
+	// first, inject the markup
 	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style="display:none"><p>- between -</p><input minlength="4" maxlength="4" placeholder="1921" name="yr-start" type="number"><p>- and -</p><input minlength="4" maxlength="4" type="number" placeholder="' + currentYear + '" name="yr-end"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href="#facetYrRefine" class="btn btn-primary mt-2">Refine</a></div><\/li>');
 
+	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
-		event.preventDefault();
+		event.preventDefault(); // disable usual behaviour
 		event.stopImmediatePropagation();
 
-		if($(this).parents('h3').siblings('div').css('display') == 'none') $(this).parents('h3').siblings('div').show();
-		else $(this).parents('h3').siblings('div').hide();
-
-		$(this).find('i.fa').toggleClass('fa-chevron-down');
-		$(this).find('i.fa').toggleClass('fa-chevron-left');
+		facetPublicationDateRangeSubmitHandler(); // run the code
 	});
 
 	$('a[href="#facetYrRefine"]').on('click', function(event) {
@@ -190,34 +153,35 @@ function facetPublicationDateRangeSubmitHandler() {
 	var yrStart = $('input[name="yr-start"]');
 	var yrEnd = $('input[name="yr-end"]');
 	var currentYear = new Date().getFullYear();
-	var urlParams = new URLSearchParams(window.location.search.substring(1));
+	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
 
-	if(isNaN(yrStart.val()) || yrStart.val() == '') {
-		$('#facet-yr-error').show();
-		return false;
+	if(isNaN(yrStart.val()) || yrStart.val() == '') { // if nothing is sent
+		$('#facet-yr-error').show(); // show error
+		return false; // ... and exit
 	}
 	if(isNaN(yrEnd.val()) || yrEnd.val() == '') {
 		$('#facet-yr-error').show();
 		return false;
 	}
 
-	if(yrStart.val() < '1921') yrStart.val('1921');
+	if(yrStart.val() < '1921') yrStart.val('1921'); // check we aren't too low
 	if(yrEnd.val() < '1921') yrEnd.val('1921');
-	if(yrStart.val() > '' + currentYear) yrStart.val('' + currentYear);
+	if(yrStart.val() > '' + currentYear) yrStart.val('' + currentYear); // check we aren't too high
 	if(yrEnd.val() > '' + currentYear) yrEnd.val('' + currentYear);
-	if(yrStart.val() > yrEnd.val()) yrStart.val(yrEnd.val());
+	if(yrStart.val() > yrEnd.val()) yrStart.val(yrEnd.val()); // check the scales don't cross over
 	if(yrEnd.val() < yrStart.val()) yrEnd.val(yrStart.val());
 
-	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr');
-	urlParams.append('limit-yr', $('input[name="yr-start"]').val() + '-' + $('input[name="yr-end"]').val());
+	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already...
+	urlParams.append('limit-yr', $('input[name="yr-start"]').val() + '-' + $('input[name="yr-end"]').val()); // add our years
 
-	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString();
+	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;
 }
 
 //
 // function to add accordeons to search facets
 function facetAccordeons() {
+	// change the labels to be links
 	$('#search-facets .menu-collapse h3').each(function () {
 		// vars
 		var currentText = $(this).text();
@@ -225,17 +189,31 @@ function facetAccordeons() {
 		$(this).html('<a href="\#expandFacet"\>' + currentText + ' <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a>');
 	});
 
+	// remove the display:none and collapsible facet
 	$('#search-facets .collapsible-facet').each(function() {
 		$(this).removeAttr('style');
 		$(this).removeClass('collapsible-facet');
 	});
 
+	// remove the toggle links
 	$('#search-facets .moretoggle').each(function() {
 		$(this).remove();
 	});
 
+	// hide the lists
 	$('#search-facets .menu-collapse ul').each(function() {
 		$(this).hide();
+	});
+
+	// facet link handler
+	$('a[href="#expandFacet"]').on('click', function(event) {
+		event.preventDefault();
+
+		if($(this).parents('h3').siblings('ul').css('display') == 'none') $(this).parents('h3').siblings('ul').show(); // unhide
+		else $(this).parents('h3').siblings('ul').hide(); // else hide
+
+		$(this).find('i.fa').toggleClass('fa-chevron-down'); // swap the chevrons
+		$(this).find('i.fa').toggleClass('fa-chevron-left');
 	});
 
 	return;
