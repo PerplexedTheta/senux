@@ -207,6 +207,11 @@ function facetAccordeons() {
 		$(this).hide();
 	});
 
+	// unhide anything that has been selected
+	$('#search-facets .menu-collapse li').find('li:contains("[x]")').each(function() {
+		$(this).parents("ul").show();
+	});
+
 	// facet link handler
 	$('a[href="#expandFacet"]').on('click', function(event) {
 		event.preventDefault();
