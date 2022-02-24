@@ -110,7 +110,7 @@ function facetPublicationDateRange() {
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
-	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"display:none\"><p>- between -</p><input placeholder=\"1921\" name=\"yr-start\" type=\"number\"><p>- and -</p><input type=\"number\" placeholder=\"' + currentYear + '\" name=\"yr-end\"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine<\/a><\/div><\/li>');
+	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"\"><p>- between -</p><input placeholder=\"1921\" name=\"yr-start\" type=\"number\"><p>- and -</p><input type=\"number\" placeholder=\"' + currentYear + '\" name=\"yr-end\"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine<\/a><\/div><\/li>');
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
@@ -165,8 +165,6 @@ function facetPublicationDateRangeSubmitHandler() {
 		return false;
 	}
 
-	if(yrStart.val() < '1921') yrStart.val('1921'); // check we aren't too low
-	if(yrEnd.val() < '1921') yrEnd.val('1921');
 	if(yrStart.val() > '' + currentYear) yrStart.val('' + currentYear); // check we aren't too high
 	if(yrEnd.val() > '' + currentYear) yrEnd.val('' + currentYear);
 	if(yrStart.val() > yrEnd.val()) yrStart.val(yrEnd.val()); // check the scales don't cross over
