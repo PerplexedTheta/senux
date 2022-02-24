@@ -148,6 +148,7 @@ function facetPublicationDateRange() {
 
 
 //
+// function to process publication date range submissions
 function facetPublicationDateRangeSubmitHandler() {
 	// vars
 	var yrStart = $('input[name="yr-start"]');
@@ -177,6 +178,7 @@ function facetPublicationDateRangeSubmitHandler() {
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;
 }
+
 
 //
 // function to add accordeons to search facets
