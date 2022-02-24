@@ -685,6 +685,15 @@ caption, h5 {
   text-decoration: none;
 }
 
+#search-facets h3 a {
+  display: block;
+  font-size: initial;
+  font-weight: bold;
+}
+#search-facets h3 a i.fa {
+  float: right;
+}
+
 #bookbag_form {
   border-bottom: 0.066rem solid #d0ccc8;
 }

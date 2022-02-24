@@ -172,6 +172,30 @@
 	}
 }
 
+#search-facets h3 a {
+	display: block;
+	font-size: initial;
+	font-weight: bold;
+
+	i.fa {
+		float: right
+	}
+}
+
+#yr_id {
+	p {
+		text-align: center
+	}
+
+	input, a.btn {
+		width: 100%
+	}
+}
+
+#facet-yr-error {
+	color: $msRed
+}
+
 //
 // bookbag form
 #bookbag_form {
