@@ -954,7 +954,7 @@ a#ISBDview.active {
   color: #e6f2ff !important;
   background-color: #007fff !important;
   border: 0.066rem solid #4da5ff !important;
-  outline: 0.33rem solid #99ccff !important;
+  outline: 0.33rem solid transparent !important;
   border-radius: 0.33rem !important;
   outline-offset: 0.066rem;
 }

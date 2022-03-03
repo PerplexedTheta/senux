@@ -440,7 +440,7 @@ a#ISBDview {
 	color: $btnPriText!important;
 	background-color: $btnPriBg!important;
 	border: $btnPriBorder!important;
-	outline: .33rem solid darken($userText1, 15%)!important;
+	outline: .33rem solid transparent!important;
 
 	border-radius: $defaultRadius!important;
 	outline-offset: .066rem;
