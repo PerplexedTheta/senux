@@ -306,7 +306,6 @@ input[type="number"], input[type="search-md"],
 input[type="search"], select, textarea,
 .form-control, .dataTables_filter input[type="search"] {
 	padding: 0.375rem 0.75rem;
-	outline: none;
 	font-weight: 300;
 	font-size: 1.1rem;
 	height: auto;
@@ -314,6 +313,7 @@ input[type="search"], select, textarea,
 	background-image: none;
 	text-shadow: none;
 	border-radius: $defaultRadius;
+	outline-offset: $defaultOutlineOffset;
 
 	color: $defaultText;
 	background-color: $white;
