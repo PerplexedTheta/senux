@@ -44,6 +44,7 @@ a {
 	color: $defaultLinkText;
 	border: $defaultLinkBorder;
 	outline: $defaultLinkOutline;
+	box-shadow: none!important;
 	text-decoration: $defaultLinkDecoration;
 
 	border-radius: $defaultRadius;
@@ -157,6 +158,7 @@ hr {
 	background-color: $btnPriBg;
 	border: $btnPriBorder;
 	outline: $btnPriOutline;
+	box-shadow: none!important;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -183,6 +185,7 @@ hr {
 	background-color: $btnPriBg;
 	border: $btnPriBorder;
 	outline: $btnPriOutline;
+	box-shadow: none!important;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -208,6 +211,7 @@ hr {
 	background-color: $btnSecBg;
 	border: $btnSecBorder;
 	outline: $btnSecOutline;
+	box-shadow: none!important;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -315,6 +319,7 @@ input[type="search"], select, textarea,
 	background-color: $white;
 	border: $inputBorder;
 	outline: $inputOutline;
+	box-shadow: none!important;
 
 	&:hover, &:active,
 	&.active {
