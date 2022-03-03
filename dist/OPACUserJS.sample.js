@@ -107,10 +107,14 @@ function scrollToThis(element) {
 // function to add date ranges to search facets
 function facetPublicationDateRange() {
 	// vars
+	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
-	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-left\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"\"><p>- between -</p><input placeholder=\"1921\" name=\"yr-start\" type=\"number\"><p>- and -</p><input type=\"number\" placeholder=\"' + currentYear + '\" name=\"yr-end\"><p id=\"facet-yr-error\" style=\"display:none\">Please enter two dates above<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine<\/a><\/div><\/li>');
+	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"display:none\"><input type=\"text\" name=\"limit-yr\"><p class=\"hint\">For example: 1999-2001<\/p><a href=\"#facetYrRefine\" class=\"btn btn-default mt-2\">Refine<\/a><\/div><\/li>');
+
+	// then, check for and inject, the previous value
+	if(urlParams.get('limit-yr')) $('input[name="limit-yr"]').val(urlParams.get('limit-yr'));
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
@@ -129,19 +133,12 @@ function facetPublicationDateRange() {
 
 		facetPublicationDateRangeSubmitHandler();
 	});
-	$('input[name="yr-start"]').on('keyup', function(event) {
+	$('input[name="limit-yr"]').on('keyup', function(event) {
 		if (event.key === 'Enter' || event.keyCode === 13) {
 			event.preventDefault();
 
 			facetPublicationDateRangeSubmitHandler();
-        }
-	});
-	$('input[name="yr-end"]').on('keyup', function(event) {
-		if (event.key === 'Enter' || event.keyCode === 13) {
-			event.preventDefault();
-
-			facetPublicationDateRangeSubmitHandler();
-        }
+		}
 	});
 	return;
 }
@@ -151,27 +148,11 @@ function facetPublicationDateRange() {
 // function to process publication date range submissions
 function facetPublicationDateRangeSubmitHandler() {
 	// vars
-	var yrStart = $('input[name="yr-start"]');
-	var yrEnd = $('input[name="yr-end"]');
-	var currentYear = new Date().getFullYear();
+	var limitYr = $('input[name="limit-yr"]').val();
 	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
 
-	if(isNaN(yrStart.val()) || yrStart.val() == '') { // if nothing is sent
-		$('#facet-yr-error').show(); // show error
-		return false; // ... and exit
-	}
-	if(isNaN(yrEnd.val()) || yrEnd.val() == '') {
-		$('#facet-yr-error').show();
-		return false;
-	}
-
-	if(yrStart.val() > '' + currentYear) yrStart.val('' + currentYear); // check we aren't too high
-	if(yrEnd.val() > '' + currentYear) yrEnd.val('' + currentYear);
-	if(yrStart.val() > yrEnd.val()) yrStart.val(yrEnd.val()); // check the scales don't cross over
-	if(yrEnd.val() < yrStart.val()) yrEnd.val(yrStart.val());
-
-	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already...
-	urlParams.append('limit-yr', $('input[name="yr-start"]').val() + '-' + $('input[name="yr-end"]').val()); // add our years
+	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already, delete...
+	urlParams.append('limit-yr', limitYr); // add our years
 
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;

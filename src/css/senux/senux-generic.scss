@@ -40,19 +40,58 @@ h4, h5, h6,
 }
 
 a {
-	color: $defaultLink;
+	background-color: $defaultLinkBg;
+	color: $defaultLinkText;
+	border: $defaultLinkBorder;
+	outline: $defaultLinkOutline;
 	text-decoration: $defaultLinkDecoration;
 
-	&:link, &:visited {
-		background-color: transparent;
-		color: $defaultLink;
-		text-decoration: $defaultLinkDecoration
+	border-radius: $defaultRadius;
+	outline-offset: $defaultOutlineOffset;
+
+	i.fa {
+		background-color: $defaultLinkBg;
+		color: $defaultLinkText
 	}
 
-	&:hover, &:focus,
+	&:link, &:visited {
+		background-color: $defaultLinkBg;
+		color: $defaultLinkText;
+		border: $defaultLinkBorder;
+		outline: $defaultLinkOutline;
+		text-decoration: $defaultLinkDecoration;
+
+		i.fa {
+			background-color: $defaultLinkBg;
+			color: $defaultLinkText
+		}
+	}
+
+	&:hover {
+		background-color: $defaultLinkBgHov;
+		color: $defaultLinkTextHov;
+		border: $defaultLinkBorderHov;
+		outline: $defaultLinkOutlineHov;
+		text-decoration: $defaultLinkDecorationHov;
+
+		i.fa {
+			background-color: $defaultLinkBgHov;
+			color: $defaultLinkTextHov
+		}
+	}
+
+	&:focus,
 	&:active, &.active {
-		color: darken($defaultLink, 15%);
-		text-decoration: $defaultLinkHovDecoration
+		background-color: $defaultLinkBgFoc;
+		color: $defaultLinkTextFoc;
+		border: $defaultLinkBorderFoc;
+		outline: $defaultLinkOutlineFoc;
+		text-decoration: $defaultLinkDecorationFoc;
+
+		i.fa {
+			background-color: $defaultLinkBgFoc;
+			color: $defaultLinkTextFoc
+		}
 	}
 }
 
@@ -108,6 +147,7 @@ hr {
 	padding: .45rem 1.125rem;
 	font-size: 1rem;
 	border-radius: $defaultRadius;
+	outline-offset: $defaultOutlineOffset;
 	cursor: pointer;
 	white-space: normal;
 	word-wrap: break-word;
@@ -116,7 +156,7 @@ hr {
 	color: $btnPriText;
 	background-color: $btnPriBg;
 	border: $btnPriBorder;
-	box-shadow: $btnPriShadow;
+	outline: $btnPriOutline;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -127,7 +167,7 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: $btnPriBorderHov;
-		box-shadow: $btnPriShadowHov
+		outline: $btnPriOutlineHov
 	}
 }
 
@@ -142,7 +182,7 @@ hr {
 	color: $btnPriText;
 	background-color: $btnPriBg;
 	border: $btnPriBorder;
-	box-shadow: 0 0 0 .33rem $btnPriShadow;
+	outline: $btnPriOutline;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -153,7 +193,7 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: $btnPriBorderHov;
-		box-shadow: $btnPriShadowHov
+		outline: $btnPriOutlineHov
 	}
 }
 
@@ -167,7 +207,7 @@ hr {
 	color: $btnSecText;
 	background-color: $btnSecBg;
 	border: $btnSecBorder;
-	box-shadow: 0 0 0 .33rem $btnSecShadow;
+	outline: $btnSecOutline;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -178,7 +218,7 @@ hr {
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
 		border: $btnSecBorderHov;
-		box-shadow: $btnSecShadowHov
+		outline: $btnSecOutlineHov
 	}
 }
 
@@ -206,7 +246,7 @@ hr {
 		color: $btnLinkTextHov;
 		background-color: $btnLinkBgHov;
 		border: $btnLinkBorderHov;
-		box-shadow: $btnLinkShadowHov;
+		outline: $btnLinkOutlineHov;
 
 		i.fa {
 			color: $btnLinkTextHov;
@@ -216,11 +256,11 @@ hr {
 }
 
 .dt-button::before {
-	color: $defaultLink
+	color: $defaultLinkText
 }
 
 .dt-button:hover::before {
-	color: darken($defaultLink, 15%)
+	color: darken($defaultLinkText, 15%)
 }
 
 .btn-danger, input[type="submit"].btn-danger,
@@ -243,7 +283,7 @@ hr {
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
 		border: darken($msRed, 10%);
-		box-shadow: 0 0 0 .33rem $msRed
+		outline: .33rem solid $msRed
 	}
 }
 
@@ -274,7 +314,7 @@ input[type="search"], select, textarea,
 	color: $defaultText;
 	background-color: $white;
 	border: $inputBorder;
-	box-shadow: $inputShadow;
+	outline: $inputOutline;
 
 	&:hover, &:active,
 	&.active {
@@ -282,7 +322,7 @@ input[type="search"], select, textarea,
 		text-shadow: none;
 
 		border: $inputBorderHov;
-		box-shadow: $inputShadowHov
+		outline: $inputOutlineHov
 	}
 
 	&:focus {
@@ -290,7 +330,7 @@ input[type="search"], select, textarea,
 		text-shadow: none;
 
 		border: $inputBorderFoc;
-		box-shadow: $inputShadowFoc
+		outline: $inputOutlineFoc
 	}
 
 	&:disabled {

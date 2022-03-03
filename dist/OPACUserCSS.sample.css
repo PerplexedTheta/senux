@@ -30,17 +30,50 @@ h4, h5, h6,
 }
 
 a {
+  background-color: transparent;
   color: #2b579a;
-  text-decoration: underline;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 0.33rem;
+  outline-offset: 0.066rem;
+}
+a i.fa {
+  background-color: transparent;
+  color: #2b579a;
 }
 a:link, a:visited {
   background-color: transparent;
   color: #2b579a;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+a:link i.fa, a:visited i.fa {
+  background-color: transparent;
+  color: #2b579a;
+}
+a:hover {
+  background-color: transparent;
+  color: #1a355e;
+  border: none;
+  outline: none;
   text-decoration: underline;
 }
-a:hover, a:focus, a:active, a.active {
+a:hover i.fa {
+  background-color: transparent;
   color: #1a355e;
+}
+a:focus, a:active, a.active {
+  background-color: #fafbfd !important;
+  color: #1a355e !important;
+  border: none;
+  outline: 0.33rem solid #99ccff !important;
   text-decoration: none;
+}
+a:focus i.fa, a:active i.fa, a.active i.fa {
+  background-color: #fafbfd !important;
+  color: #1a355e !important;
 }
 
 label {
@@ -114,6 +147,7 @@ hr {
   padding: 0.45rem 1.125rem;
   font-size: 1rem;
   border-radius: 0.33rem;
+  outline-offset: 0.066rem;
   cursor: pointer;
   white-space: normal;
   word-wrap: break-word;
@@ -121,7 +155,7 @@ hr {
   color: #e6f2ff;
   background-color: #007fff;
   border: 0.066rem solid #4da5ff;
-  box-shadow: 0 0 0 0.33rem transparent;
+  outline: 0.33rem solid transparent;
 }
 .btn:hover, .btn:focus, .btn:active, .btn.active, input[type=submit].btn:hover, input[type=submit].btn:focus, input[type=submit].btn:active, input[type=submit].btn.active {
   background-image: none;
@@ -130,7 +164,7 @@ hr {
   color: #007fff;
   background-color: #e6f2ff;
   border: 0.066rem solid #99ccff;
-  box-shadow: 0 0 0 0.33rem #99ccff;
+  outline: 0.33rem solid #99ccff;
 }
 
 .btn-primary, #loginModal input[type=submit],
@@ -143,7 +177,7 @@ hr {
   color: #e6f2ff;
   background-color: #007fff;
   border: 0.066rem solid #4da5ff;
-  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem transparent;
+  outline: 0.33rem solid transparent;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, #loginModal input[type=submit]:hover, #loginModal input[type=submit]:focus, #loginModal input[type=submit]:active, #loginModal input[type=submit].active,
 .btn-primary:not(:disabled):not(.disabled):hover,
@@ -164,7 +198,7 @@ hr {
   color: #007fff;
   background-color: #e6f2ff;
   border: 0.066rem solid #99ccff;
-  box-shadow: 0 0 0 0.33rem #99ccff;
+  outline: 0.33rem solid #99ccff;
 }
 
 .btn-default, .btn-secondary,
@@ -176,7 +210,7 @@ hr {
   color: #231f20;
   background-color: #f3f2f1;
   border: 0.066rem solid #d0ccc8;
-  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem transparent;
+  outline: 0.33rem solid transparent;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active,
 .btn-default:not(:disabled):not(.disabled):hover,
@@ -193,7 +227,7 @@ hr {
   color: #f3f2f1;
   background-color: #231f20;
   border: 0.066rem solid #4c4345;
-  box-shadow: 0 0 0 0.33rem #4c4345;
+  outline: 0.33rem solid #4c4345;
 }
 
 .btn-link, .dt-button,
@@ -203,7 +237,7 @@ hr {
   text-decoration: none;
   color: #2b579a;
   background-color: transparent;
-  border: transparent;
+  border: 0.066rem solid transparent;
 }
 .btn-link i.fa, .dt-button i.fa,
 .btn-link:not(:disabled):not(.disabled) i.fa {
@@ -219,9 +253,9 @@ hr {
   text-shadow: none;
   text-decoration: none;
   color: #1a355e;
-  background-color: transparent;
+  background-color: #fafbfd;
   border: 0.066rem solid #99ccff;
-  box-shadow: 0 0 0 0.33rem #99ccff;
+  outline: 0.33rem solid #99ccff;
 }
 .btn-link:hover i.fa, .btn-link:focus i.fa, .btn-link:active i.fa, .btn-link.active i.fa, .dt-button:hover i.fa, .dt-button:focus i.fa, .dt-button:active i.fa, .dt-button.active i.fa,
 .btn-link:not(:disabled):not(.disabled):hover i.fa,
@@ -229,7 +263,7 @@ hr {
 .btn-link:not(:disabled):not(.disabled):active i.fa,
 .btn-link:not(:disabled):not(.disabled).active i.fa {
   color: #1a355e;
-  background-color: transparent;
+  background-color: #fafbfd;
 }
 
 .dt-button::before {
@@ -260,7 +294,7 @@ hr {
   color: #f3f2f1;
   background-color: #6e2210;
   border: #842913;
-  box-shadow: 0 0 0 0.33rem #b13719;
+  outline: 0.33rem solid #b13719;
 }
 
 .input-append .add-on:last-child, .input-append .btn:last-child,
@@ -287,7 +321,7 @@ input[type=search], select, textarea,
   color: #231f20;
   background-color: white;
   border: 0.066rem solid #d0ccc8;
-  box-shadow: none;
+  outline: none;
 }
 input[type=text]:hover, input[type=text]:active, input[type=text].active, input[type=password]:hover, input[type=password]:active, input[type=password].active,
 input[type=email]:hover,
@@ -311,7 +345,7 @@ input[type=search].active, select:hover, select:active, select.active, textarea:
   background-image: none;
   text-shadow: none;
   border: 0.066rem solid #3498ff;
-  box-shadow: 0 0 0 0.33rem #3498ff;
+  outline: 0.33rem solid #3498ff;
 }
 input[type=text]:focus, input[type=password]:focus,
 input[type=email]:focus, input[type=url]:focus,
@@ -323,7 +357,7 @@ input[type=search]:focus, select:focus, textarea:focus,
   background-image: none;
   text-shadow: none;
   border: 0.066rem solid #3498ff;
-  box-shadow: 0 0 0 0.33rem #007fff;
+  outline: 0.33rem solid #007fff;
 }
 input[type=text]:disabled, input[type=password]:disabled,
 input[type=email]:disabled, input[type=url]:disabled,
@@ -594,10 +628,10 @@ caption, h5 {
 }
 
 .newsheader a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 .newsheader a:hover, .newsheader a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .newsfooter {
@@ -677,12 +711,12 @@ caption, h5 {
 #menu h2 a, #search-facets h2 a {
   color: #231f20;
   background-color: #f3f2f1;
-  text-decoration: underline;
+  text-decoration: none;
   border-bottom: 0.066rem solid #d0ccc8;
   border-right: 0.066rem solid #d0ccc8;
 }
 #menu h2 a:hover, #menu h2 a:focus, #search-facets h2 a:hover, #search-facets h2 a:focus {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #search-facets h3 a {
@@ -730,7 +764,7 @@ caption, h5 {
 #CheckAll, #CheckNone,
 .CheckAll, .CheckNone,
 #menu a, #search-facets a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 #CheckAll:hover, #CheckAll:focus, #CheckAll:active, #CheckAll.active, #CheckNone:hover, #CheckNone:focus, #CheckNone:active, #CheckNone.active,
 .CheckAll:hover,
@@ -741,7 +775,7 @@ caption, h5 {
 #menu a:focus,
 #menu a:active,
 #menu a.active, #search-facets a:hover, #search-facets a:focus, #search-facets a:active, #search-facets a.active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .available, .intransit, .unavailable,
@@ -838,7 +872,11 @@ caption, h5 {
   background-color: #f3f2f1;
 }
 
-#export .dropdown-menu a:hover, #export .dropdown-menu a:focus, #export .dropdown-menu a:link:hover, #export .dropdown-menu a:link:focus, #export .dropdown-menu a:visited:hover, #export .dropdown-menu a:visited:focus, #moresearches_menu .dropdown-menu a:hover, #moresearches_menu .dropdown-menu a:focus, #moresearches_menu .dropdown-menu a:link:hover, #moresearches_menu .dropdown-menu a:link:focus, #moresearches_menu .dropdown-menu a:visited:hover, #moresearches_menu .dropdown-menu a:visited:focus {
+#export .dropdown-menu a, #moresearches_menu .dropdown-menu a {
+  background-color: transparent;
+  color: #231f20;
+}
+#export .dropdown-menu a:hover, #moresearches_menu .dropdown-menu a:hover {
   background-color: #80bfff;
   color: #231f20;
 }
@@ -852,14 +890,14 @@ caption, h5 {
 
 a#Normalview, a#MARCview,
 a#ISBDview {
-  text-decoration: underline;
+  text-decoration: none;
 }
 a#Normalview:hover, a#Normalview:focus, a#Normalview:active, a#Normalview.active, a#MARCview:hover, a#MARCview:focus, a#MARCview:active, a#MARCview.active,
 a#ISBDview:hover,
 a#ISBDview:focus,
 a#ISBDview:active,
 a#ISBDview.active {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .dataTables_filter input,
@@ -911,8 +949,9 @@ a#ISBDview.active {
   color: #e6f2ff !important;
   background-color: #007fff !important;
   border: 0.066rem solid #4da5ff !important;
+  outline: 0.33rem solid #99ccff !important;
   border-radius: 0.33rem !important;
-  box-shadow: 0 0 0 0.33rem 0 0 0 0.33rem transparent !important;
+  outline-offset: 0.066rem;
 }
 #inlibro-carrousel button:hover, #inlibro-carrousel button:focus, #inlibro-carrousel button:active, #inlibro-carrousel button.active {
   background-image: none !important;
@@ -921,7 +960,7 @@ a#ISBDview.active {
   color: #007fff !important;
   background-color: #e6f2ff !important;
   border: 0.066rem solid #99ccff !important;
-  box-shadow: 0 0 0 0.33rem #99ccff !important;
+  outline: 0.33rem solid #99ccff !important;
 }
 
 #opaccredits, #koha_url, #report_a_problem {
@@ -1044,15 +1083,18 @@ a#ISBDview.active {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  background-color: #aca69f;
+  background-color: #80bfff;
 }
 
 #logo {
   display: none;
   background: transparent url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAXCAYAAACcTMh5AAAABmJLR0QA/wD/AP+gvaeTAAAFfklEQVRYheWZfWiXVRTHz91mOjE3cSLm1NSRlhkVZppJYaEzlYgoS1KxSCqpiSRlZtmgsLAspq4FQTUFDSIh2Au9+JYppFhqRS+utMLmlg1bvs9Pf9xz+T3e332en87t94/nn4ff+Z63e+557jn3+YlkIMAAk4H1wHdAM7ALeAHok0n/kiZgNPAt8XQIuDWDjQKgFzAQmABMzELceeqzF1ACTAVGdLZfP4glwJmE5DlqAYbE2LgM2K5V66g8C7HfBmwGjkT8ju5sv865ASrOI3FR2pDB5tSI7NisLMT6fV59NgE52XK68AKTB7ZSByXYnK1yzUBuVhZi/Var37Wd5eOcXQHGi8gr7bCTKyL3JODunKw3xrS1w/4FE2BE5E7nNxsOC4E/21F9jt5LsP27yjzU6QtJ+bxefZ4F+naWn2gFLhCRKy7C1tAQE9v9ikXkrGSjElLkuv1uY0xjZznJEREBikRkfkfYCtAkfe40xjQ5JtATeBnYC8yKMwoMBsqxXXULUAvMOo+z1CWwTu3cDKwBdgI1elzFEnbsehPYDfwIrAYKFXsCeAY3GulCLpY+jQmkTvGlEd5VGpSjPTG6M4FjwDbgauUNBxqB6oTFdwdOqO3xwNO6AdOASWrzKNAzRr8UaFWZRcAY4CXgM6A/9lgAGOYUfu6ABK4JBJKvwYLOYcBNwEFsh2xSbGVAd7YG+hPQw8Pcht8bk4C7FG8BXgTewTYVhx9QPO0SgN2go0AbcLuH1QKVqrvfMa/tgOQBLAkEM0mxw0AOMBHYB4xUvA8wDm9G05iOq+4dAbvTFauLSeBbijcDn0TtY48Od0G4xtPL0/gAPgjYXUyqslc65nMdlMApAYdvKFYNzAC+AvqFFu3p1aje9hh8huJ/xeA/KN4KDPSw+xVrAfI87AHF2oDBAbvz/fXmichIT65JRPaJSIuI9BORUSqXRKdEZEuA7w7yEhFZISJDjDH/JRkCSkSkVH+mHQtK3fVZGNAfJCLD9WeVMeagJzJdnzXGmDMeVqbPL40xvwb8dtHnCRHZ6Bzu0Izuxp4d/q70B9ZmqL7awEKKA3JTA0H5etFdDt5ugNcVbw5gcxU7BRR7WC9Sr+AUD+tB6tUukwABVYrXR5mN2At/foaFudcxRPcF5B9R7Bvs4QvwPd4GBfTeVdm9CTIbVWZrAPtIsfUB7DHFGv04sN3a0S0xfncpPj/KPM15fOrBdtTGQPJ+CSUF+/0Q4FVsU3C7Oy+Dn49Vbl0M3gdbXRAZjRTLA/5R7MGA7jbFKgLYtMiaLg/gA/DHFwW+SFqQZ6SOdJoZkMsF/lZ8gvLe1t+HgYIEH+4DQNpoo/hTip/EO+ixHR1NcKGHlUQSkPZFiNTE4J+LDl+qeIMPLIpbTMDI117yNhGZryJyYxRvBboqry92vgJY7i16dOT3YpWpDNjNx86QACsCeLliaUUBLFBsP/aTXTcilQjcqPixgG6BbjzoeIMd1rfmiOsmXqAB3igRuSHCahGRh40x+LKS6r6bjDEnRUT0PrpM+WXYmbBIRKpE5EBE90Ox9+Zhkk4LRWSAiOwQkWcDuLs21gSw6/S5QWOeIyLR2PeIyCERySf9A/EqEXGV57r6XBFZE5es17yqGAM0RCrvODA5EKSTd2fNkx6/K6m/CM4A/wJpicBem06j91WgC1CGnc82A70DOr0VB29AVtzdICqAu7EDc5En86jK1OuaxwLrgGWRt6oSe6bXEXcf1+o4pUn7jXOpARiXkLxcYBW25aeNIcBQ7Oh0ElgeFwQwR5O9Fdu9P8fejYMfLbD362V4jSWCX4n9kHAce6ctiZGbh22Mf2C7fWkEW409QtaGNtE3NAJ4XxN4RKvqcaBbouIlRv8DfEqfXZUlsLUAAAAASUVORK5CYII=") no-repeat left center;
 }
-#logo:hover, #logo:focus {
+#logo:hover, #logo:focus, #logo:active, #logo.active {
   background: transparent url("data:image/png;base64,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") no-repeat left center;
+}
+#logo a:focus, #logo a:active, #logo a.active {
+  background-color: transparent !important;
 }
 @media (min-width: 992px) {
   #logo {
@@ -1076,7 +1118,8 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
   bottom: auto;
   left: 1rem;
   border: 0.066rem solid #d0ccc8;
-  box-shadow: 0 0 0 0.33rem #d0ccc8;
+  outline: 0.33rem solid #d0ccc8;
+  outline-offset: 0.066rem;
   border-radius: 0.33rem;
 }
 
@@ -1095,7 +1138,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
   color: #cac3c5;
 }
 #cart-list-nav li a.dropdown-item, #members li a.dropdown-item, #header_langmenu li a.dropdown-item {
-  background-color: #f3f2f1;
+  background-color: transparent;
   color: #231f20;
 }
 #cart-list-nav li a.dropdown-item i.fa, #members li a.dropdown-item i.fa, #header_langmenu li a.dropdown-item i.fa {

@@ -36,10 +36,10 @@
 	}
 
 	a, a:link, a:visited {
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($defaultLink, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 
@@ -86,22 +86,22 @@
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	a, a:link, a:visited {
 		background-color: transparent;
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
 			background-color: transparent;
-			color: darken($defaultLink, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
 
 .ui-tabs .ui-state-default {
 	a, a:link, a:visited {
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
 			background: darken($defaultBg, 15%);
-			color: darken($defaultLink, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -150,10 +150,10 @@
 	background-color: $defaultBg;
 
 	a, a:link, a:visited, a.btn.btn-link {
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($defaultLink, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -163,10 +163,10 @@
 	background-color: $white;
 
 	a, a:link, a:visited, a.btn.btn-link {
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($defaultLink, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -186,7 +186,7 @@
 
 #menu li {
 	a {
-		color: $defaultLink;
+		color: $defaultLinkText;
 		background-color: $defaultBg;
 		border-radius: $defaultRadius 0 0 $defaultRadius;
 		border-top: .066rem solid darken($defaultBg, 33%);
@@ -196,7 +196,7 @@
 
 		&:hover, &:focus,
 		&:active, &.active {
-			background-color: $defaultLink;
+			background-color: $defaultLinkText;
 			color: $defaultBg
 		}
 	}

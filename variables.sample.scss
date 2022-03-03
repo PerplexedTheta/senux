@@ -17,13 +17,25 @@ $userText3: $senuxText3;
 // 2.1 page variables
 $defaultBg: $msWhite;
 $defaultText: $msBlack;
-$defaultLink: $msBlue;
-$defaultLinkHov: darken($defaultLink, 15%);
-$defaultLinkDecoration: underline;
-$defaultLinkHovDecoration: none;
+$defaultLinkBg: transparent;
+$defaultLinkText: $msBlue;
+$defaultLinkBorder: none;
+$defaultLinkOutline: none;
+$defaultLinkDecoration: none;
+$defaultLinkBgHov: transparent;
+$defaultLinkTextHov: darken($defaultLinkText, 15%);
+$defaultLinkBorderHov: none;
+$defaultLinkOutlineHov: none;
+$defaultLinkDecorationHov: underline;
+$defaultLinkBgFoc: lighten($defaultLinkText, 60%)!important;
+$defaultLinkTextFoc: darken($defaultLinkText, 15%)!important;
+$defaultLinkBorderFoc: none;
+$defaultLinkOutlineFoc: .33rem solid darken($userText1, 15%)!important;
+$defaultLinkDecorationFoc: none;
 $defaultFonts: 'Helvetica', 'Arial', sans-serif;
 $defaultBorder: .066rem solid darken($defaultBg, 15%);
-$defaultShadow: 0 0 0 .33rem darken($defaultBg, 15%);
+$defaultOutline: .33rem solid darken($defaultBg, 15%);
+$defaultOutlineOffset: .066rem;
 $defaultRadius: .33rem;
 $defaultBullet: disc;
 
@@ -34,41 +46,41 @@ $mainText: $defaultText;
 $btnPriText: $userText1;
 $btnPriBg: $userHue1;
 $btnPriBorder: .066rem solid lighten($userHue1, 15%);
-$btnPriShadow: 0 0 0 .33rem transparent;
+$btnPriOutline: .33rem solid transparent;
 $btnPriTextHov: $userHue1;
 $btnPriBgHov: $userText1;
 $btnPriBorderHov: .066rem solid darken($userText1, 15%);
-$btnPriShadowHov: 0 0 0 .33rem darken($userText1, 15%);
+$btnPriOutlineHov: .33rem solid darken($userText1, 15%);
 $btnSecText: $msBlack;
 $btnSecBg: $msWhite;
 $btnSecBorder: .066rem solid darken($msWhite, 15%);
-$btnSecShadow: 0 0 0 .33rem transparent;
+$btnSecOutline: .33rem solid transparent;
 $btnSecTextHov: $msWhite;
 $btnSecBgHov: $msBlack;
 $btnSecBorderHov: .066rem solid lighten($msBlack, 15%);
-$btnSecShadowHov: 0 0 0 .33rem lighten($msBlack, 15%);
-$btnLinkText: $defaultLink;
+$btnSecOutlineHov: .33rem solid lighten($msBlack, 15%);
+$btnLinkText: $defaultLinkText;
 $btnLinkBg: transparent;
 $btnLinkBorder: .066rem solid transparent;
-$btnLinkShadow: 0 0 0 .33rem transparent;
-$btnLinkTextHov: $defaultLinkHov;
-$btnLinkBgHov: transparent;
+$btnLinkOutline: .33rem solid transparent;
+$btnLinkTextHov: $defaultLinkTextHov;
+$btnLinkBgHov: lighten($defaultLinkText, 60%);
 $btnLinkBorderHov: .066rem solid darken($userText1, 15%);
-$btnLinkShadowHov: 0 0 0 .33rem darken($userText1, 15%);
+$btnLinkOutlineHov: .33rem solid darken($userText1, 15%);
 // 3.2 input variables
 $inputBorder: .066rem solid darken($msWhite, 15%);
-$inputShadow: none;
+$inputOutline: none;
 $inputBorderHov: .066rem solid darken($userHue2, 15%);
-$inputShadowHov: 0 0 0 .33rem darken($userHue2, 15%);
+$inputOutlineHov: .33rem solid darken($userHue2, 15%);
 $inputBorderFoc: .066rem solid darken($userHue2, 15%);
-$inputShadowFoc: 0 0 0 .33rem $userHue1;
+$inputOutlineFoc: .33rem solid $userHue1;
 // 3.3 dropdown menu variables
 $dropdownBg: $msWhite;
-$dropdownBgHov: darken($msWhite, 30%);
 $dropdownText: $msBlack;
-$dropdownLink: $msBlack;
-$dropdownLinkHov: $msBlack;
-$dropdownLinkHovBg: $userHue2;
+$dropdownLinkBg: transparent;
+$dropdownLinkText: $msBlack;
+$dropdownLinkBgHov: $userHue2;
+$dropdownLinkTextHov: $msBlack;
 
 // 4. navbar variables
 $navbarLogo: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAXCAYAAACcTMh5AAAABmJLR0QA/wD/AP+gvaeTAAAFfklEQVRYheWZfWiXVRTHz91mOjE3cSLm1NSRlhkVZppJYaEzlYgoS1KxSCqpiSRlZtmgsLAspq4FQTUFDSIh2Au9+JYppFhqRS+utMLmlg1bvs9Pf9xz+T3e332en87t94/nn4ff+Z63e+557jn3+YlkIMAAk4H1wHdAM7ALeAHok0n/kiZgNPAt8XQIuDWDjQKgFzAQmABMzELceeqzF1ACTAVGdLZfP4glwJmE5DlqAYbE2LgM2K5V66g8C7HfBmwGjkT8ju5sv865ASrOI3FR2pDB5tSI7NisLMT6fV59NgE52XK68AKTB7ZSByXYnK1yzUBuVhZi/Var37Wd5eOcXQHGi8gr7bCTKyL3JODunKw3xrS1w/4FE2BE5E7nNxsOC4E/21F9jt5LsP27yjzU6QtJ+bxefZ4F+naWn2gFLhCRKy7C1tAQE9v9ikXkrGSjElLkuv1uY0xjZznJEREBikRkfkfYCtAkfe40xjQ5JtATeBnYC8yKMwoMBsqxXXULUAvMOo+z1CWwTu3cDKwBdgI1elzFEnbsehPYDfwIrAYKFXsCeAY3GulCLpY+jQmkTvGlEd5VGpSjPTG6M4FjwDbgauUNBxqB6oTFdwdOqO3xwNO6AdOASWrzKNAzRr8UaFWZRcAY4CXgM6A/9lgAGOYUfu6ABK4JBJKvwYLOYcBNwEFsh2xSbGVAd7YG+hPQw8Pcht8bk4C7FG8BXgTewTYVhx9QPO0SgN2go0AbcLuH1QKVqrvfMa/tgOQBLAkEM0mxw0AOMBHYB4xUvA8wDm9G05iOq+4dAbvTFauLSeBbijcDn0TtY48Od0G4xtPL0/gAPgjYXUyqslc65nMdlMApAYdvKFYNzAC+AvqFFu3p1aje9hh8huJ/xeA/KN4KDPSw+xVrAfI87AHF2oDBAbvz/fXmichIT65JRPaJSIuI9BORUSqXRKdEZEuA7w7yEhFZISJDjDH/JRkCSkSkVH+mHQtK3fVZGNAfJCLD9WeVMeagJzJdnzXGmDMeVqbPL40xvwb8dtHnCRHZ6Bzu0Izuxp4d/q70B9ZmqL7awEKKA3JTA0H5etFdDt5ugNcVbw5gcxU7BRR7WC9Sr+AUD+tB6tUukwABVYrXR5mN2At/foaFudcxRPcF5B9R7Bvs4QvwPd4GBfTeVdm9CTIbVWZrAPtIsfUB7DHFGv04sN3a0S0xfncpPj/KPM15fOrBdtTGQPJ+CSUF+/0Q4FVsU3C7Oy+Dn49Vbl0M3gdbXRAZjRTLA/5R7MGA7jbFKgLYtMiaLg/gA/DHFwW+SFqQZ6SOdJoZkMsF/lZ8gvLe1t+HgYIEH+4DQNpoo/hTip/EO+ixHR1NcKGHlUQSkPZFiNTE4J+LDl+qeIMPLIpbTMDI117yNhGZryJyYxRvBboqry92vgJY7i16dOT3YpWpDNjNx86QACsCeLliaUUBLFBsP/aTXTcilQjcqPixgG6BbjzoeIMd1rfmiOsmXqAB3igRuSHCahGRh40x+LKS6r6bjDEnRUT0PrpM+WXYmbBIRKpE5EBE90Ox9+Zhkk4LRWSAiOwQkWcDuLs21gSw6/S5QWOeIyLR2PeIyCERySf9A/EqEXGV57r6XBFZE5es17yqGAM0RCrvODA5EKSTd2fNkx6/K6m/CM4A/wJpicBem06j91WgC1CGnc82A70DOr0VB29AVtzdICqAu7EDc5En86jK1OuaxwLrgGWRt6oSe6bXEXcf1+o4pUn7jXOpARiXkLxcYBW25aeNIcBQ7Oh0ElgeFwQwR5O9Fdu9P8fejYMfLbD362V4jSWCX4n9kHAce6ctiZGbh22Mf2C7fWkEW409QtaGNtE3NAJ4XxN4RKvqcaBbouIlRv8DfEqfXZUlsLUAAAAASUVORK5CYII=') no-repeat left center;
@@ -100,7 +112,7 @@ $moreSearchLinkHov: lighten($userText2, 15%);
 // 6. opac-wide variables
 $onlineAccessBg: lighten($msGold, 33%);
 $onlineAccessText: $defaultText;
-$onlineAccessLink: $defaultLink;
+$onlineAccessLink: $defaultLinkText;
 
 // 7. footer variables
 $footerBg: $userHue3;

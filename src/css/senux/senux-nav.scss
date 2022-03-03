@@ -12,8 +12,16 @@
 	display: $navbarLogoDisplayMobile;
 	background: $navbarLogo;
 
-	&:hover, &:focus {
+	&:hover, &:focus,
+	&:active, &.active {
 		background: $navbarLogoHov
+	}
+
+	a {
+		&:focus, &:active,
+		&.active {
+			background-color: transparent!important
+		}
 	}
 
 	@media(min-width: $breakpoint-pc) {
@@ -39,7 +47,8 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 	bottom: auto;
 	left: 1rem;
 	border: $defaultBorder;
-	box-shadow: $defaultShadow;
+	outline: $defaultOutline;
+	outline-offset: $defaultOutlineOffset;
 	border-radius: $defaultRadius
 }
 
@@ -65,20 +74,20 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 		}
 
 		a.dropdown-item {
-			background-color: $dropdownBg;
-			color: $dropdownText;
+			background-color: $dropdownLinkBg;
+			color: $dropdownLinkText;
 
 			i.fa {
-				color: $dropdownText;
+				color: $dropdownLinkText;
 			}
 
 			&:hover, &:focus,
 			&:active, &.active {
-				background-color: $dropdownLinkHovBg;
-				color: $dropdownLinkHov;
+				background-color: $dropdownLinkBgHov;
+				color: $dropdownLinkTextHov;
 
 				i.fa {
-					color: $dropdownLinkHov;
+					color: $dropdownLinkTextHov;
 				}
 			}
 		}

@@ -59,7 +59,7 @@
 		text-decoration: $defaultLinkDecoration;
 
 		&:hover, &:focus {
-			text-decoration: $defaultLinkHovDecoration
+			text-decoration: $defaultLinkDecorationHov
 		}
 	}
 }
@@ -106,27 +106,27 @@
 .page-item {
 	&.disabled {
 		.page-link {
-			background-color: $defaultLink;
+			background-color: $defaultLinkText;
 			color: $defaultBg
 		}
 	}
 
 	.page-link {
 		background-color: $white;
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		i.fa {
 			background-color: $white;
-			color: $defaultLink
+			color: $defaultLinkText
 		}
 
 		&:hover, &:focus,
 		&:active, &.active {
-			background-color: $defaultLink;
+			background-color: $defaultLinkText;
 			color: $defaultBg;
 
 			i.fa {
-				background-color: $defaultLink;
+				background-color: $defaultLinkText;
 				color: $defaultBg
 			}
 		}
@@ -167,7 +167,7 @@
 		border-right: $defaultBorder;
 
 		&:hover, &:focus {
-			text-decoration: $defaultLinkHovDecoration
+			text-decoration: $defaultLinkDecorationHov
 		}
 	}
 }
@@ -230,7 +230,7 @@
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: $defaultLinkHovDecoration
+		text-decoration: $defaultLinkDecorationHov
 	}
 }
 
@@ -296,17 +296,17 @@
 	}
 
 	a {
-		color: $defaultLink;
+		color: $defaultLinkText;
 
 		i.fa {
-			color: $defaultLink
+			color: $defaultLinkText
 		}
 
 		&:hover, &:focus {
-			color: darken($defaultLink, 33%);
+			color: darken($defaultLinkText, 33%);
 
 			i.fa {
-			color: darken($defaultLink, 33%)
+			color: darken($defaultLinkText, 33%)
 			}
 		}
 	}
@@ -340,10 +340,13 @@
 
 // moresearches menu
 #export .dropdown-menu, #moresearches_menu .dropdown-menu {
-	a, a:link, a:visited {
-		&:hover, &:focus {
-			background-color: $dropdownLinkHovBg;
-			color: $dropdownLinkHov
+	a {
+		background-color: $dropdownLinkBg;
+		color: $dropdownLinkText;
+
+		&:hover {
+			background-color: $dropdownLinkBgHov;
+			color: $dropdownLinkTextHov
 		}
 	}
 }
@@ -369,7 +372,7 @@ a#ISBDview {
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: $defaultLinkHovDecoration
+		text-decoration: $defaultLinkDecorationHov
 	}
 }
 
@@ -385,17 +388,17 @@ a#ISBDview {
 .pg_menu .pg_link span {
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $defaultLink;
+		background-color: $defaultLinkText;
 		color: $defaultBg
 	}
 }
 
 #a_listResults {
-	color: $defaultLink;
+	color: $defaultLinkText;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $defaultLink;
+		background-color: $defaultLinkText;
 		color: $defaultBg
 	}
 }
@@ -437,8 +440,10 @@ a#ISBDview {
 	color: $btnPriText!important;
 	background-color: $btnPriBg!important;
 	border: $btnPriBorder!important;
+	outline: .33rem solid darken($userText1, 15%)!important;
+
 	border-radius: $defaultRadius!important;
-	box-shadow: 0 0 0 .33rem $btnPriShadow!important;
+	outline-offset: .066rem;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -449,6 +454,6 @@ a#ISBDview {
 		color: $btnPriTextHov!important;
 		background-color: $btnPriBgHov!important;
 		border: $btnPriBorderHov!important;
-		box-shadow: $btnPriShadowHov!important
+		outline: $btnPriOutlineHov!important;
 	}
 }
