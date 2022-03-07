@@ -143,7 +143,7 @@ hr {
 .btn, input[type="submit"].btn {
 	background-image: none;
 	text-shadow: none;
-	text-decoration: none;
+	text-decoration: none!important;
 
 	padding: .45rem 1.125rem;
 	font-size: 1rem;
@@ -164,7 +164,7 @@ hr {
 	&:active, &.active {
 		background-image: none;
 		text-shadow: none;
-		text-decoration: none;
+		text-decoration: none!important;
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
@@ -205,7 +205,6 @@ hr {
 .btn-secondary:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
-	text-decoration: none;
 
 	color: $btnSecText;
 	background-color: $btnSecBg;
@@ -217,7 +216,6 @@ hr {
 	&:active, &.active {
 		background-image: none;
 		text-shadow: none;
-		text-decoration: none;
 
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
@@ -230,7 +228,6 @@ hr {
 .btn-link:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
-	text-decoration: none;
 
 	color: $btnLinkText;
 	background-color: $btnLinkBg;
@@ -245,7 +242,6 @@ hr {
 	&:active, &.active {
 		background-image: none;
 		text-shadow: none;
-		text-decoration: none;
 
 		color: $btnLinkTextHov;
 		background-color: $btnLinkBgHov;
@@ -271,7 +267,6 @@ hr {
 .btn-danger:not(:disabled):not(.disabled) {
 	background-image: none;
 	text-shadow: none;
-	text-decoration: none;
 
 	color: $msWhite;
 	background-color: $msRed;
@@ -282,7 +277,6 @@ hr {
 	&:active, &.active {
 		background-image: none;
 		text-shadow: none;
-		text-decoration: none;
 
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
