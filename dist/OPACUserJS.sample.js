@@ -173,7 +173,7 @@ function facetAccordeons() {
 	// remove the display:none and collapsible facet
 	$('#search-facets .collapsible-facet').each(function() {
 		$(this).removeAttr('style');
-		$(this).removeClass('collapsible-facet');
+		$(this).removeAttr('class');
 	});
 
 	// remove the toggle links

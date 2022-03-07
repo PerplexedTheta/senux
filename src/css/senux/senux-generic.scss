@@ -40,7 +40,7 @@ h4, h5, h6,
 }
 
 a {
-	background-color: $defaultLinkBg;
+	background: $defaultLinkBg;
 	color: $defaultLinkText;
 	border: $defaultLinkBorder;
 	outline: $defaultLinkOutline;
@@ -51,46 +51,46 @@ a {
 	outline-offset: $defaultOutlineOffset;
 
 	i.fa {
-		background-color: $defaultLinkBg;
+		background-color: transparent;
 		color: $defaultLinkText
 	}
 
 	&:link, &:visited {
-		background-color: $defaultLinkBg;
+		background: $defaultLinkBg;
 		color: $defaultLinkText;
 		border: $defaultLinkBorder;
 		outline: $defaultLinkOutline;
 		text-decoration: $defaultLinkDecoration;
 
 		i.fa {
-			background-color: $defaultLinkBg;
+			background-color: transparent;
 			color: $defaultLinkText
 		}
 	}
 
 	&:hover {
-		background-color: $defaultLinkBgHov;
+		background: $defaultLinkBgHov;
 		color: $defaultLinkTextHov;
 		border: $defaultLinkBorderHov;
 		outline: $defaultLinkOutlineHov;
 		text-decoration: $defaultLinkDecorationHov;
 
 		i.fa {
-			background-color: $defaultLinkBgHov;
+			background-color: transparent;
 			color: $defaultLinkTextHov
 		}
 	}
 
 	&:focus,
 	&:active, &.active {
-		background-color: $defaultLinkBgFoc;
+		background: $defaultLinkBgFoc;
 		color: $defaultLinkTextFoc;
 		border: $defaultLinkBorderFoc;
 		outline: $defaultLinkOutlineFoc;
 		text-decoration: $defaultLinkDecorationFoc;
 
 		i.fa {
-			background-color: $defaultLinkBgFoc;
+			background-color: transparent;
 			color: $defaultLinkTextFoc
 		}
 	}
@@ -260,11 +260,11 @@ hr {
 }
 
 .dt-button::before {
-	color: $defaultLinkText
+	color: $mainLinkText
 }
 
 .dt-button:hover::before {
-	color: darken($defaultLinkText, 15%)
+	color: darken($mainLinkText, 15%)
 }
 
 .btn-danger, input[type="submit"].btn-danger,

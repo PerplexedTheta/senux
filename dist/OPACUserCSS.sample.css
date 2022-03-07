@@ -30,7 +30,7 @@ h4, h5, h6,
 }
 
 a {
-  background-color: transparent;
+  background: transparent;
   color: #2b579a;
   border: none;
   outline: none;
@@ -44,7 +44,7 @@ a i.fa {
   color: #2b579a;
 }
 a:link, a:visited {
-  background-color: transparent;
+  background: transparent;
   color: #2b579a;
   border: none;
   outline: none;
@@ -55,7 +55,7 @@ a:link i.fa, a:visited i.fa {
   color: #2b579a;
 }
 a:hover {
-  background-color: transparent;
+  background: transparent;
   color: #1a355e;
   border: none;
   outline: none;
@@ -66,14 +66,14 @@ a:hover i.fa {
   color: #1a355e;
 }
 a:focus, a:active, a.active {
-  background-color: #fafbfd !important;
+  background: #fafbfd !important;
   color: #1a355e !important;
   border: none;
   outline: 0.33rem solid #99ccff !important;
   text-decoration: none;
 }
 a:focus i.fa, a:active i.fa, a.active i.fa {
-  background-color: #fafbfd !important;
+  background-color: transparent;
   color: #1a355e !important;
 }
 
@@ -400,6 +400,53 @@ input[type=search]:read-only {
   padding: 1rem;
   color: #231f20;
   background-color: #ffffff;
+}
+.main a {
+  background: transparent;
+  color: #2b579a;
+  border: none;
+  outline: none;
+  box-shadow: none !important;
+  text-decoration: none;
+  border-radius: 0.33rem;
+  outline-offset: 0.066rem;
+}
+.main a i.fa {
+  background-color: transparent;
+  color: #2b579a;
+}
+.main a:link, .main a:visited {
+  background: transparent;
+  color: #2b579a;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+.main a:link i.fa, .main a:visited i.fa {
+  background-color: transparent;
+  color: #2b579a;
+}
+.main a:hover {
+  background: transparent;
+  color: #1a355e;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+}
+.main a:hover i.fa {
+  background-color: transparent;
+  color: #1a355e;
+}
+.main a:active, .main a.active {
+  background: #fafbfd !important;
+  color: #1a355e !important;
+  border: none;
+  outline: 0.33rem solid #99ccff !important;
+  text-decoration: none;
+}
+.main a:active i.fa, .main a.active i.fa {
+  background-color: transparent;
+  color: #1a355e !important;
 }
 
 @media (min-width: 992px) {
