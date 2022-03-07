@@ -260,11 +260,11 @@ hr {
 }
 
 .dt-button::before {
-	color: $mainLinkText
+	color: $defaultLinkText
 }
 
 .dt-button:hover::before {
-	color: darken($mainLinkText, 15%)
+	color: darken($defaultLinkText, 15%)
 }
 
 .btn-danger, input[type="submit"].btn-danger,

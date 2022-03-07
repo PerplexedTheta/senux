@@ -42,21 +42,6 @@ $defaultBullet: disc;
 // 3. generic variables
 $mainBg: #ffffff;
 $mainText: $defaultText;
-$mainLinkBg: $defaultLinkBg;
-$mainLinkText: $defaultLinkText;
-$mainLinkBorder: none;
-$mainLinkOutline: none;
-$mainLinkDecoration: none;
-$mainLinkBgHov: transparent;
-$mainLinkTextHov: darken($mainLinkText, 15%);
-$mainLinkBorderHov: none;
-$mainLinkOutlineHov: none;
-$mainLinkDecorationHov: underline;
-$mainLinkBgFoc: lighten($mainLinkText, 60%)!important;
-$mainLinkTextFoc: darken($mainLinkText, 15%)!important;
-$mainLinkBorderFoc: none;
-$mainLinkOutlineFoc: .33rem solid darken($userText1, 15%)!important;
-$mainLinkDecorationFoc: none;
 // 3.1 button variables
 $btnPriText: $userText1;
 $btnPriBg: $userHue1;

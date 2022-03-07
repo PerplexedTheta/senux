@@ -56,10 +56,10 @@
 
 .newsheader {
 	a {
-		text-decoration: $mainLinkDecoration;
+		text-decoration: $defaultLinkDecoration;
 
 		&:hover, &:focus {
-			text-decoration: $mainLinkDecorationHov
+			text-decoration: $defaultLinkDecorationHov
 		}
 	}
 }
@@ -106,27 +106,27 @@
 .page-item {
 	&.disabled {
 		.page-link {
-			background-color: $mainLinkText;
+			background-color: $defaultLinkText;
 			color: $defaultBg
 		}
 	}
 
 	.page-link {
 		background-color: $white;
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		i.fa {
 			background-color: $white;
-			color: $mainLinkText
+			color: $defaultLinkText
 		}
 
 		&:hover, &:focus,
 		&:active, &.active {
-			background-color: $mainLinkText;
+			background-color: $defaultLinkText;
 			color: $defaultBg;
 
 			i.fa {
-				background-color: $mainLinkText;
+				background-color: $defaultLinkText;
 				color: $defaultBg
 			}
 		}
@@ -162,12 +162,12 @@
 	a {
 		color: $defaultText;
 		background-color: $defaultBg;
-		text-decoration: $mainLinkDecoration;
+		text-decoration: $defaultLinkDecoration;
 		border-bottom: $defaultBorder;
 		border-right: $defaultBorder;
 
 		&:hover, &:focus {
-			text-decoration: $mainLinkDecorationHov
+			text-decoration: $defaultLinkDecorationHov
 		}
 	}
 }
@@ -226,11 +226,11 @@
 #CheckAll, #CheckNone,
 .CheckAll, .CheckNone,
 #menu a, #search-facets a {
-	text-decoration: $mainLinkDecoration;
+	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: $mainLinkDecorationHov
+		text-decoration: $defaultLinkDecorationHov
 	}
 }
 
@@ -296,17 +296,17 @@
 	}
 
 	a {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		i.fa {
-			color: $mainLinkText
+			color: $defaultLinkText
 		}
 
 		&:hover, &:focus {
-			color: darken($mainLinkText, 33%);
+			color: darken($defaultLinkText, 33%);
 
 			i.fa {
-			color: darken($mainLinkText, 33%)
+			color: darken($defaultLinkText, 33%)
 			}
 		}
 	}
@@ -368,11 +368,11 @@
 // view tabs
 a#Normalview, a#MARCview,
 a#ISBDview {
-	text-decoration: $mainLinkDecoration;
+	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		text-decoration: $mainLinkDecorationHov
+		text-decoration: $defaultLinkDecorationHov
 	}
 }
 
@@ -388,17 +388,17 @@ a#ISBDview {
 .pg_menu .pg_link span {
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $mainLinkText;
+		background-color: $defaultLinkText;
 		color: $defaultBg
 	}
 }
 
 #a_listResults {
-	color: $mainLinkText;
+	color: $defaultLinkText;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		background-color: $mainLinkText;
+		background-color: $defaultLinkText;
 		color: $defaultBg
 	}
 }

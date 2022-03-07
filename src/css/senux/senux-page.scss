@@ -12,63 +12,7 @@
 	margin: 0;
 	padding: 1rem;
 	color: $mainText;
-	background-color: $mainBg;
-
-	a {
-		background: $mainLinkBg;
-		color: $mainLinkText;
-		border: $mainLinkBorder;
-		outline: $mainLinkOutline;
-		box-shadow: none!important;
-		text-decoration: $mainLinkDecoration;
-
-		border-radius: $defaultRadius;
-		outline-offset: $defaultOutlineOffset;
-
-		i.fa {
-				background-color: transparent;
-				color: $mainLinkText
-		}
-
-		&:link, &:visited {
-				background: $mainLinkBg;
-				color: $mainLinkText;
-				border: $mainLinkBorder;
-				outline: $mainLinkOutline;
-				text-decoration: $mainLinkDecoration;
-
-				i.fa {
-						background-color: transparent;
-						color: $mainLinkText
-				}
-		}
-
-		&:hover {
-				background: $mainLinkBgHov;
-				color: $mainLinkTextHov;
-				border: $mainLinkBorderHov;
-				outline: $mainLinkOutlineHov;
-				text-decoration: $mainLinkDecorationHov;
-
-				i.fa {
-						background-color: transparent;
-						color: $mainLinkTextHov
-				}
-		}
-
-		&:active, &.active {
-			background: $mainLinkBgFoc;
-			color: $mainLinkTextFoc;
-			border: $mainLinkBorderFoc;
-			outline: $mainLinkOutlineFoc;
-			text-decoration: $mainLinkDecorationFoc;
-
-			i.fa {
-				background-color: transparent;
-				color: $mainLinkTextFoc
-			}
-		}
-	}
+	background-color: $mainBg
 }
 @media (min-width: 992px) {
 	.main {
@@ -92,10 +36,10 @@
 	}
 
 	a, a:link, a:visited {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($mainLinkText, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 
@@ -142,22 +86,22 @@
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
 	a, a:link, a:visited {
 		background-color: transparent;
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
 			background-color: transparent;
-			color: darken($mainLinkText, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
 
 .ui-tabs .ui-state-default {
 	a, a:link, a:visited {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
 			background: darken($defaultBg, 15%);
-			color: darken($mainLinkText, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -206,10 +150,10 @@
 	background-color: $defaultBg;
 
 	a, a:link, a:visited, a.btn.btn-link {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($mainLinkText, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -219,10 +163,10 @@
 	background-color: $white;
 
 	a, a:link, a:visited, a.btn.btn-link {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			color: darken($mainLinkText, 15%)
+			color: darken($defaultLinkText, 15%)
 		}
 	}
 }
@@ -242,7 +186,7 @@
 
 #menu li {
 	a {
-		color: $mainLinkText;
+		color: $defaultLinkText;
 		background-color: $defaultBg;
 		border-radius: $defaultRadius 0 0 $defaultRadius;
 		border-top: .066rem solid darken($defaultBg, 33%);
@@ -252,7 +196,7 @@
 
 		&:hover, &:focus,
 		&:active, &.active {
-			background-color: $mainLinkText;
+			background-color: $defaultLinkText;
 			color: $defaultBg
 		}
 	}

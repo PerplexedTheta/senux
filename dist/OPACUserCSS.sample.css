@@ -401,53 +401,6 @@ input[type=search]:read-only {
   color: #231f20;
   background-color: #ffffff;
 }
-.main a {
-  background: transparent;
-  color: #2b579a;
-  border: none;
-  outline: none;
-  box-shadow: none !important;
-  text-decoration: none;
-  border-radius: 0.33rem;
-  outline-offset: 0.066rem;
-}
-.main a i.fa {
-  background-color: transparent;
-  color: #2b579a;
-}
-.main a:link, .main a:visited {
-  background: transparent;
-  color: #2b579a;
-  border: none;
-  outline: none;
-  text-decoration: none;
-}
-.main a:link i.fa, .main a:visited i.fa {
-  background-color: transparent;
-  color: #2b579a;
-}
-.main a:hover {
-  background: transparent;
-  color: #1a355e;
-  border: none;
-  outline: none;
-  text-decoration: underline;
-}
-.main a:hover i.fa {
-  background-color: transparent;
-  color: #1a355e;
-}
-.main a:active, .main a.active {
-  background: #fafbfd !important;
-  color: #1a355e !important;
-  border: none;
-  outline: 0.33rem solid #99ccff !important;
-  text-decoration: none;
-}
-.main a:active i.fa, .main a.active i.fa {
-  background-color: transparent;
-  color: #1a355e !important;
-}
 
 @media (min-width: 992px) {
   .main {
