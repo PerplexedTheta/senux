@@ -27,7 +27,7 @@ $defaultLinkTextHov: darken($defaultLinkText, 15%);
 $defaultLinkBorderHov: none;
 $defaultLinkOutlineHov: none;
 $defaultLinkDecorationHov: underline;
-$defaultLinkBgFoc: lighten($defaultLinkText, 60%)!important;
+$defaultLinkBgFoc: lighten($defaultLinkText, 45%)!important;
 $defaultLinkTextFoc: darken($defaultLinkText, 15%)!important;
 $defaultLinkBorderFoc: none;
 $defaultLinkOutlineFoc: .33rem solid darken($userText1, 15%)!important;

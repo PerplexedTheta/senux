@@ -114,7 +114,7 @@ function facetPublicationDateRange() {
 	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"display:none\"><input type=\"text\" name=\"limit-yr\"><p class=\"hint\">For example: 1999-2001<\/p><a href=\"#facetYrRefine\" class=\"btn btn-default mt-2\">Refine<\/a><\/div><\/li>');
 
 	// then, check for and inject, the previous value
-	if(urlParams.get('limit-yr')) $('input[name="limit-yr"]').val(urlParams.get('limit-yr'));
+	if(urlParams.get('limit-yr')) sessionStorage.setItem('limit-yr', urlParams.get('limit-yr'));
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
@@ -140,6 +140,10 @@ function facetPublicationDateRange() {
 			facetPublicationDateRangeSubmitHandler();
 		}
 	});
+
+	// lastly, check for and set the section expander
+	if(sessionStorage.getItem('limit-yr')) $('input[name="limit-yr"]').val(sessionStorage.getItem('limit-yr'));
+	if(urlParams.get('limit-yr')) $('#facet-yr a').click();
 	return;
 }
 
@@ -152,6 +156,7 @@ function facetPublicationDateRangeSubmitHandler() {
 	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
 
 	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already, delete...
+	if(urlParams.get('limit')) urlParams.delete('limit'); // if we have a limit already, delete...
 	urlParams.append('limit-yr', limitYr); // add our years
 
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
@@ -199,6 +204,9 @@ function facetAccordeons() {
 
 	// unhide anything that has been selected
 	$('#search-facets .menu-collapse li').find('li:contains("[x]")').each(function() {
+		$(this).parents('li').find('h3 a').click();
+	});
+	$('#search-facets .menu-collapse li').find('li:contains("Showing only available items")').each(function() {
 		$(this).parents('li').find('h3 a').click();
 	});
 
