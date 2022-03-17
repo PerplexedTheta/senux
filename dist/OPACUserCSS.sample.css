@@ -530,7 +530,7 @@ input[type=search]:read-only {
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
-  background-color: #f3f2f1;
+  background-color: white;
 }
 .table-striped tbody > tr:nth-child(2n+1) > td a, .table-striped tbody > tr:nth-child(2n+1) > td a:link, .table-striped tbody > tr:nth-child(2n+1) > td a:visited, .table-striped tbody > tr:nth-child(2n+1) > td a.btn.btn-link,
 .table-striped tbody > tr:nth-child(2n+1) > th a,

@@ -147,7 +147,7 @@
 // striped
 .table-striped tbody > tr > td,
 .table-striped tbody > tr > th {
-	background-color: $defaultBg;
+	background-color: $tableStripedEven;
 
 	a, a:link, a:visited, a.btn.btn-link {
 		color: $defaultLinkText;
@@ -160,7 +160,7 @@
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
-	background-color: $white;
+	background-color: $tableStripedOdd;
 
 	a, a:link, a:visited, a.btn.btn-link {
 		color: $defaultLinkText;

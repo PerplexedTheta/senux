@@ -122,7 +122,11 @@ $onlineAccessBg: lighten($msGold, 33%);
 $onlineAccessText: $defaultText;
 $onlineAccessLink: $defaultLinkText;
 
-// 7. footer variables
+// 7. datatables variables
+$tableStripedOdd: rgb(255, 255, 255);
+$tableStripedEven: $defaultBg;
+
+// 8. footer variables
 $footerBg: $userHue3;
 $footerText: $userText3;
 $footerLink: $footerText;
