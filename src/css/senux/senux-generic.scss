@@ -309,25 +309,29 @@ input[type="search"], select, textarea,
 	border-radius: $defaultRadius;
 	outline-offset: $defaultOutlineOffset;
 
-	color: $defaultText;
-	background-color: $mainBg;
+	color: $inputText;
+	background-color: $inputBg;
 	border: $inputBorder;
 	outline: $inputOutline;
 	box-shadow: none!important;
 
-	&:hover, &:active,
-	&.active {
+	&:hover {
 		background-image: none;
 		text-shadow: none;
 
+		color: $inputTextHov;
+		background-color: $inputBgHov;
 		border: $inputBorderHov;
 		outline: $inputOutlineHov
 	}
 
-	&:focus {
+	&:focus, &:active,
+	&.active {
 		background-image: none;
 		text-shadow: none;
 
+		color: $inputTextFoc;
+		background-color: $inputBgFoc;
 		border: $inputBorderFoc;
 		outline: $inputOutlineFoc
 	}

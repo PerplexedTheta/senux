@@ -316,45 +316,49 @@ input[type=search], select, textarea,
   text-shadow: none;
   border-radius: 0.33rem;
   outline-offset: 0.066rem;
-  color: #231f20;
-  background-color: #ffffff;
+  color: black;
+  background-color: white;
   border: 0.066rem solid #d0ccc8;
   outline: none;
   box-shadow: none !important;
 }
-input[type=text]:hover, input[type=text]:active, input[type=text].active, input[type=password]:hover, input[type=password]:active, input[type=password].active,
-input[type=email]:hover,
-input[type=email]:active,
-input[type=email].active, input[type=url]:hover, input[type=url]:active, input[type=url].active,
-input[type=time]:hover,
-input[type=time]:active,
-input[type=time].active, input[type=date]:hover, input[type=date]:active, input[type=date].active,
-input[type=datetime-local]:hover,
-input[type=datetime-local]:active,
-input[type=datetime-local].active, input[type=tel]:hover, input[type=tel]:active, input[type=tel].active,
-input[type=number]:hover,
-input[type=number]:active,
-input[type=number].active, input[type=search-md]:hover, input[type=search-md]:active, input[type=search-md].active,
-input[type=search]:hover,
-input[type=search]:active,
-input[type=search].active, select:hover, select:active, select.active, textarea:hover, textarea:active, textarea.active,
-.form-control:hover,
-.form-control:active,
-.form-control.active, .dataTables_filter input[type=search]:hover, .dataTables_filter input[type=search]:active, .dataTables_filter input[type=search].active {
+input[type=text]:hover, input[type=password]:hover,
+input[type=email]:hover, input[type=url]:hover,
+input[type=time]:hover, input[type=date]:hover,
+input[type=datetime-local]:hover, input[type=tel]:hover,
+input[type=number]:hover, input[type=search-md]:hover,
+input[type=search]:hover, select:hover, textarea:hover,
+.form-control:hover, .dataTables_filter input[type=search]:hover {
   background-image: none;
   text-shadow: none;
+  color: black;
+  background-color: white;
   border: 0.066rem solid #3498ff;
   outline: 0.33rem solid #3498ff;
 }
-input[type=text]:focus, input[type=password]:focus,
-input[type=email]:focus, input[type=url]:focus,
-input[type=time]:focus, input[type=date]:focus,
-input[type=datetime-local]:focus, input[type=tel]:focus,
-input[type=number]:focus, input[type=search-md]:focus,
-input[type=search]:focus, select:focus, textarea:focus,
-.form-control:focus, .dataTables_filter input[type=search]:focus {
+input[type=text]:focus, input[type=text]:active, input[type=text].active, input[type=password]:focus, input[type=password]:active, input[type=password].active,
+input[type=email]:focus,
+input[type=email]:active,
+input[type=email].active, input[type=url]:focus, input[type=url]:active, input[type=url].active,
+input[type=time]:focus,
+input[type=time]:active,
+input[type=time].active, input[type=date]:focus, input[type=date]:active, input[type=date].active,
+input[type=datetime-local]:focus,
+input[type=datetime-local]:active,
+input[type=datetime-local].active, input[type=tel]:focus, input[type=tel]:active, input[type=tel].active,
+input[type=number]:focus,
+input[type=number]:active,
+input[type=number].active, input[type=search-md]:focus, input[type=search-md]:active, input[type=search-md].active,
+input[type=search]:focus,
+input[type=search]:active,
+input[type=search].active, select:focus, select:active, select.active, textarea:focus, textarea:active, textarea.active,
+.form-control:focus,
+.form-control:active,
+.form-control.active, .dataTables_filter input[type=search]:focus, .dataTables_filter input[type=search]:active, .dataTables_filter input[type=search].active {
   background-image: none;
   text-shadow: none;
+  color: black;
+  background-color: white;
   border: 0.066rem solid #3498ff;
   outline: 0.33rem solid #007fff;
 }

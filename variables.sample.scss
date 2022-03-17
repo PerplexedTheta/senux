@@ -68,10 +68,16 @@ $btnLinkBgHov: lighten($defaultLinkText, 60%);
 $btnLinkBorderHov: .066rem solid darken($userText1, 15%);
 $btnLinkOutlineHov: .33rem solid darken($userText1, 15%);
 // 3.2 input variables
+$inputText: $black;
+$inputBg: $white;
 $inputBorder: .066rem solid darken($msWhite, 15%);
 $inputOutline: none;
+$inputTextHov: $black;
+$inputBgHov: $white;
 $inputBorderHov: .066rem solid darken($userHue2, 15%);
 $inputOutlineHov: .33rem solid darken($userHue2, 15%);
+$inputTextFoc: $black;
+$inputBgFoc: $white;
 $inputBorderFoc: .066rem solid darken($userHue2, 15%);
 $inputOutlineFoc: .33rem solid $userHue1;
 // 3.3 dropdown menu variables
