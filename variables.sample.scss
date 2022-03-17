@@ -74,12 +74,12 @@ $inputText: $black;
 $inputBg: $white;
 $inputBorder: .066rem solid darken($white, 15%);
 $inputOutline: none;
-$inputTextHov: $black;
-$inputBgHov: $white;
+$inputTextHov: $inputText;
+$inputBgHov: $inputBg;
 $inputBorderHov: .066rem solid darken($userHue2, 15%);
 $inputOutlineHov: .33rem solid darken($userHue2, 15%);
-$inputTextFoc: $black;
-$inputBgFoc: $white;
+$inputTextFoc: $inputText;
+$inputBgFoc: $inputBg;
 $inputBorderFoc: .066rem solid darken($userHue2, 15%);
 $inputOutlineFoc: .33rem solid $userHue1;
 // 3.3 dropdown menu variables
