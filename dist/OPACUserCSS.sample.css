@@ -316,8 +316,8 @@ input[type=search], select, textarea,
   text-shadow: none;
   border-radius: 0.33rem;
   outline-offset: 0.066rem;
-  color: black;
-  background-color: white;
+  color: #231f20;
+  background-color: #f3f2f1;
   border: 0.066rem solid #d0ccc8;
   outline: none;
   box-shadow: none !important;
@@ -331,8 +331,8 @@ input[type=search]:hover, select:hover, textarea:hover,
 .form-control:hover, .dataTables_filter input[type=search]:hover {
   background-image: none;
   text-shadow: none;
-  color: black;
-  background-color: white;
+  color: #231f20;
+  background-color: #f3f2f1;
   border: 0.066rem solid #3498ff;
   outline: 0.33rem solid #3498ff;
 }
@@ -357,8 +357,8 @@ input[type=search].active, select:focus, select:active, select.active, textarea:
 .form-control.active, .dataTables_filter input[type=search]:focus, .dataTables_filter input[type=search]:active, .dataTables_filter input[type=search].active {
   background-image: none;
   text-shadow: none;
-  color: black;
-  background-color: white;
+  color: #231f20;
+  background-color: #f3f2f1;
   border: 0.066rem solid #3498ff;
   outline: 0.33rem solid #007fff;
 }
@@ -442,7 +442,7 @@ input[type=search]:read-only {
   border-radius: 0.33rem 0.33rem 0 0;
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  background: white;
+  background: #f3f2f1;
   color: #231f20;
   border-color: #a59e96;
   border-radius: 0.33rem 0.33rem 0 0;
@@ -485,7 +485,7 @@ input[type=search]:read-only {
 }
 
 .table tbody tr {
-  background-color: white;
+  background-color: #f3f2f1;
 }
 
 .table .sorting {
@@ -530,7 +530,7 @@ input[type=search]:read-only {
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
-  background-color: white;
+  background-color: #f3f2f1;
 }
 .table-striped tbody > tr:nth-child(2n+1) > td a, .table-striped tbody > tr:nth-child(2n+1) > td a:link, .table-striped tbody > tr:nth-child(2n+1) > td a:visited, .table-striped tbody > tr:nth-child(2n+1) > td a.btn.btn-link,
 .table-striped tbody > tr:nth-child(2n+1) > th a,
@@ -673,11 +673,11 @@ caption, h5 {
   color: #f3f2f1;
 }
 .page-item .page-link {
-  background-color: white;
+  background-color: #f3f2f1;
   color: #2b579a;
 }
 .page-item .page-link i.fa {
-  background-color: white;
+  background-color: #f3f2f1;
   color: #2b579a;
 }
 .page-item .page-link:hover, .page-item .page-link:focus, .page-item .page-link:active, .page-item .page-link.active {
