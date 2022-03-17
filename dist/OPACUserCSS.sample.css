@@ -470,18 +470,14 @@ input[type=search]:read-only {
   color: #1a355e;
 }
 
-.table {
-  border: none;
-}
-
 .table-bordered, .table-bordered td,
 .table-bordered th {
-  border: #7c6e72;
+  border: 0.066rem solid #d0ccc8;
 }
 
 .table thead th {
   background-color: #e7e5e3;
-  border-bottom: #7c6e72;
+  border-bottom: none;
 }
 
 .table tbody tr {

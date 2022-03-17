@@ -109,18 +109,14 @@
 //
 // tables
 // default
-.table {
-	border: none
-}
-
 .table-bordered, .table-bordered td,
 .table-bordered th {
-	border: lighten($defaultText, 33%)
+	border: $defaultBorder
 }
 
 .table thead th {
 	background-color: darken($defaultBg, 5%);
-	border-bottom: lighten($defaultText, 33%)
+	border-bottom: none
 }
 
 .table tbody tr {
