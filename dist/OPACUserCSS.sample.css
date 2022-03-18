@@ -605,7 +605,7 @@ caption, h5 {
 
 .maincontent {
   color: #231f20;
-  background-color: white;
+  background-color: transparent;
 }
 .maincontent h1::after, .maincontent h2::after, .maincontent h3::after,
 .maincontent h4::after, .maincontent h5::after {
