@@ -640,6 +640,7 @@ caption, h5 {
 }
 
 #news {
+  margin: 0 0 0.5em 0;
   border: 0.066rem solid #d0ccc8;
   border-radius: 0.33rem;
 }
