@@ -388,6 +388,10 @@ input[type=search]:read-only {
   outline: none;
 }
 
+.alert {
+  border-radius: 0.33rem;
+}
+
 .sr-only {
   position: absolute;
   width: 0.066rem;
