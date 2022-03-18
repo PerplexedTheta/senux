@@ -7,6 +7,7 @@
 // git repo root, and make your changes there!
 // ----------------------------------------------------------------------------
 
+
 //
 // vars -- global
 $black: rgba(0,0,0,1);
@@ -67,7 +68,7 @@ $defaultBullet: disc;
 
 //
 // vars -- main
-$mainBg: #ffffff;
+$mainBg: $white;
 $mainText: $defaultText;
 // vars -- main -- btns
 $btnPriText: $userText1;
