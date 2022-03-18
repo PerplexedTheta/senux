@@ -403,7 +403,7 @@ input[type=search]:read-only {
   margin: 0;
   padding: 1rem;
   color: #231f20;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 @media (min-width: 992px) {
@@ -603,6 +603,10 @@ caption, h5 {
   display: none;
 }
 
+.maincontent {
+  color: #231f20;
+  background-color: white;
+}
 .maincontent h1::after, .maincontent h2::after, .maincontent h3::after,
 .maincontent h4::after, .maincontent h5::after {
   content: "";
