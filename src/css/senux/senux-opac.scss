@@ -183,13 +183,19 @@
 	}
 }
 
-#search-facets h3 a {
-	display: block;
-	font-size: initial;
-	font-weight: bold;
+#search-facets {
+	ul {
+		padding: .5rem
+	}
 
-	i.fa {
-		float: right
+	h3 a {
+		display: block;
+		font-size: initial;
+		font-weight: bold;
+
+		i.fa {
+			float: right
+		}
 	}
 }
 
