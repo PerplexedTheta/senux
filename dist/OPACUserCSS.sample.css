@@ -655,6 +655,10 @@ caption, h5 {
   display: none;
 }
 
+.modal-content {
+  border-radius: 0.33rem;
+}
+
 #advsearch_limits label, #subtypes label,
 .hint {
   color: #231f20;
