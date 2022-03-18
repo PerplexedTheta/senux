@@ -214,7 +214,11 @@ legend, .legend {
 }
 
 .results_summary {
-	color: $defaultText
+	color: $defaultText;
+
+	label {
+		color: $defaultText
+	}
 }
 
 caption, h5 {

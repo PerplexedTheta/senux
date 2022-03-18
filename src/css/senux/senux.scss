@@ -8,6 +8,7 @@
 //
 //
 // senux imports
+@import 'variables.scss';
 @import 'senux-generic.scss'; // rules for all elements/regularly used elements
 @import 'senux-page.scss'; // rules for page area
 @import 'senux-opac.scss'; // rules for opac overrides
@@ -15,4 +16,4 @@
 @import 'senux-header.scss'; // rules for header area
 @import 'senux-nav.scss'; // rules for navbar
 @import 'senux-misc.scss'; // rule for misc
-@import 'senux-after.scss'; // anything else
+@import 'customisations.scss'; // anything else

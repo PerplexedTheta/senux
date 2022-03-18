@@ -20,7 +20,7 @@
 		color: $footerLink;
 
 		&:hover, &:focus {
-			color: darken($footerLink, 15%)
+			color: $footerLinkHov
 		}
 	}
 }

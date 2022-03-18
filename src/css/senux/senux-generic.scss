@@ -337,7 +337,10 @@ input[type="search"], select, textarea,
 	}
 
 	&:disabled {
-		background-color: rgba(224,224,224,1)
+		color: $inputDisabledText;
+		background-color: $inputDisabledBg;
+		border: $inputDisabledBorder;
+		outline: $inputDisabledOutline;
 	}
 }
 
@@ -349,7 +352,10 @@ input[type="number"], input[type="search-md"],
 input[type="search"], textarea,
 input[type="search"] {
 	&:read-only {
-		background-color: rgba(224,224,224,1)
+		color: $inputDisabledText;
+		background-color: $inputDisabledBg;
+		border: $inputDisabledBorder;
+		outline: $inputDisabledOutline;
 	}
 }
 

@@ -23,9 +23,10 @@
 			background-color: transparent!important
 		}
 	}
-
-	@media(min-width: $breakpoint-pc) {
-		display: $navbarLogoDisplay;
+}
+@media(min-width: $breakpoint-pc) {
+	#logo {
+		display: $navbarLogoDisplay
 	}
 }
 
