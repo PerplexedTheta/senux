@@ -360,6 +360,12 @@ input[type="search"] {
 }
 
 //
+// alerts
+.alert {
+	border-radius: $defaultRadius
+}
+
+//
 // accessibility - screen reader text
 .sr-only {
 	position: absolute;
