@@ -160,6 +160,11 @@ hr {
 	outline: $btnPriOutline;
 	box-shadow: none!important;
 
+	i.fa {
+		color: $btnPriText;
+		background-color: transparent
+	}
+
 	&:hover, &:focus,
 	&:active, &.active {
 		background-image: none;
@@ -169,7 +174,12 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: $btnPriBorderHov;
-		outline: $btnPriOutlineHov
+		outline: $btnPriOutlineHov;
+
+		i.fa {
+			color: $btnPriTextHov;
+			background-color: transparent
+		}
 	}
 }
 
@@ -187,6 +197,11 @@ hr {
 	outline: $btnPriOutline;
 	box-shadow: none!important;
 
+	i.fa {
+		color: $btnPriText;
+		background-color: transparent
+	}
+
 	&:hover, &:focus,
 	&:active, &.active {
 		background-image: none;
@@ -196,7 +211,12 @@ hr {
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
 		border: $btnPriBorderHov;
-		outline: $btnPriOutlineHov
+		outline: $btnPriOutlineHov;
+
+		i.fa {
+			color: $btnPriTextHov;
+			background-color: transparent
+		}
 	}
 }
 
@@ -212,6 +232,11 @@ hr {
 	outline: $btnSecOutline;
 	box-shadow: none!important;
 
+	i.fa {
+		color: $btnSecText;
+		background-color: transparent
+	}
+
 	&:hover, &:focus,
 	&:active, &.active {
 		background-image: none;
@@ -220,7 +245,12 @@ hr {
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
 		border: $btnSecBorderHov;
-		outline: $btnSecOutlineHov
+		outline: $btnSecOutlineHov;
+
+		i.fa {
+			color: $btnSecTextHov;
+			background-color: transparent
+		}
 	}
 }
 
@@ -235,7 +265,7 @@ hr {
 
 	i.fa {
 		color: $btnLinkText;
-		background-color: $btnLinkBg
+		background-color: transparent
 	}
 
 	&:hover, &:focus,
@@ -250,7 +280,7 @@ hr {
 
 		i.fa {
 			color: $btnLinkTextHov;
-			background-color: $btnLinkBgHov
+			background-color: transparent
 		}
 	}
 }
