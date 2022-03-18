@@ -741,6 +741,9 @@ caption, h5 {
   text-decoration: underline;
 }
 
+#search-facets ul {
+  padding: 0.5rem;
+}
 #search-facets h3 a {
   display: block;
   font-size: initial;
