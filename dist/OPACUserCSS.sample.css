@@ -402,6 +402,7 @@ input[type=search]:read-only {
 .main {
   margin: 0;
   padding: 1rem;
+  border: none;
   color: #231f20;
   background-color: white;
 }
