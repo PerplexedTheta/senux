@@ -53,8 +53,9 @@
 
 // news
 #news {
+	margin: 0 0 .5em 0;
 	border: $defaultBorder;
-	border-radius: $defaultRadius;
+	border-radius: $defaultRadius
 }
 
 .newsheader {
