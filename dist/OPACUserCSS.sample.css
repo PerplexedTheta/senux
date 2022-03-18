@@ -159,6 +159,10 @@ hr {
   outline: 0.33rem solid transparent;
   box-shadow: none !important;
 }
+.btn i.fa, input[type=submit].btn i.fa {
+  color: #e6f2ff;
+  background-color: transparent;
+}
 .btn:hover, .btn:focus, .btn:active, .btn.active, input[type=submit].btn:hover, input[type=submit].btn:focus, input[type=submit].btn:active, input[type=submit].btn.active {
   background-image: none;
   text-shadow: none;
@@ -167,6 +171,10 @@ hr {
   background-color: #e6f2ff;
   border: 0.066rem solid #99ccff;
   outline: 0.33rem solid #99ccff;
+}
+.btn:hover i.fa, .btn:focus i.fa, .btn:active i.fa, .btn.active i.fa, input[type=submit].btn:hover i.fa, input[type=submit].btn:focus i.fa, input[type=submit].btn:active i.fa, input[type=submit].btn.active i.fa {
+  color: #007fff;
+  background-color: transparent;
 }
 
 .btn-primary, #loginModal input[type=submit],
@@ -181,6 +189,13 @@ hr {
   border: 0.066rem solid #4da5ff;
   outline: 0.33rem solid transparent;
   box-shadow: none !important;
+}
+.btn-primary i.fa, #loginModal input[type=submit] i.fa,
+.btn-primary:not(:disabled):not(.disabled) i.fa,
+.btn-success i.fa, .btn-success:not(:disabled):not(.disabled) i.fa,
+#searchsubmit.btn.btn-primary i.fa {
+  color: #e6f2ff;
+  background-color: transparent;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, #loginModal input[type=submit]:hover, #loginModal input[type=submit]:focus, #loginModal input[type=submit]:active, #loginModal input[type=submit].active,
 .btn-primary:not(:disabled):not(.disabled):hover,
@@ -203,6 +218,22 @@ hr {
   border: 0.066rem solid #99ccff;
   outline: 0.33rem solid #99ccff;
 }
+.btn-primary:hover i.fa, .btn-primary:focus i.fa, .btn-primary:active i.fa, .btn-primary.active i.fa, #loginModal input[type=submit]:hover i.fa, #loginModal input[type=submit]:focus i.fa, #loginModal input[type=submit]:active i.fa, #loginModal input[type=submit].active i.fa,
+.btn-primary:not(:disabled):not(.disabled):hover i.fa,
+.btn-primary:not(:disabled):not(.disabled):focus i.fa,
+.btn-primary:not(:disabled):not(.disabled):active i.fa,
+.btn-primary:not(:disabled):not(.disabled).active i.fa,
+.btn-success:hover i.fa,
+.btn-success:focus i.fa,
+.btn-success:active i.fa,
+.btn-success.active i.fa, .btn-success:not(:disabled):not(.disabled):hover i.fa, .btn-success:not(:disabled):not(.disabled):focus i.fa, .btn-success:not(:disabled):not(.disabled):active i.fa, .btn-success:not(:disabled):not(.disabled).active i.fa,
+#searchsubmit.btn.btn-primary:hover i.fa,
+#searchsubmit.btn.btn-primary:focus i.fa,
+#searchsubmit.btn.btn-primary:active i.fa,
+#searchsubmit.btn.btn-primary.active i.fa {
+  color: #007fff;
+  background-color: transparent;
+}
 
 .btn-default, .btn-secondary,
 .btn-default:not(:disabled):not(.disabled),
@@ -214,6 +245,12 @@ hr {
   border: 0.066rem solid #d0ccc8;
   outline: 0.33rem solid transparent;
   box-shadow: none !important;
+}
+.btn-default i.fa, .btn-secondary i.fa,
+.btn-default:not(:disabled):not(.disabled) i.fa,
+.btn-secondary:not(:disabled):not(.disabled) i.fa {
+  color: #231f20;
+  background-color: transparent;
 }
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active,
 .btn-default:not(:disabled):not(.disabled):hover,
@@ -230,6 +267,18 @@ hr {
   background-color: #231f20;
   border: 0.066rem solid #4c4345;
   outline: 0.33rem solid #4c4345;
+}
+.btn-default:hover i.fa, .btn-default:focus i.fa, .btn-default:active i.fa, .btn-default.active i.fa, .btn-secondary:hover i.fa, .btn-secondary:focus i.fa, .btn-secondary:active i.fa, .btn-secondary.active i.fa,
+.btn-default:not(:disabled):not(.disabled):hover i.fa,
+.btn-default:not(:disabled):not(.disabled):focus i.fa,
+.btn-default:not(:disabled):not(.disabled):active i.fa,
+.btn-default:not(:disabled):not(.disabled).active i.fa,
+.btn-secondary:not(:disabled):not(.disabled):hover i.fa,
+.btn-secondary:not(:disabled):not(.disabled):focus i.fa,
+.btn-secondary:not(:disabled):not(.disabled):active i.fa,
+.btn-secondary:not(:disabled):not(.disabled).active i.fa {
+  color: #f3f2f1;
+  background-color: transparent;
 }
 
 .btn-link, .dt-button,
@@ -263,7 +312,7 @@ hr {
 .btn-link:not(:disabled):not(.disabled):active i.fa,
 .btn-link:not(:disabled):not(.disabled).active i.fa {
   color: #1a355e;
-  background-color: #fafbfd;
+  background-color: transparent;
 }
 
 .dt-button::before {
