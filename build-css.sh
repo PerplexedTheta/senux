@@ -19,11 +19,11 @@ if [[ ! $(command -v sass) ]]; then
 fi
 
 if [[ $1 == "--sample-run" ]]; then
-	sass ${SCRIPT_DIR}/src/css/build.sample.scss:dist/OPACUserCSS.sample.css
+	sass ${SCRIPT_DIR}/src/css/build.sample.scss:${SCRIPT_DIR}/dist/OPACUserCSS.sample.css
 	echo "File built and outputted to ./dist/OPACUserCSS.sample.css"
 else
-	sass ${SCRIPT_DIR}/src/css/build.scss:dist/OPACUserCSS.css
+	sass ${SCRIPT_DIR}/src/css/build.scss:${SCRIPT_DIR}/dist/OPACUserCSS.css
 	echo "File built and outputted to ./dist/OPACUserCSS.css"
-	sass ${SCRIPT_DIR}/src/css/build.scss:dist/OPACUserCSS.min.css --style compressed
+	sass ${SCRIPT_DIR}/src/css/build.scss:${SCRIPT_DIR}/dist/OPACUserCSS.min.css --style compressed
 	echo "File built and outputted to ./dist/OPACUserCSS.min.css"
 fi
