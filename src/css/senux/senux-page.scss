@@ -80,11 +80,13 @@
 }
 
 .ui-tabs .ui-tabs-panel {
+	background-color: $white;
 	border-color: darken($defaultBg, 33%);
 	border-radius: $defaultRadius
 }
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
 	a, a:link, a:visited {
 		background-color: transparent;
 		color: $defaultLinkText;
