@@ -85,8 +85,7 @@
 	border-radius: $defaultRadius
 }
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-active,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
+.ui-tabs .ui-tabs-nav li.ui-tabs-active{
 	a, a:link, a:visited {
 		background-color: transparent;
 		color: $defaultLinkText;
@@ -95,6 +94,16 @@
 			background-color: transparent;
 			color: darken($defaultLinkText, 15%)
 		}
+	}
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
+	color: $defaultLinkText;
+
+	&:hover, &:focus {
+		background: darken($defaultBg, 15%);
+		color: darken($defaultLinkText, 15%)
 	}
 }
 
