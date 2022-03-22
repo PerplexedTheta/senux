@@ -288,6 +288,10 @@ hr {
 	border: $btnPriBorderWidth $btnPriBorderType $msRed;
 	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
 
+	i.fa {
+		color: $msWhite
+	}
+
 	&:hover, &:focus,
 	&:active, &.active {
 		background-image: none;
@@ -296,7 +300,11 @@ hr {
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
 		border: $btnPriBorderWidth $btnPriBorderType darken($msRed, 10%);
-		outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%)
+		outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%);
+
+		i.fa {
+			color: $msWhite
+		}
 	}
 }
 
