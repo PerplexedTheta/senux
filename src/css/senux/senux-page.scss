@@ -57,6 +57,7 @@
 .breadcrumb-item + .breadcrumb-item {
 	&::before {
 		height: auto;
+		width: auto;
 		background: none;
 		color: $breadcrumbDivider;
 		content: "/"
