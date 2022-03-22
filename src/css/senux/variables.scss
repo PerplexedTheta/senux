@@ -153,6 +153,15 @@ $moreSearchText: $userText2;
 $moreSearchLink: $userText2;
 $moreSearchLinkHov: lighten($userText2,15%);
 
+// vars -- content
+$breadcrumbBg: $defaultBg;
+$breadcrumbText: $defaultText;
+$breadcrumbBorder: none;
+$breadcrumbOutline: none;
+$breadcrumbLink: $defaultLink;
+$breadcrumbLinkHov: $defaultLinkHov;
+
+
 //
 // vars -- opac
 $onlineAccessBg: lighten($msGold,33%);
