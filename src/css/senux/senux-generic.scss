@@ -42,28 +42,24 @@ h4, h5, h6,
 a {
 	background: $defaultLinkBg;
 	color: $defaultLinkText;
-	border: $defaultLinkBorder;
-	outline: $defaultLinkOutline;
+	outline: $defaultLinkOutlineWidth $defaultLinkOutlineType $defaultLinkOutlineCol;
 	box-shadow: none!important;
 	text-decoration: $defaultLinkDecoration;
 
 	border-radius: $defaultRadius;
-	outline-offset: $defaultOutlineOffset;
+	outline-offset: $defaultOffset;
 
 	i.fa {
-		background-color: transparent;
 		color: $defaultLinkText
 	}
 
 	&:link, &:visited {
 		background: $defaultLinkBg;
 		color: $defaultLinkText;
-		border: $defaultLinkBorder;
-		outline: $defaultLinkOutline;
+		outline: $defaultLinkOutlineWidth $defaultLinkOutlineType $defaultLinkOutlineCol;
 		text-decoration: $defaultLinkDecoration;
 
 		i.fa {
-			background-color: transparent;
 			color: $defaultLinkText
 		}
 	}
@@ -71,27 +67,23 @@ a {
 	&:hover {
 		background: $defaultLinkBgHov;
 		color: $defaultLinkTextHov;
-		border: $defaultLinkBorderHov;
-		outline: $defaultLinkOutlineHov;
+		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
 		text-decoration: $defaultLinkDecorationHov;
 
 		i.fa {
-			background-color: transparent;
 			color: $defaultLinkTextHov
 		}
 	}
 
 	&:focus,
 	&:active, &.active {
-		background: $defaultLinkBgFoc;
-		color: $defaultLinkTextFoc;
-		border: $defaultLinkBorderFoc;
-		outline: $defaultLinkOutlineFoc;
-		text-decoration: $defaultLinkDecorationFoc;
+		background: $defaultLinkBgFoc!important;
+		color: $defaultLinkTextFoc!important;
+		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
+		text-decoration: $defaultLinkDecorationFoc!important;
 
 		i.fa {
-			background-color: transparent;
-			color: $defaultLinkTextFoc
+			color: $defaultLinkTextFoc!important
 		}
 	}
 }
@@ -105,7 +97,7 @@ ul {
 }
 
 hr {
-	border-top: $defaultBorder
+	border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
 //
@@ -148,7 +140,7 @@ hr {
 	padding: .45rem 1.125rem;
 	font-size: 1rem;
 	border-radius: $defaultRadius;
-	outline-offset: $defaultOutlineOffset;
+	outline-offset: $defaultOffset;
 	cursor: pointer;
 	white-space: normal;
 	word-wrap: break-word;
@@ -156,13 +148,12 @@ hr {
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: $btnPriBorder;
-	outline: $btnPriOutline;
+	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
+	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
-		color: $btnPriText;
-		background-color: transparent
+		color: $btnPriText
 	}
 
 	&:hover, &:focus,
@@ -173,12 +164,11 @@ hr {
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: $btnPriBorderHov;
-		outline: $btnPriOutlineHov;
+		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov;
+		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov;
 
 		i.fa {
-			color: $btnPriTextHov;
-			background-color: transparent
+			color: $btnPriTextHov
 		}
 	}
 }
@@ -193,13 +183,12 @@ hr {
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: $btnPriBorder;
-	outline: $btnPriOutline;
+	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
+	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
-		color: $btnPriText;
-		background-color: transparent
+		color: $btnPriText
 	}
 
 	&:hover, &:focus,
@@ -210,12 +199,11 @@ hr {
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: $btnPriBorderHov;
-		outline: $btnPriOutlineHov;
+		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov;
+		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov;
 
 		i.fa {
-			color: $btnPriTextHov;
-			background-color: transparent
+			color: $btnPriTextHov
 		}
 	}
 }
@@ -228,13 +216,12 @@ hr {
 
 	color: $btnSecText;
 	background-color: $btnSecBg;
-	border: $btnSecBorder;
-	outline: $btnSecOutline;
+	border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
+	outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
-		color: $btnSecText;
-		background-color: transparent
+		color: $btnSecText
 	}
 
 	&:hover, &:focus,
@@ -244,12 +231,11 @@ hr {
 
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
-		border: $btnSecBorderHov;
-		outline: $btnSecOutlineHov;
+		border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
+		outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov;
 
 		i.fa {
-			color: $btnSecTextHov;
-			background-color: transparent
+			color: $btnSecTextHov
 		}
 	}
 }
@@ -261,11 +247,11 @@ hr {
 
 	color: $btnLinkText;
 	background-color: $btnLinkBg;
-	border: $btnLinkBorder;
+	border: $btnLinkBorderWidth $btnLinkBorderType $btnLinkBorderCol;
+	outline: $btnLinkOutlineWidth $btnLinkOutlineType $btnLinkOutlineCol;
 
 	i.fa {
-		color: $btnLinkText;
-		background-color: transparent
+		color: $btnLinkText
 	}
 
 	&:hover, &:focus,
@@ -275,12 +261,11 @@ hr {
 
 		color: $btnLinkTextHov;
 		background-color: $btnLinkBgHov;
-		border: $btnLinkBorderHov;
-		outline: $btnLinkOutlineHov;
+		border: $btnLinkBorderWidthHov $btnLinkBorderTypeHov $btnLinkBorderColHov;
+		outline: $btnLinkOutlineWidthHov $btnLinkOutlineTypeHov $btnLinkOutlineColHov;
 
 		i.fa {
-			color: $btnLinkTextHov;
-			background-color: transparent
+			color: $btnLinkTextHov
 		}
 	}
 }
@@ -300,8 +285,8 @@ hr {
 
 	color: $msWhite;
 	background-color: $msRed;
-	border: $msWhite;
-	
+	border: $btnPriBorderWidth $btnPriBorderType $msRed;
+	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -310,8 +295,8 @@ hr {
 
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
-		border: darken($msRed, 10%);
-		outline: .33rem solid $msRed
+		border: $btnPriBorderWidth $btnPriBorderType darken($msRed, 10%);
+		outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%)
 	}
 }
 
@@ -337,12 +322,12 @@ input[type="search"], select, textarea,
 	background-image: none;
 	text-shadow: none;
 	border-radius: $defaultRadius;
-	outline-offset: $defaultOutlineOffset;
+	outline-offset: $defaultOffset;
 
 	color: $inputText;
 	background-color: $inputBg;
-	border: $inputBorder;
-	outline: $inputOutline;
+	border: $inputBorderWidth $inputBorderType $inputBorderCol;
+	outline: $inputOutlineWidth $inputOutlineType $inputOutlineCol;
 	box-shadow: none!important;
 
 	&:hover {
@@ -351,8 +336,8 @@ input[type="search"], select, textarea,
 
 		color: $inputTextHov;
 		background-color: $inputBgHov;
-		border: $inputBorderHov;
-		outline: $inputOutlineHov
+		border: $inputBorderWidthHov $inputBorderTypeHov $inputBorderColHov;
+		outline: $inputOutlineWidthHov $inputOutlineTypeHov $inputOutlineColHov
 	}
 
 	&:focus, &:active,
@@ -362,15 +347,15 @@ input[type="search"], select, textarea,
 
 		color: $inputTextFoc;
 		background-color: $inputBgFoc;
-		border: $inputBorderFoc;
-		outline: $inputOutlineFoc
+		border: $inputBorderWidthFoc $inputBorderTypeFoc $inputBorderColFoc;
+		outline: $inputOutlineWidthFoc $inputOutlineTypeFoc $inputOutlineColFoc
 	}
 
 	&:disabled {
 		color: $inputDisabledText;
 		background-color: $inputDisabledBg;
-		border: $inputDisabledBorder;
-		outline: $inputDisabledOutline;
+		border: $inputDisabledBorderWidth $inputDisabledBorderType $inputDisabledBorderCol;
+		outline: $inputDisabledOutlineWidth $inputDisabledOutlineType $inputDisabledOutlineCol
 	}
 }
 
@@ -384,8 +369,8 @@ input[type="search"] {
 	&:read-only {
 		color: $inputDisabledText;
 		background-color: $inputDisabledBg;
-		border: $inputDisabledBorder;
-		outline: $inputDisabledOutline;
+		border: $inputDisabledBorderWidth $inputDisabledBorderType $inputDisabledBorderCol;
+		outline: $inputDisabledOutlineWidth $inputDisabledOutlineType $inputDisabledOutlineCol
 	}
 }
 
@@ -405,5 +390,5 @@ input[type="search"] {
 	margin: -1px;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
-	border: 0
+	border: none
 }

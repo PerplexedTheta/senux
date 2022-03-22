@@ -11,7 +11,7 @@
 .main {
 	margin: 0;
 	padding: 1rem;
-	border: none;
+	border: $defaultBorderWidth $defaultBorderType transparent;
 	color: $mainText;
 	background-color: $mainBg
 }
@@ -27,9 +27,9 @@
 	margin: .5rem 0 .9375rem;
 	background-color: $breadcrumbBg;
 	color: $breadcrumbText;
-	border: $breadcrumbBorder;
-	outline: $breadcrumbOutline;
-	border-radius: $breadcrumbBorder
+	border: $breadcrumbBorderWidth $breadcrumbBorderType $breadcrumbBorderCol;
+	outline: $breadcrumbOutlineWidth $breadcrumbOutlineType $breadcrumbOutlineCol;
+	border-radius: $defaultRadius
 }
 
 .breadcrumb-item {
@@ -89,20 +89,20 @@
 .ui-tabs .ui-tabs-nav li {
 	background: $defaultBg;
 	color: $defaultText;
-	border-color: darken($defaultBg, 33%);
+	border-color: $defaultBorderCol;
 	border-radius: $defaultRadius $defaultRadius 0 0;
 
 	&.ui-tabs-active {
 		background: $white;
 		color: $defaultText;
-		border-color: darken($defaultBg, 33%);
+		border-color: $defaultBorderCol;
 		border-radius: $defaultRadius $defaultRadius 0 0
 	}
 }
 
 .ui-tabs .ui-tabs-panel {
 	background-color: $white;
-	border-color: darken($defaultBg, 33%);
+	border-color: $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
@@ -144,7 +144,7 @@
 // default
 .table-bordered, .table-bordered td,
 .table-bordered th {
-	border: $defaultBorder
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
 .table thead th {
@@ -219,7 +219,7 @@ td.overdue {
 //
 // menus
 .menu-collapse {
-	border-right: $defaultBorder
+	border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
 #menu li {

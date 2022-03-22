@@ -39,7 +39,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 .navbar-expand {
 	background-color: $navbarBg;
 	padding: .5rem 1rem;
-	border: none
+	border: $defaultBorderWidth $defaultBorderType transparent
 }
 
 #cartDetails {
@@ -47,9 +47,9 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 	right: auto;
 	bottom: auto;
 	left: 1rem;
-	border: $defaultBorder;
-	outline: $defaultOutline;
-	outline-offset: $defaultOutlineOffset;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $defaultOutlineCol;
+	outline-offset: $defaultOffset;
 	border-radius: $defaultRadius
 }
 
@@ -134,7 +134,8 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 
 .dropdown-menu {
 	background-color: $dropdownBg;
-	color: $dropdownText
+	color: $dropdownText;
+	border-radius: $defaultRadius
 }
 
 .navbar .nav > li {

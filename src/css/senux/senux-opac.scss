@@ -54,7 +54,7 @@
 // news
 #news {
 	margin: 0 0 .5em 0;
-	border: $defaultBorder;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
@@ -69,7 +69,7 @@
 }
 
 .newsfooter {
-	border: none
+	border: $defaultBorderWidth $defaultBorderType transparent
 }
 
 // hide rss because its old & branch select unless its required
@@ -92,9 +92,9 @@
 	color: $defaultText
 }
 
-#location, #sortby, #pubrange,
-#langfilter {
-	border: $defaultBorder
+.advsearch_limit {
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
 }
 
 //
@@ -123,13 +123,9 @@
 	}
 
 	.page-link {
-		background-color: $white;
+		background-color: lighten($white, 100%);
 		color: $defaultLinkText;
-
-		i.fa {
-			background-color: $white;
-			color: $defaultLinkText
-		}
+		border: none;
 
 		&:hover, &:focus,
 		&:active, &.active {
@@ -137,7 +133,6 @@
 			color: $defaultBg;
 
 			i.fa {
-				background-color: $defaultLinkText;
 				color: $defaultBg
 			}
 		}
@@ -157,14 +152,13 @@
 //
 // search facets
 #facetcontainer {
-	border: $defaultBorder;
-	border-right: .066rem solid transparent;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
 #menu, #search-facets {
 	margin: 0;
-	border: none
+	border: $defaultBorderWidth $defaultBorderType transparent
 }
 
 #menu h2, #search-facets h2 {
@@ -174,8 +168,8 @@
 		color: $defaultText;
 		background-color: $defaultBg;
 		text-decoration: $defaultLinkDecoration;
-		border-bottom: $defaultBorder;
-		border-right: $defaultBorder;
+		border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 
 		&:hover, &:focus {
 			text-decoration: $defaultLinkDecorationHov
@@ -197,6 +191,10 @@
 			float: right
 		}
 	}
+
+	.menu-collapse {
+		border: none
+	}
 }
 
 #yr_id {
@@ -216,27 +214,27 @@
 //
 // bookbag form
 #bookbag_form {
-	border-bottom: $defaultBorder
+	border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
 //
 // floating toolbar
 #floating {
-	border: $defaultBorder;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
-#toolbar.toolbar,
-#toolbar.toolbar.clearfix {
+#toolbar.toolbar, #toolbar.toolbar.clearfix {
 	background: $defaultBg;
-	border: .066rem solid transparent;
-	border-bottom: $defaultBorder
+	border: $defaultBorderWidth $defaultBorderType transparent;
+	border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
 }
 
-#selections-toolbar,
-.selections-toolbar {
+#selections-toolbar, .selections-toolbar {
 	background: $defaultBg;
-	border: .066rem solid transparent
+	border: $defaultBorderWidth $defaultBorderType transparent;
+	border-radius: $defaultRadius;
 }
 
 // underlined links
@@ -293,7 +291,7 @@
 .suggestion {
 	background-color: $defaultBg;
 	color: $defaultText;
-	border: .066rem solid transparent;
+	border: $defaultBorderWidth $defaultBorderType transparent;
 	border-radius: $defaultRadius
 }
 
@@ -302,6 +300,12 @@
 // details page
 .no-image {
 	display: none
+}
+
+#catalogue_detail_biblio {
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
+	padding: 1rem
 }
 
 #action, .actions,
@@ -323,7 +327,7 @@
 			color: darken($defaultLinkText, 33%);
 
 			i.fa {
-			color: darken($defaultLinkText, 33%)
+				color: darken($defaultLinkText, 33%)
 			}
 		}
 	}
@@ -331,23 +335,23 @@
 
 #action {
 	background-color: $defaultBg;
-	border: .066rem solid transparent;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
 }
 
 //
 // views
 #views {
-	border-bottom: $defaultBorder
+	border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
 .view {
 	color: $defaultText;
 
-	border-top: $defaultBorder;
-	border-right: $defaultBorder;
-	border-bottom: none;
-	border-left: $defaultBorder;
+	border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-bottom: $defaultBorderWidth $defaultBorderType $transparent;
+	border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius $defaultRadius 0 0
 }
 
@@ -368,6 +372,19 @@
 	}
 }
 
+// moreactions
+.nav_results {
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
+}
+
+.l_Results {
+	border-radius: $defaultRadius $defaultRadius 0 0
+}
+.pg_menu {
+	border-radius: 0 0 $defaultRadius $defaultRadius
+}
+
 //
 // socials
 #social_networks {
@@ -376,7 +393,7 @@
 
 		&:hover, &:focus,
 		&:active, &.active {
-			border-color: $defaultBorder
+			border-color: $defaultBorderCol
 		}
 	}
 }
@@ -413,10 +430,18 @@ a#ISBDview {
 #a_listResults {
 	color: $defaultLinkText;
 
+	i.fa {
+		color: $defaultLinkText;
+	}
+
 	&:hover, &:focus,
 	&:active, &.active {
 		background-color: $defaultLinkText;
-		color: $defaultBg
+		color: $defaultBg;
+
+		i.fa {
+			color: $defaultBg
+		}
 	}
 }
 
@@ -456,11 +481,11 @@ a#ISBDview {
 
 	color: $btnPriText!important;
 	background-color: $btnPriBg!important;
-	border: $btnPriBorder!important;
-	outline: .33rem solid transparent!important;
+	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol!important;
+	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol!important;
 
 	border-radius: $defaultRadius!important;
-	outline-offset: .066rem;
+	outline-offset: $defaultOffset!important;
 
 	&:hover, &:focus,
 	&:active, &.active {
@@ -470,7 +495,7 @@ a#ISBDview {
 
 		color: $btnPriTextHov!important;
 		background-color: $btnPriBgHov!important;
-		border: $btnPriBorderHov!important;
-		outline: $btnPriOutlineHov!important;
+		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov!important;
+		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov!important;
 	}
 }
