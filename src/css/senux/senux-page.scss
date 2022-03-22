@@ -200,7 +200,11 @@
 	}
 }
 
-// overdue
+// table lables
+.table_entries {
+	color: $defaultText
+}
+
 td.overdue {
 	color: $msRed
 }
