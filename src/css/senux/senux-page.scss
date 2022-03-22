@@ -40,24 +40,16 @@
 	a {
 		color: $breadcrumbLinkText;
 
+		&:link, &:visited {
+			color: $breadcrumbLinkText
+		}
+
 		&:hover, &:focus,
 		&:active, &.active {
 			color: $breadcrumbLinkTextHov
 		}
 	}
 
-	&.active {
-		a {
-			color: $breadcrumbLinkText;
-			font-weight: bold;
-
-			&:hover, &:focus,
-			&:active, &.active {
-				color: $breadcrumbLinkTextHov;
-				font-weight: bold
-			}
-		}
-	}
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -65,6 +57,24 @@
 		height: auto;
 		background: none;
 		content: "/"
+	}
+}
+
+.breadcrumb-item.active {
+	a {
+		color: $breadcrumbText;
+		font-weight: bold;
+
+		&:link, &:visited {
+			color: $breadcrumbText;
+			font-weight: bold
+		}
+
+		&:hover, &:focus,
+		&:active, &.active {
+			color: $breadcrumbText;
+			font-weight: bold
+		}
 	}
 }
 
