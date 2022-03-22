@@ -134,6 +134,7 @@
 // dropdown items
 .dropdown-item {
 	&:hover, &:focus {
+		color: $dropdownLinkTextHov;
 		background-color: $dropdownLinkBgHov
 	}
 }
