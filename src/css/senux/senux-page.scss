@@ -248,7 +248,7 @@ td.overdue {
 		border-right: $defaultBorderWidth $defaultBorderType $transparent;
 		border-bottom: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
 		border-left: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
-		border-radius: $defaultRadius;
+		border-radius: $defaultRadius 0 0 $defaultRadius;
 
 		&:hover, &:focus,
 		&:active, &.active {

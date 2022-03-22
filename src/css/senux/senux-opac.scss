@@ -156,11 +156,6 @@
 	border-radius: $defaultRadius
 }
 
-#menu, #search-facets {
-	margin: 0;
-	border: $defaultBorderWidth $defaultBorderType $transparent
-}
-
 #menu h2, #search-facets h2 {
 	margin: 0;
 
@@ -178,6 +173,8 @@
 }
 
 #search-facets {
+	border: $defaultBorderWidth $defaultBorderType $transparent;
+
 	ul {
 		padding: .5rem
 	}
