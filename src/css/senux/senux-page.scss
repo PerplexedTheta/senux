@@ -33,6 +33,8 @@
 }
 
 .breadcrumb-item {
+	color: $breadcrumbText;
+
 	&::before {
 		content: none
 	}
@@ -61,6 +63,8 @@
 }
 
 .breadcrumb-item.active {
+	color: $breadcrumbText;
+
 	a {
 		color: $breadcrumbText;
 		font-weight: bold;
