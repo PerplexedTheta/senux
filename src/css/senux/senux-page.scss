@@ -226,11 +226,12 @@ td.overdue {
 	a {
 		color: $defaultLinkText;
 		background-color: $defaultBg;
+
+		border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-right: $defaultBorderWidth $defaultBorderType $transparent;
+		border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 		border-radius: $defaultRadius 0 0 $defaultRadius;
-		border-top: .066rem solid darken($defaultBg, 33%);
-		border-right: .066rem solid $transparent;
-		border-bottom: .066rem solid darken($defaultBg, 33%);
-		border-left: .066rem solid darken($defaultBg, 33%);
 
 		&:hover, &:focus,
 		&:active, &.active {
@@ -240,11 +241,14 @@ td.overdue {
 	}
 
 	&.active a {
-		border-radius: $defaultRadius;
-		border-top: .066rem solid darken($defaultBg, 33%);
-		border-right: .066rem solid $transparent;
-		border-bottom: .066rem solid darken($defaultBg, 33%);
-		border-left: .066rem solid darken($defaultBg, 33%)
+		color: $defaultLinkTextFoc;
+		background-color: $defaultLinkBgFoc;
+
+		border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-right: $defaultBorderWidth $defaultBorderType $transparent;
+		border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-radius: $defaultRadius
 	}
 }
 
