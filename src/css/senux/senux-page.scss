@@ -42,18 +42,18 @@
 
 		&:hover, &:focus,
 		&:active, &.active {
-			color: $breadcrumbLinkHov
+			color: $breadcrumbLinkTextHov
 		}
 	}
 
 	&.active {
 		a {
-			color: $breadcrumbLink;
+			color: $breadcrumbLinkText;
 			font-weight: bold;
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $breadcrumbLinkHov;
+				color: $breadcrumbLinkTextHov;
 				font-weight: bold
 			}
 		}
