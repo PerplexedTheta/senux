@@ -20,7 +20,7 @@
 	a {
 		&:focus, &:active,
 		&.active {
-			background-color: transparent!important
+			background-color: $transparent!important
 		}
 	}
 }
@@ -39,7 +39,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 .navbar-expand {
 	background-color: $navbarBg;
 	padding: .5rem 1rem;
-	border: $defaultBorderWidth $defaultBorderType transparent
+	border: $defaultBorderWidth $defaultBorderType $transparent
 }
 
 #cartDetails {
