@@ -252,8 +252,13 @@ td.overdue {
 
 		&:hover, &:focus,
 		&:active, &.active {
+			color: $defaultBg;
 			background-color: $defaultLinkText;
-			color: $defaultBg
+
+			border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+			border-right: $defaultBorderWidth $defaultBorderType $transparent;
+			border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+			border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol
                 }
 	}
 }
