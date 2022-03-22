@@ -53,7 +53,7 @@
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $breadcrumbLinkHov
+				color: $breadcrumbLinkHov;
 				font-weight: bold
 			}
 		}
