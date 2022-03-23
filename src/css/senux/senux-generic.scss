@@ -91,10 +91,10 @@ a {
 a[target="_blank"] {
 	&::after {
 		font-family: 'FontAwesome';
-		font-size: .8em;
+		font-size: .75em;
 		font-weight: normal;
 		text-rendering: auto;
-		content: " \f08e"
+		content: "\00a0\f08e"
 	}
 }
 
