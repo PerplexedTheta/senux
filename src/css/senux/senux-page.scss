@@ -211,12 +211,6 @@ td.overdue {
 	}
 
 	li {
-		color: $btnSecText;
-		background-color: $btnSecBg;
-		border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
-		border-radius: $defaultRadius;
-		outline-offset: $defaultOffset;
-
 		list-style-type: none;
 
 		a {
