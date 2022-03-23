@@ -40,7 +40,8 @@
 	border-radius: $defaultRadius;
 }
 
-#navigation, #OpacNavRight {
+#navigation, #OpacNavRight,
+#login {
 	padding: 1rem;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
@@ -61,6 +62,12 @@
 		}
 	}
 }
+
+#login {
+	margin: 0 0 .5rem 0;
+	max-width: none
+}
+
 @media only screen and (min-width: 992px) {
 	#opac-main {
 		.col-12 {
@@ -419,7 +426,8 @@
 }
 
 .l_Results {
-	background-color: $defaultFg;
+	color: $headlinerText;
+	background-color: $headlinerBg;
 	border-radius: $defaultRadius;
 }
 .pg_menu .pg_link a, .pg_menu .pg_link span {
