@@ -33,8 +33,17 @@
 	}
 }
 
-#OpacNav, #OpacNavBottom,
-#OpacNavRight {
+#OpacMainUserBlock, #news {
+	background-color: $defaultBg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
+}
+
+#navigation, #OpacNavRight {
+	background-color: $defaultBg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
+
 	.btn {
 		width: 100%;
 		margin-bottom: .33rem
@@ -50,12 +59,24 @@
 		}
 	}
 }
+@media only screen and (min-width: 992px) {
+	#opac-main {
+		.col-12 {
+			display: flex;
+			flex: 0 0 auto;
+			flex-direction: column
+		}
+
+		#OpacMainUserBlock, #navigation,
+		#OpacNavRight {
+			flex-grow: 1
+		}
+	}
+}
 
 // news
 #news {
-	margin: 0 0 .5em 0;
-	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-	border-radius: $defaultRadius
+	margin: 0
 }
 
 .newsheader {
