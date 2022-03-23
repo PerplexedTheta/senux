@@ -189,6 +189,9 @@
 	border-bottom-right-radius: $defaultRadius
 }
 
+.pagination_list li {
+	color: $defaultText
+}
 
 #numresults, #selections {
 	color: $defaultText
