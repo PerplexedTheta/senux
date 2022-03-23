@@ -206,6 +206,10 @@ td.overdue {
 	border-right: none;
 
 	li {
+		display: block
+		padding: .4em .6em;
+		list-style-type: none;
+
 		a {
 			color: $defaultLinkText;
 			background-color: $defaultFg;
