@@ -88,6 +88,16 @@ a {
 	}
 }
 
+a[target="_blank"] {
+	&::after {
+		font-family: 'FontAwesome';
+		font-size: .8em;
+		font-weight: normal;
+		text-rendering: auto;
+		content: " \f08e"
+	}
+}
+
 label, .label, .hint {
 	color: $defaultText
 }
