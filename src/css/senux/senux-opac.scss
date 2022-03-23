@@ -630,6 +630,17 @@ a#ISBDview {
 
 //
 //
+// error pages
+div[id^="errormsg"] {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
 // inlibro changes
 #inlibro-carrousel {
 	padding: 1rem
