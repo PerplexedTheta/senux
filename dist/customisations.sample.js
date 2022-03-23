@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// add publication date range to facets
 	facetPublicationDateRange();
 
+	// add basket link handler
+	basketLinkHandler();
+
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
 });
@@ -72,7 +75,8 @@ function basketWindowHandler() {
 	var loc = "/cgi-bin/koha/opac-basket.pl?" + strCookie;
 	var basket = open(loc, "basket", optWin);
 	if (window.focus) basket.focus();
-
+}
+function basketLinkHandler() {
 	// bookbag link handler
 	$('a[href="#openFolder"]').on('click', function(event) {
 		event.preventDefault();

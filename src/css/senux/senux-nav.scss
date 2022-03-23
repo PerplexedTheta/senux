@@ -147,14 +147,15 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 //
 //
 // mobile overrides
-@media only screen and (max-width:1100px) {
-	.hmplabel, .helplabel, .srchlabel {
-		display: none
-	}
+.custlabel1, .custlabel2,
+.custlabel3, .custlabel4,
+.custlabel5 {
+	display: none
 }
-
-@media (max-width:767px) {
-	#opac-main .maincontent {
-		width: 74.46808510638297%
+@media only screen and (min-width: 992px) {
+	.custlabel1, .custlabel2,
+	.custlabel3, .custlabel4,
+	.custlabel5 {
+		display: inline
 	}
 }

@@ -13,7 +13,7 @@
 //
 // main page
 .maincontent {
-	color: $mainText;
+	color: $defaultText;
 	background-color: $transparent;
 
 	h1, h2, h3,
@@ -34,13 +34,15 @@
 }
 
 #OpacMainUserBlock, #news {
-	background-color: $defaultBg;
+	padding: 1rem;
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
 }
 
 #navigation, #OpacNavRight {
-	background-color: $defaultBg;
+	padding: 1rem;
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
 
@@ -108,14 +110,22 @@
 //
 //
 // adv search
-#advsearch_limits label, #subtypes label,
-.hint {
-	color: $defaultText
+#booleansearch {
+	width: 100%;
+	padding: 1rem;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius	
 }
 
 .advsearch_limit {
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
+}
+
+#advsearch_limits label, #subtypes label {
+	color: $defaultText
 }
 
 //
@@ -173,6 +183,8 @@
 //
 // search facets
 #facetcontainer {
+	padding: 1rem;
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
@@ -184,8 +196,7 @@
 		color: $defaultText;
 		background-color: $defaultBg;
 		text-decoration: $defaultLinkDecoration;
-		border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-		border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 
 		&:hover, &:focus {
 			text-decoration: $defaultLinkDecorationHov
@@ -197,7 +208,8 @@
 	border: $defaultBorderWidth $defaultBorderType $transparent;
 
 	ul {
-		padding: .5rem
+		border: none;
+		padding: 1rem 0 0 0
 	}
 
 	h3 a {
@@ -208,10 +220,6 @@
 		i.fa {
 			float: right
 		}
-	}
-
-	.menu-collapse {
-		border: none
 	}
 }
 
@@ -239,20 +247,16 @@
 // floating toolbar
 #floating {
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-bottom: none;
 	border-radius: $defaultRadius
 }
 
-#toolbar.toolbar, #toolbar.toolbar.clearfix {
-	background: $defaultBg;
-	border: $defaultBorderWidth $defaultBorderType $transparent;
-	border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-	border-radius: $defaultRadius;
-}
-
+#toolbar.toolbar, #toolbar.toolbar.clearfix,
 #selections-toolbar, .selections-toolbar {
-	background: $defaultBg;
-	border: $defaultBorderWidth $defaultBorderType $transparent;
-	border-radius: $defaultRadius;
+	color: $toolbarText;
+	background: $toolbarBg;
+	border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
 }
 
 // underlined links
@@ -307,7 +311,7 @@
 //
 // suggestions box
 .suggestion {
-	background-color: $defaultBg;
+	background-color: $defaultFg;
 	color: $defaultText;
 	border: $defaultBorderWidth $defaultBorderType $transparent;
 	border-radius: $defaultRadius
@@ -321,9 +325,11 @@
 }
 
 #catalogue_detail_biblio {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-	border-radius: $defaultRadius;
-	padding: 1rem
+	border-radius: $defaultRadius
 }
 
 #action, .actions,
@@ -352,7 +358,7 @@
 }
 
 #action {
-	background-color: $defaultBg;
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
 }
@@ -374,7 +380,7 @@
 }
 
 .current-view {
-	background-color: $defaultBg
+	background-color: $defaultFg
 }
 
 // moresearches menu
@@ -392,15 +398,18 @@
 
 // moreactions
 .nav_results {
+	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
 }
 
 .l_Results {
-	border-radius: $defaultRadius $defaultRadius 0 0
+	background-color: $defaultFg;
+	border-radius: $defaultRadius;
 }
-.pg_menu {
-	border-radius: 0 0 $defaultRadius $defaultRadius
+.pg_menu .pg_link a, .pg_menu .pg_link span {
+	background-color: $defaultFg;
+	border-radius: $defaultRadius
 }
 
 //
@@ -430,7 +439,15 @@ a#ISBDview {
 
 //
 //
-// course search
+// course reserves
+#courses {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
 .dataTables_filter input,
 .dataTables_filter label {
 	font-size: 1rem
@@ -441,7 +458,7 @@ a#ISBDview {
 	&:hover, &:focus,
 	&:active, &.active {
 		background-color: $defaultLinkText;
-		color: $defaultBg
+		color: $defaultFg
 	}
 }
 
@@ -455,10 +472,10 @@ a#ISBDview {
 	&:hover, &:focus,
 	&:active, &.active {
 		background-color: $defaultLinkText;
-		color: $defaultBg;
+		color: $defaultFg;
 
 		i.fa {
-			color: $defaultBg
+			color: $defaultFg
 		}
 	}
 }
@@ -468,6 +485,99 @@ a#ISBDview {
 // serials
 #libraryfilter, #subscriptionidfilter {
 	margin-bottom: .5rem
+}
+
+//
+//
+// account
+#userdetails, #useraccount,
+#opac-patron-update .col-md-12.col-lg-10.order-1, #usertags,
+#searchhistory, #userreadingrecord,
+#userholdshistory, #usersuggestions,
+#usermessaging, #usershelves,
+#illrequests {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// libraries
+#library_info {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// holds
+#holds {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// subject cloud
+#subjectcloud {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// auths
+#userauthhome {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// browser
+#userbrowser {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// lists
+#useraddbybiblionumber {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
+}
+
+//
+//
+// basket
+#userbasket {
+	padding: 1rem;
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius
 }
 
 //

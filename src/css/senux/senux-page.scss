@@ -12,8 +12,8 @@
 	margin: 0;
 	padding: 1rem;
 	border: $defaultBorderWidth $defaultBorderType $transparent;
-	color: $mainText;
-	background-color: $mainBg
+	color: $defaultText;
+	background-color: $defaultBg
 }
 @media (min-width: 992px) {
 	.main {
@@ -27,8 +27,7 @@
 	margin: .5rem 0 .9375rem;
 	background-color: $breadcrumbBg;
 	color: $breadcrumbText;
-	border: $breadcrumbBorderWidth $breadcrumbBorderType $breadcrumbBorderCol;
-	outline: $breadcrumbOutlineWidth $breadcrumbOutlineType $breadcrumbOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
@@ -51,7 +50,6 @@
 			color: $breadcrumbLinkTextHov
 		}
 	}
-
 }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -90,42 +88,13 @@
 	background: $defaultBg;
 	color: $defaultText;
 	border-color: $defaultBorderCol;
-	border-radius: $defaultRadius $defaultRadius 0 0;
-
-	&.ui-tabs-active {
-		background: $white;
-		color: $defaultText;
-		border-color: $defaultBorderCol;
-		border-radius: $defaultRadius $defaultRadius 0 0
-	}
+	border-radius: $defaultRadius $defaultRadius 0 0
 }
 
 .ui-tabs .ui-tabs-panel {
 	background-color: $white;
 	border-color: $defaultBorderCol;
 	border-radius: $defaultRadius
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active{
-	a, a:link, a:visited {
-		background-color: $transparent;
-		color: $defaultLinkText;
-
-		&:hover, &:focus {
-			background-color: $transparent;
-			color: darken($defaultLinkText, 15%)
-		}
-	}
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
-	color: $defaultLinkText;
-
-	&:hover, &:focus {
-		background: darken($defaultBg, 15%);
-		color: darken($defaultLinkText, 15%)
-	}
 }
 
 .ui-tabs .ui-state-default {
@@ -136,6 +105,17 @@
 			background: darken($defaultBg, 15%);
 			color: darken($defaultLinkText, 15%)
 		}
+	}
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
+.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
+	background-color: $defaultLinkBgFoc;
+	color: $defaultLinkTextFoc;
+
+	a, a:link, a:visited {
+		color: $defaultLinkTextFoc;
 	}
 }
 
@@ -222,43 +202,35 @@ td.overdue {
 	border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
+#menu {
+	border-right: none
+}
+
 #menu li {
 	a {
 		color: $defaultLinkText;
-		background-color: $defaultBg;
-
-		border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-		border-right: $defaultBorderWidth $defaultBorderType $transparent;
-		border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-		border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-		border-radius: $defaultRadius 0 0 $defaultRadius;
+		background-color: $defaultFg;
+		border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+		border-radius: $defaultRadius;
 
 		&:hover, &:focus,
 		&:active, &.active {
+			color: $defaultFg;
 			background-color: $defaultLinkText;
-			color: $defaultBg
+			outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
 		}
 	}
 
 	&.active a {
 		color: $defaultLinkTextFoc;
 		background-color: $defaultLinkBgFoc;
-
-		border-top: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
-		border-right: $defaultBorderWidth $defaultBorderType $transparent;
-		border-bottom: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
-		border-left: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
-		border-radius: $defaultRadius 0 0 $defaultRadius;
+		border: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
 
 		&:hover, &:focus,
 		&:active, &.active {
-			color: $defaultBg;
+			color: $defaultFg;
 			background-color: $defaultLinkText;
-
-			border-top: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-			border-right: $defaultBorderWidth $defaultBorderType $transparent;
-			border-bottom: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-			border-left: $defaultBorderWidth $defaultBorderType $defaultBorderCol
+			outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
                 }
 	}
 }
