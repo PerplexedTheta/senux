@@ -189,7 +189,7 @@
 	border-bottom-right-radius: $defaultRadius
 }
 
-.pagination_list li {
+.pagination_list li, .pagination_list .li_pag_index {
 	color: $defaultText
 }
 
