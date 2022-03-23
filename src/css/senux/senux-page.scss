@@ -202,36 +202,36 @@ td.overdue {
 	border-right: $defaultBorderWidth $defaultBorderType $defaultBorderCol
 }
 
-#menu {
+#menu, .menu {
 	border-right: none
-}
 
-#menu li {
-	a {
-		color: $defaultLinkText;
-		background-color: $defaultFg;
-		border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-		border-radius: $defaultRadius;
+	li {
+		a {
+			color: $defaultLinkText;
+			background-color: $defaultFg;
+			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+			border-radius: $defaultRadius;
 
-		&:hover, &:focus,
-		&:active, &.active {
-			color: $defaultFg;
-			background-color: $defaultLinkText;
-			outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
+			&:hover, &:focus,
+			&:active, &.active {
+				color: $defaultFg;
+				background-color: $defaultLinkText;
+				outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
+			}
 		}
-	}
 
-	&.active a {
-		color: $defaultLinkTextFoc;
-		background-color: $defaultLinkBgFoc;
-		border: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
+		&.active a {
+			color: $defaultLinkTextFoc;
+			background-color: $defaultLinkBgFoc;
+			border: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
 
-		&:hover, &:focus,
-		&:active, &.active {
-			color: $defaultFg;
-			background-color: $defaultLinkText;
-			outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
-                }
+			&:hover, &:focus,
+			&:active, &.active {
+				color: $defaultFg;
+				background-color: $defaultLinkText;
+				outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
+			}
+		}
 	}
 }
 

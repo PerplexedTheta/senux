@@ -202,7 +202,8 @@
 	border-radius: $defaultRadius
 }
 
-#menu h2, #search-facets h2 {
+#menu h2, .menu h2,
+#search-facets h2 {
 	margin: 0;
 
 	a {
@@ -275,7 +276,8 @@
 // underlined links
 #CheckAll, #CheckNone,
 .CheckAll, .CheckNone,
-#menu a, #search-facets a {
+#menu a, .menu a,
+#search-facets a {
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
