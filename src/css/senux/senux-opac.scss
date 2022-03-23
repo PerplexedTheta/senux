@@ -104,6 +104,9 @@
 //
 // login modal
 .modal-content {
+	color: $defaultText;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
