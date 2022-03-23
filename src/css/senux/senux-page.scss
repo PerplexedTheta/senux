@@ -206,11 +206,11 @@ td.overdue {
 	border-right: none;
 
 	li {
-		display: block;
-		padding: .4em .6em;
-		list-style-type: none;
-
 		a {
+			display: block;
+			padding: .4rem .6rem;
+			list-style-type: none;
+
 			color: $defaultLinkText;
 			background-color: $defaultFg;
 			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
