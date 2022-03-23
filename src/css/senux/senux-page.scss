@@ -240,9 +240,10 @@ td.overdue {
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $defaultFg;
-				background-color: $defaultLinkText;
-				outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
+				color: $btnSecTextHov;
+				background-color: $btnSecBgHov;
+				border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
+				outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov
 			}
 		}
 	}
