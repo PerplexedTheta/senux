@@ -211,22 +211,31 @@ td.overdue {
 	}
 
 	li {
+		color: $btnSecText;
+		background-color: $btnSecBg;
+		border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
+		border-radius: $defaultRadius;
+		outline-offset: $defaultOffset;
+
 		list-style-type: none;
 
 		a {
 			display: block;
 			padding: .4rem .6rem;
 
-			color: $defaultLinkText;
-			background-color: $defaultFg;
-			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-			border-radius: $defaultRadius;
+
+			color: $btnSecText;
+			background-color: $btnSecBg;
+			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
+			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $defaultFg;
-				background-color: $defaultLinkText;
-				outline: $defaultOutlineWidth $defaultOutlineType lighten($defaultLinkText, 15%)
+				color: $btnSecTextHov;
+				background-color: $btnSecBgHov;
+				border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
+				outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov
 			}
 		}
 
