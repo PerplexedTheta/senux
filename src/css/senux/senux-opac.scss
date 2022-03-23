@@ -169,6 +169,17 @@
 	}
 }
 
+.pagination-sm .page-item:first-child .page-link {
+	border-top-left-radius: $defaultRadius;
+	border-bottom-left-radius: $defaultRadius
+}
+
+.pagination-sm .page-item:last-child .page-link {
+	border-top-right-radius: $defaultRadius;
+	border-bottom-right-radius: $defaultRadius
+}
+
+
 #numresults, #selections {
 	color: $defaultText
 }
