@@ -10,6 +10,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 	//
+	// accessibility
+
+	// add link labels
+	externalLinkAriaLabeller();
+
+
+	//
 	// site-wide logic (MAIN FUNC)
 
 	// nav menus
@@ -57,6 +64,15 @@ function showGdprBanner() {
 		$('#-gdpr-banner').remove();
 	});
 	return;
+}
+
+
+//
+// function to label external links
+function externalLinkAriaLabeller() {
+	$('a[target="_blank"]').each(function() {
+		$(this).attr('aria-label', $(this).text() + ' (new window)');
+	});
 }
 
 
