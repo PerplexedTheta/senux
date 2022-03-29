@@ -114,8 +114,8 @@
 		color: $defaultLinkText;
 
 		&:hover, &:focus {
-			background: darken($defaultBg, 15%);
-			color: darken($defaultLinkText, 15%)
+			background: $defaultBg;
+			color: $defaultLinkText
 		}
 	}
 }
