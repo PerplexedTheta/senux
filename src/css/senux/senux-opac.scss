@@ -355,6 +355,7 @@
 
 #catalogue_detail_biblio {
 	padding: 1rem;
+	overflow: auto; // clearfix
 	color: $defaultText;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
