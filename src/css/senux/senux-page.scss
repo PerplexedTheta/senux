@@ -90,9 +90,9 @@
 	border-color: $defaultBorderCol;
 	border-radius: $defaultRadius $defaultRadius 0 0;
 
-	.ui-tabs-active,
-	.ui-tabs-active.ui-state-hover,
-	.ui-tabs-active.ui-state-hover.ui-state-active {
+	&.ui-tabs-active,
+	&.ui-tabs-active.ui-state-hover,
+	&.ui-tabs-active.ui-state-hover.ui-state-active {
 		color: $defaultLinkTextFoc;
 		background-color: $defaultLinkBgFoc;
 		border-color: $defaultBorderCol;
