@@ -85,10 +85,22 @@
 //
 // ui tabs
 .ui-tabs .ui-tabs-nav li {
-	background: $defaultBg;
 	color: $defaultText;
+	background: $defaultBg;
 	border-color: $defaultBorderCol;
-	border-radius: $defaultRadius $defaultRadius 0 0
+	border-radius: $defaultRadius $defaultRadius 0 0;
+
+	.ui-tabs-active,
+	.ui-tabs-active.ui-state-hover,
+	.ui-tabs-active.ui-state-hover.ui-state-active {
+		color: $defaultLinkTextFoc;
+		background-color: $defaultLinkBgFoc;
+		border-color: $defaultBorderCol;
+
+		a, a:link, a:visited {
+			color: $defaultLinkTextFoc
+		}
+	}
 }
 
 .ui-tabs .ui-tabs-panel {
@@ -105,17 +117,6 @@
 			background: darken($defaultBg, 15%);
 			color: darken($defaultLinkText, 15%)
 		}
-	}
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover,
-.ui-tabs .ui-tabs-nav li.ui-tabs-active.ui-state-hover.ui-state-active {
-	background-color: $defaultLinkBgFoc;
-	color: $defaultLinkTextFoc;
-
-	a, a:link, a:visited {
-		color: $defaultLinkTextFoc;
 	}
 }
 
