@@ -364,7 +364,11 @@
 	border-radius: $defaultRadius;
 
 	.bookcover {
-		flex: 1 0 auto
+		flex: 1 0 auto;
+
+		&:empty {
+			display: none
+		}
 	}
 
 	.unapi-id, .Z3988, .record {
