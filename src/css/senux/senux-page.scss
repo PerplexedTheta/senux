@@ -115,6 +115,7 @@
 
 		&:hover, &:focus {
 			background: $defaultBg;
+			border-bottom: $defaultBorderWidth $defaultBorderType $defaultBg;
 			color: $defaultLinkTextHov
 		}
 	}
