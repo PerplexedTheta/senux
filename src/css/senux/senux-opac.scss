@@ -354,26 +354,11 @@
 }
 
 #catalogue_detail_biblio {
-	display: flex;
-	flex-direction: row;
-
 	padding: 1rem;
 	color: $defaultText;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-	border-radius: $defaultRadius;
-
-	.bookcover {
-		flex: 1 0 auto;
-
-		&:empty {
-			display: none
-		}
-	}
-
-	.unapi-id, .Z3988, .record {
-		flex: 0 1 auto
-	}
+	border-radius: $defaultRadius
 }
 
 #action, .actions,
