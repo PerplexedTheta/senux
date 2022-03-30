@@ -143,14 +143,7 @@
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover {
-		background: $defaultLinkBgHov;
-		color: $defaultLinkTextHov;
-		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
 		text-decoration: $defaultLinkDecorationHov;
-
-		i.fa {
-			color: $defaultLinkTextHov
-		}
 	}
 
 	&:focus, &:active,
@@ -171,14 +164,7 @@
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover {
-		background: $defaultLinkBgHov;
-		color: $defaultLinkTextHov;
-		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
 		text-decoration: $defaultLinkDecorationHov;
-
-		i.fa {
-			color: $defaultLinkTextHov
-		}
 	}
 
 	&:focus, &:active,
@@ -199,14 +185,7 @@
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover {
-		background: $defaultLinkBgHov;
-		color: $defaultLinkTextHov;
-		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
 		text-decoration: $defaultLinkDecorationHov;
-
-		i.fa {
-			color: $defaultLinkTextHov
-		}
 	}
 
 	&:focus, &:active,
