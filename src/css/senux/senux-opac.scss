@@ -121,6 +121,17 @@
 	border-radius: $defaultRadius
 }
 
+.closebtn {
+	opacity: 1;
+	color: $msRed
+
+	&:hover, &:focus,
+	&:active, &.active {
+		opacity: 1;
+		color: lighten($msRed, 15%)
+	}
+}
+
 //
 //
 // adv search
