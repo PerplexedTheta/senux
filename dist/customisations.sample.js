@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	// login modal - shibboleth
 	// comment this out if you don't use saml
-	$('#loginModal').html('<div class=\"modal-dialog\"> <div class=\"modal-content\"> <div class=\"modal-header\"> <h2 class=\"modal-title\" id=\"modalLoginLabel\">Log in to your account<\/h2> <button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button> <\/div><div id=\"modalAuth\" class=\"modal-body\"> <h3>Academic student or staff?<\/h3> <p><a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to institution login &raquo;<\/a><\/p><h3>Academic associate?<\/h3> <p><a href=\"\/cgi-bin\/koha\/opac-user.pl\" class=\"btn btn-primary\">Go to local Koha login &raquo;<\/a><\/p><\/div><\/div><\/div>');
+	//$('#loginModal').html('<div class=\"modal-dialog\"> <div class=\"modal-content\"> <div class=\"modal-header\"> <h2 class=\"modal-title\" id=\"modalLoginLabel\">Log in to your account<\/h2> <button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button> <\/div><div id=\"modalAuth\" class=\"modal-body\"> <h3>Academic student or staff?<\/h3> <p><a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to institution login &raquo;<\/a><\/p><h3>Academic associate?<\/h3> <p><a href=\"\/cgi-bin\/koha\/opac-user.pl\" class=\"btn btn-primary\">Go to local Koha login &raquo;<\/a><\/p><\/div><\/div><\/div>');
 
 	// disable borrower contact method dropdown if it is readonly
 	if($('select[name="borrower_primary_contact_method"]').attr('readonly') == "readonly") {
@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	// add basket link handler
 	basketLinkHandler();
+
+	// reservation link handler
+	reservationLinkHandler();
 
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
@@ -131,10 +134,16 @@ function facetPublicationDateRange() {
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
-	$('#search-facets .menu-collapse').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3><div style=\"display:none\"><input type=\"text\" name=\"limit-yr\"><p class=\"hint\">For example: 1999-2001<\/p><a href=\"#facetYrRefine\" class=\"btn btn-default mt-2\">Refine<\/a><\/div><\/li>');
+	$('#facetcontainer').after('<div class=\"facetcontainer\"><div role=\"region\" aria-label=\"Date range facets\" class=\"search-facets\"><h2><p>Refine date range<\/p><\/h2><div id=\"yr_id\" class=\"container-fluid\"><p class=\"hint pt-2\">- between -<\/p><input type=\"text\" name=\"limit-yr-start\"\/><p class=\"hint pt-2\">- and -<\/p><input type=\"text\" name=\"limit-yr-end\"\/><p class=\"hint pt-2\">For example: 1999-2001<\/p><p id=\"limit-yr-err\" class=\"hint pt-2\" style=\"display:none;color:red\">Please check you entered two valid years<\/p><a href=\"#facetYrRefine\" class=\"btn btn-default mt-2\">Refine date<\/a><\/div><\/div><\/div>');
 
 	// then, check for and inject, the previous value
-	if(urlParams.get('limit-yr')) sessionStorage.setItem('limit-yr', urlParams.get('limit-yr'));
+	if(urlParams.get('limit-yr')) {
+		var dateArray = urlParams.get('limit-yr').split('-');
+		if(dateArray.length == 2) {
+			sessionStorage.setItem('limit-yr-start', dateArray[0]);
+			sessionStorage.setItem('limit-yr-end', dateArray[1]);
+		}
+	}
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
@@ -153,7 +162,14 @@ function facetPublicationDateRange() {
 
 		facetPublicationDateRangeSubmitHandler();
 	});
-	$('input[name="limit-yr"]').on('keyup', function(event) {
+	$('input[name="limit-yr-start"]').on('keyup', function(event) {
+		if (event.key === 'Enter' || event.keyCode === 13) {
+			event.preventDefault();
+
+			facetPublicationDateRangeSubmitHandler();
+		}
+	});
+	$('input[name="limit-yr-end"]').on('keyup', function(event) {
 		if (event.key === 'Enter' || event.keyCode === 13) {
 			event.preventDefault();
 
@@ -161,8 +177,10 @@ function facetPublicationDateRange() {
 		}
 	});
 
-	// lastly, check for and set the section expander
-	if(sessionStorage.getItem('limit-yr')) $('input[name="limit-yr"]').val(sessionStorage.getItem('limit-yr'));
+	if(sessionStorage.getItem('limit-yr-start') && sessionStorage.getItem('limit-yr-end')) {
+		$('input[name="limit-yr-start"]').val(sessionStorage.getItem('limit-yr-start'));
+		$('input[name="limit-yr-end"]').val(sessionStorage.getItem('limit-yr-end'));
+	}
 	if(urlParams.get('limit-yr')) $('#facet-yr a').click();
 	return;
 }
@@ -172,12 +190,21 @@ function facetPublicationDateRange() {
 // function to process publication date range submissions
 function facetPublicationDateRangeSubmitHandler() {
 	// vars
-	var limitYr = $('input[name="limit-yr"]').val();
+	var limitYrStart = $('input[name="limit-yr-start"]').val();
+	var limitYrEnd = $('input[name="limit-yr-end"]').val();
 	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
+
+	if(isNaN(limitYrStart) || isNaN(limitYrEnd) || limitYrStart == '' || limitYrEnd == '') {
+		$('#limit-yr-err').show();
+		setTimeout(function() {
+			$('#limit-yr-err').hide();
+		}, 3000);
+		return false;
+	}
 
 	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already, delete...
 	if(urlParams.get('limit')) urlParams.delete('limit'); // if we have a limit already, delete...
-	urlParams.append('limit-yr', limitYr); // add our years
+	urlParams.append('limit-yr', limitYrStart + '-' + limitYrEnd); // add our years
 
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;
@@ -231,4 +258,17 @@ function facetAccordeons() {
 	});
 
 	return;
+}
+
+
+//
+// function to handle reservation link actions
+function reservationLinkHandler() {
+	$('a[href*="/cgi-bin/koha/opac-reserve.pl"]').on('click', function(event){
+		event.preventDefault();
+		$('#modalReserveOk').attr('href', $(this).attr('href')); // set link to be correct
+		$("#reserveModal").modal("show"); // show modal
+	});
+
+	$('#loginModal').after('<div class=\"modal show\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalLoginLabel\" id=\"reserveModal\" aria-modal=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h2 class=\"modal-title\" id=\"modalReserveLabel\">Place a reservation on this item?<\/h2><button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button><\/div><div class=\"modal-body\"><p id=\"modalReserveDesc\">Please click Ok to progress with this reservation. Be sure to await an email from your local Library branch, before coming in!<\/p><\/div><div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel<\/button><a id=\"modalReserveOk\" href=\"#\" class=\"btn btn-primary\" aria-describedby=\"modalReserveDesc\">Ok<\/a><\/div><\/div><\/div><\/div>');
 }

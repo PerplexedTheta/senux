@@ -113,7 +113,7 @@
 
 //
 //
-// login modal
+// login & reserve modal
 .modal-content {
 	color: $defaultText;
 	background-color: $defaultFg;
@@ -209,35 +209,51 @@
 
 //
 // search facets
-#facetcontainer {
+#facetcontainer, .facetcontainer {
 	padding: 1rem;
+	margin-bottom: 1rem;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius
 }
 
-#menu h2, .menu h2,
-#search-facets h2 {
-	margin: 0;
-
-	a {
-		color: $headlinerText;
-		background-color: $headlinerBg;
-		text-decoration: $defaultLinkDecoration;
-		border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
-
-		&:hover, &:focus {
-			text-decoration: $defaultLinkDecorationHov
-		}
-	}
-}
-
-#search-facets {
+#search-facets, .search-facets {
 	border: $defaultBorderWidth $defaultBorderType $transparent;
 
-	ul {
+	ul, .menu-collapse {
 		border: none;
 		padding: 1rem 0 0 0
+	}
+
+	li {
+		font-size: .9em;
+		font-weight: 700;
+		list-style-type: none
+	}
+
+	h2 {
+		margin: 0;
+		font-size: .9em;
+		text-align: center;
+
+		a, a:link,
+		a:visited, p {
+			display: block;
+			font-weight: 700;
+			padding: .5rem .33rem;
+
+			color: $headlinerText;
+			background-color: $headlinerBg;
+			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol
+		}
+
+		a, a:link, a:visited {
+			text-decoration: $defaultLinkDecoration;
+
+			&:hover, &:focus {
+				text-decoration: $defaultLinkDecorationHov
+			}
+		}
 	}
 
 	h3 a {
