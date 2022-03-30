@@ -142,9 +142,27 @@
 	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		text-decoration: $defaultLinkDecorationHov
+	&:hover {
+		background: $defaultLinkBgHov;
+		color: $defaultLinkTextHov;
+		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
+		text-decoration: $defaultLinkDecorationHov;
+
+		i.fa {
+			color: $defaultLinkTextHov
+		}
+	}
+
+	&:focus, &:active,
+	&.active {
+		background: $defaultLinkBgFoc!important;
+		color: $defaultLinkTextFoc!important;
+		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
+		text-decoration: $defaultLinkDecorationFoc!important;
+
+		i.fa {
+			color: $defaultLinkTextFoc!important
+		}
 	}
 }
 
@@ -152,9 +170,27 @@
 	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		text-decoration: $defaultLinkDecorationHov
+	&:hover {
+		background: $defaultLinkBgHov;
+		color: $defaultLinkTextHov;
+		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
+		text-decoration: $defaultLinkDecorationHov;
+
+		i.fa {
+			color: $defaultLinkTextHov
+		}
+	}
+
+	&:focus, &:active,
+	&.active {
+		background: $defaultLinkBgFoc!important;
+		color: $defaultLinkTextFoc!important;
+		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
+		text-decoration: $defaultLinkDecorationFoc!important;
+
+		i.fa {
+			color: $defaultLinkTextFoc!important
+		}
 	}
 }
 
@@ -162,9 +198,27 @@
 	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		text-decoration: $defaultLinkDecorationHov
+	&:hover {
+		background: $defaultLinkBgHov;
+		color: $defaultLinkTextHov;
+		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
+		text-decoration: $defaultLinkDecorationHov;
+
+		i.fa {
+			color: $defaultLinkTextHov
+		}
+	}
+
+	&:focus, &:active,
+	&.active {
+		background: $defaultLinkBgFoc!important;
+		color: $defaultLinkTextFoc!important;
+		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
+		text-decoration: $defaultLinkDecorationFoc!important;
+
+		i.fa {
+			color: $defaultLinkTextFoc!important
+		}
 	}
 }
 
