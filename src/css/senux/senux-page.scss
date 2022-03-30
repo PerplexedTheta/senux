@@ -139,7 +139,7 @@
 }
 
 .table .sorting {
-	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $defaultBg
+	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
@@ -149,7 +149,7 @@
 }
 
 .table .sorting_asc {
-	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $defaultBg
+	background: url('/opac-tmpl/bootstrap/images/asc.gif') no-repeat scroll 100% 80% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
@@ -159,7 +159,7 @@
 }
 
 .table .sorting_desc {
-	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $defaultBg
+	background: url('/opac-tmpl/bootstrap/images/desc.gif') no-repeat scroll 100% 80% $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
 	&:hover, &:focus,
