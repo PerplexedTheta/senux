@@ -138,30 +138,10 @@
 	background-color: $white
 }
 
-.table .sorting {
-	background: url('/opac-tmpl/bootstrap/images/ascdesc.gif') no-repeat scroll 100% 75% $defaultBg;
-	text-decoration: $defaultLinkDecoration;
-
-	&:hover {
-		text-decoration: $defaultLinkDecorationHov;
-	}
-
-	&:focus, &:active,
-	&.active {
-		background: $defaultLinkBgFoc!important;
-		color: $defaultLinkTextFoc!important;
-		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
-		text-decoration: $defaultLinkDecorationFoc!important;
-
-		i.fa {
-			color: $defaultLinkTextFoc!important
-		}
-	}
-}
-
 .table .nosort, .table .nosort.sorting,
 .table .nosort.sorting_asc, .table .nosort.sorting_desc,
-.table .sorting_asc, .table .sorting_desc {
+.table .sorting, .table .sorting_asc,
+.table .sorting_desc {
 	background: $defaultBg;
 	text-decoration: $defaultLinkDecoration;
 
@@ -175,6 +155,26 @@
 		color: $defaultLinkTextFoc;
 		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc;
 		text-decoration: $defaultLinkDecorationFoc;
+	}
+}
+
+.table .sorting_asc {
+	&::after {
+		font-family: "FontAwesome";
+		font-size: 0.75em;
+		font-weight: normal;
+		text-rendering: auto;
+		content: " \f077"
+	}
+}
+
+.table .sorting_desc {
+	&::after {
+		font-family: "FontAwesome";
+		font-size: 0.75em;
+		font-weight: normal;
+		text-rendering: auto;
+		content: " \f078"
 	}
 }
 
