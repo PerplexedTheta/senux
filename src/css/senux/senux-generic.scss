@@ -216,6 +216,31 @@ hr {
 			color: $btnPriTextHov
 		}
 	}
+
+	&:disabled, &.disabled {
+		opacity: .5;
+		color: $btnPriText;
+		background-color: $btnPriBg;
+		border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
+		outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+
+		i.fa {
+			color: $btnPriText
+		}
+
+		&:hover, &:focus,
+		&:active, &.active {
+			opacity: .5;
+			color: $btnPriText;
+			background-color: $btnPriBg;
+			border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
+			outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+
+			i.fa {
+				color: $btnPriTextHov
+			}
+		}
+	}
 }
 
 .btn-default, .btn-secondary,
@@ -246,6 +271,31 @@ hr {
 
 		i.fa {
 			color: $btnSecTextHov
+		}
+	}
+
+	&:disabled, &.disabled {
+		opacity: .5;
+		color: $btnSecText;
+		background-color: $btnSecBg;
+		border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
+		outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+
+		i.fa {
+			color: $btnSecText
+		}
+
+		&:hover, &:focus,
+		&:active, &.active {
+			opacity: .5;
+			color: $btnSecText;
+			background-color: $btnSecBg;
+			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
+			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+
+			i.fa {
+				color: $btnSecTextHov
+			}
 		}
 	}
 }
@@ -320,7 +370,10 @@ hr {
 
 .input-append .add-on:last-child, .input-append .btn:last-child,
 .input-append .btn-group:last-child > .dropdown-toggle {
-	border-radius: $defaultRadius
+	color: $msWhite;
+	background-color: darken($msRed, 15%);
+	border: $btnPriBorderWidth $btnPriBorderType darken($msRed, 10%);
+	outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%);
 }
 
 //
