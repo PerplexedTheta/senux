@@ -231,10 +231,10 @@ hr {
 		&:hover, &:focus,
 		&:active, &.active {
 			opacity: .5;
-			color: $btnPriText;
-			background-color: $btnPriBg;
-			border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
-			outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+			color: $btnPriTextHov;
+			background-color: $btnPriBgHov;
+			border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderColHov;
+			outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineColHov;
 
 			i.fa {
 				color: $btnPriTextHov
@@ -288,10 +288,10 @@ hr {
 		&:hover, &:focus,
 		&:active, &.active {
 			opacity: .5;
-			color: $btnSecText;
-			background-color: $btnSecBg;
-			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
-			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+			color: $btnSecTextHov;
+			background-color: $btnSecBgHov;
+			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderColHov;
+			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineColHov;
 
 			i.fa {
 				color: $btnSecTextHov
