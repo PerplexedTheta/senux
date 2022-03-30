@@ -186,7 +186,8 @@ hr {
 .btn-primary, #loginModal input[type="submit"],
 .btn-primary:not(:disabled):not(.disabled),
 .btn-success, .btn-success:not(:disabled):not(.disabled),
-#searchsubmit.btn.btn-primary {
+#searchsubmit.btn.btn-primary, .btn-primary.disabled,
+.btn-primary:disabled {
 	background-image: none;
 	text-shadow: none;
 	text-decoration: none;
@@ -216,36 +217,17 @@ hr {
 			color: $btnPriTextHov
 		}
 	}
+}
 
-	&:disabled, &.disabled {
-		opacity: .5;
-		color: $btnPriText;
-		background-color: $btnPriBg;
-		border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
-		outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
-
-		i.fa {
-			color: $btnPriText
-		}
-
-		&:hover, &:focus,
-		&:active, &.active {
-			opacity: .5;
-			color: $btnPriTextHov;
-			background-color: $btnPriBgHov;
-			border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderColHov;
-			outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineColHov;
-
-			i.fa {
-				color: $btnPriTextHov
-			}
-		}
-	}
+.btn-primary.disabled, .btn-primary:disabled {
+	opacity: .6;
 }
 
 .btn-default, .btn-secondary,
 .btn-default:not(:disabled):not(.disabled), 
-.btn-secondary:not(:disabled):not(.disabled) {
+.btn-secondary:not(:disabled):not(.disabled), .btn-default.disabled,
+.btn-default:disabled, .btn-secondary.disabled,
+.btn-secondary:disabled {
 	background-image: none;
 	text-shadow: none;
 
@@ -273,35 +255,16 @@ hr {
 			color: $btnSecTextHov
 		}
 	}
+}
 
-	&:disabled, &.disabled {
-		opacity: .5;
-		color: $btnSecText;
-		background-color: $btnSecBg;
-		border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
-		outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
-
-		i.fa {
-			color: $btnSecText
-		}
-
-		&:hover, &:focus,
-		&:active, &.active {
-			opacity: .5;
-			color: $btnSecTextHov;
-			background-color: $btnSecBgHov;
-			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderColHov;
-			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineColHov;
-
-			i.fa {
-				color: $btnSecTextHov
-			}
-		}
-	}
+.btn-default.disabled, .btn-default:disabled,
+.btn-secondary.disabled, .btn-secondary:disabled {
+        opacity: .6;
 }
 
 .btn-link, .dt-button,
-.btn-link:not(:disabled):not(.disabled) {
+.btn-link:not(:disabled):not(.disabled), .btn-link.disabled,
+.btn-link:disabled {
 	background-image: none;
 	text-shadow: none;
 
@@ -330,6 +293,10 @@ hr {
 	}
 }
 
+.btn-link.disabled, .btn-link:disabled {
+	opacity: .6
+}
+
 .dt-button::before {
 	color: $defaultLinkText
 }
@@ -339,7 +306,8 @@ hr {
 }
 
 .btn-danger, input[type="submit"].btn-danger,
-.btn-danger:not(:disabled):not(.disabled) {
+.btn-danger:not(:disabled):not(.disabled), .btn-danger.disabled,
+.btn-danger:disabled {
 	background-image: none;
 	text-shadow: none;
 
@@ -366,6 +334,10 @@ hr {
 			color: $msWhite
 		}
 	}
+}
+
+.btn-danger.disabled, .btn-danger:disabled {
+
 }
 
 .input-append .add-on:last-child, .input-append .btn:last-child,
