@@ -34,18 +34,22 @@
 }
 
 #OpacMainUserBlock, #news {
+	margin: 0 0 .5rem 0;
 	padding: 1rem;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
+	max-width: none
 }
 
 #navigation, #OpacNavRight,
 #login {
+	margin: 0 0 .5rem 0;
 	padding: 1rem;
 	background-color: $defaultFg;
 	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
 	border-radius: $defaultRadius;
+	max-width: none;
 
 	.btn {
 		width: 100%;
@@ -61,11 +65,6 @@
 			border-radius: $defaultRadius;
 		}
 	}
-}
-
-#login {
-	margin: 0 0 .5rem 0;
-	max-width: none
 }
 
 #nologininstructions {
