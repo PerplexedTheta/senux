@@ -255,7 +255,8 @@
 
 			color: $headlinerText;
 			background-color: $headlinerBg;
-			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol
+			border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+			border-radius: $defaultRadius
 		}
 
 		a, a:link, a:visited {

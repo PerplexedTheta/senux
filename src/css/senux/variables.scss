@@ -1,20 +1,20 @@
-@charset "UTF-8";
+@charset"UTF-8";
 
-// variables.scss, Senux Project, Jake Deery, 2021
+// variables.scss,SenuxProject,JakeDeery,2021
 //
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 // DO NOT MODIFY THIS FILE! Instead, create and modify 'variables.scss' in the
 // git repo root, and make your changes there!
-// ----------------------------------------------------------------------------
+//----------------------------------------------------------------------------
 
 
 //
-// vars -- global
-// vars -- global -- monotones
+// vars--global
+// vars--global--monotones
 $transparent: transparent;
 $black: rgba(0,0,0,1);
 $white: rgba(255,255,255,1);
-// vars -- global -- microsoft
+// vars--global--microsoft
 $msBlack: rgba(35,31,32,1);
 $msWhite: rgba(243,242,241,1);
 $msCharcoal: rgba(59,58,57,1);
@@ -26,31 +26,31 @@ $msBlue: rgba(43,87,154,1);
 $msLagoon: rgba(3,120,124,1);
 $msPurple: rgba(101,102,163,1);
 $msMagenta: rgba(135,68,125,1);
-// vars -- global -- senux
+// vars--global--senux
 $senuxHue1: rgba(0,127,255,1); // hue1
 $senuxHue2: rgba(128,191,255,1); // hue2
 $senuxHue3: rgba(85,86,86,1); // hue3
 $userHue1: $senuxHue1;
 $userHue2: $senuxHue2;
 $userHue3: $senuxHue3;
-$senuxText1: lighten($senuxHue1,45%); // text for hue1
-$senuxText2: darken($senuxHue2,65%); // text for hue2
-$senuxText3: lighten($senuxHue3,50%); // text for hue3
+$senuxText1: lighten($senuxHue1,45%); // textforhue1
+$senuxText2: darken($senuxHue2,65%); // textforhue2
+$senuxText3: lighten($senuxHue3,50%); // textforhue3
 $userText1: $senuxText1;
 $userText2: $senuxText2;
 $userText3: $senuxText3;
-// vars -- global -- bootstrap
+// vars--global--bootstrap
 $breakpoint-pc: 992px;
 
 //
-// vars -- generic
-// vars -- generic -- root
+// vars--generic
+// vars--generic--root
 $defaultBg: $msWhite;
 $defaultFg: $white;
 $defaultText: $msBlack;
-$defaultFonts: 'Segoe UI','Roboto','Helvetica Neue','Arial',sans-serif;
+$defaultFonts: 'SegoeUI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
 $defaultBullet: disc;
-// vars -- generic -- borders and outlines
+// vars--generic--bordersandoutlines
 $defaultRadius: .33rem;
 $defaultOffset: .066rem;
 $defaultBorderWidth: .066rem;
@@ -59,7 +59,7 @@ $defaultBorderCol: darken($defaultFg,15%);
 $defaultOutlineWidth: .33rem;
 $defaultOutlineType: solid;
 $defaultOutlineCol: darken($defaultFg,15%);
-// vars -- generic -- links
+// vars--generic--links
 $defaultLinkBg: $transparent;
 $defaultLinkText: $msBlue;
 $defaultLinkOutlineWidth: $defaultOutlineWidth;
@@ -80,8 +80,8 @@ $defaultLinkOutlineColFoc: darken($defaultLinkText,15%);
 $defaultLinkDecorationFoc: none;
 
 //
-// vars -- main
-// vars -- main -- btns
+// vars--main
+// vars--main--btns
 $btnPriText: $userText1;
 $btnPriBg: $userHue1;
 $btnPriBorderWidth: $defaultBorderWidth;
@@ -130,7 +130,7 @@ $btnLinkBorderColHov: darken($userText1,15%);
 $btnLinkOutlineWidthHov: $defaultOutlineWidth;
 $btnLinkOutlineTypeHov: $defaultOutlineType;
 $btnLinkOutlineColHov: darken($userText1,15%);
-// vars -- main -- inputs
+// vars--main--inputs
 $inputText: $msBlack;
 $inputBg: $white;
 $inputBorderWidth: $defaultBorderWidth;
@@ -163,7 +163,7 @@ $inputDisabledBorderCol: $inputBorderCol;
 $inputDisabledOutlineWidth: $inputOutlineWidth;
 $inputDisabledOutlineType: $inputOutlineType;
 $inputDisabledOutlineCol: $inputOutlineCol;
-// vars -- main -- dropdowns
+// vars--main--dropdowns
 $dropdownBg: $msWhite;
 $dropdownText: $msBlack;
 $dropdownLinkBg: $transparent;
@@ -172,17 +172,17 @@ $dropdownLinkBgHov: $userHue2;
 $dropdownLinkTextHov: $msBlack;
 
 //
-// vars -- navbar
-// vars -- navbar -- root
+// vars--navbar
+// vars--navbar--root
 $navbarBg: $msBlack;
 $navbarLink: lighten($msBlack,85%);
 $navbarLinkHov: lighten($msBlack,65%);
-// vars -- navbar -- logo
+// vars--navbar--logo
 $navbarLogo: $transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAXCAYAAACcTMh5AAAABmJLR0QA/wD/AP+gvaeTAAAFfklEQVRYheWZfWiXVRTHz91mOjE3cSLm1NSRlhkVZppJYaEzlYgoS1KxSCqpiSRlZtmgsLAspq4FQTUFDSIh2Au9+JYppFhqRS+utMLmlg1bvs9Pf9xz+T3e332en87t94/nn4ff+Z63e+557jn3+YlkIMAAk4H1wHdAM7ALeAHok0n/kiZgNPAt8XQIuDWDjQKgFzAQmABMzELceeqzF1ACTAVGdLZfP4glwJmE5DlqAYbE2LgM2K5V66g8C7HfBmwGjkT8ju5sv865ASrOI3FR2pDB5tSI7NisLMT6fV59NgE52XK68AKTB7ZSByXYnK1yzUBuVhZi/Var37Wd5eOcXQHGi8gr7bCTKyL3JODunKw3xrS1w/4FE2BE5E7nNxsOC4E/21F9jt5LsP27yjzU6QtJ+bxefZ4F+naWn2gFLhCRKy7C1tAQE9v9ikXkrGSjElLkuv1uY0xjZznJEREBikRkfkfYCtAkfe40xjQ5JtATeBnYC8yKMwoMBsqxXXULUAvMOo+z1CWwTu3cDKwBdgI1elzFEnbsehPYDfwIrAYKFXsCeAY3GulCLpY+jQmkTvGlEd5VGpSjPTG6M4FjwDbgauUNBxqB6oTFdwdOqO3xwNO6AdOASWrzKNAzRr8UaFWZRcAY4CXgM6A/9lgAGOYUfu6ABK4JBJKvwYLOYcBNwEFsh2xSbGVAd7YG+hPQw8Pcht8bk4C7FG8BXgTewTYVhx9QPO0SgN2go0AbcLuH1QKVqrvfMa/tgOQBLAkEM0mxw0AOMBHYB4xUvA8wDm9G05iOq+4dAbvTFauLSeBbijcDn0TtY48Od0G4xtPL0/gAPgjYXUyqslc65nMdlMApAYdvKFYNzAC+AvqFFu3p1aje9hh8huJ/xeA/KN4KDPSw+xVrAfI87AHF2oDBAbvz/fXmichIT65JRPaJSIuI9BORUSqXRKdEZEuA7w7yEhFZISJDjDH/JRkCSkSkVH+mHQtK3fVZGNAfJCLD9WeVMeagJzJdnzXGmDMeVqbPL40xvwb8dtHnCRHZ6Bzu0Izuxp4d/q70B9ZmqL7awEKKA3JTA0H5etFdDt5ugNcVbw5gcxU7BRR7WC9Sr+AUD+tB6tUukwABVYrXR5mN2At/foaFudcxRPcF5B9R7Bvs4QvwPd4GBfTeVdm9CTIbVWZrAPtIsfUB7DHFGv04sN3a0S0xfncpPj/KPM15fOrBdtTGQPJ+CSUF+/0Q4FVsU3C7Oy+Dn49Vbl0M3gdbXRAZjRTLA/5R7MGA7jbFKgLYtMiaLg/gA/DHFwW+SFqQZ6SOdJoZkMsF/lZ8gvLe1t+HgYIEH+4DQNpoo/hTip/EO+ixHR1NcKGHlUQSkPZFiNTE4J+LDl+qeIMPLIpbTMDI117yNhGZryJyYxRvBboqry92vgJY7i16dOT3YpWpDNjNx86QACsCeLliaUUBLFBsP/aTXTcilQjcqPixgG6BbjzoeIMd1rfmiOsmXqAB3igRuSHCahGRh40x+LKS6r6bjDEnRUT0PrpM+WXYmbBIRKpE5EBE90Ox9+Zhkk4LRWSAiOwQkWcDuLs21gSw6/S5QWOeIyLR2PeIyCERySf9A/EqEXGV57r6XBFZE5es17yqGAM0RCrvODA5EKSTd2fNkx6/K6m/CM4A/wJpicBem06j91WgC1CGnc82A70DOr0VB29AVtzdICqAu7EDc5En86jK1OuaxwLrgGWRt6oSe6bXEXcf1+o4pUn7jXOpARiXkLxcYBW25aeNIcBQ7Oh0ElgeFwQwR5O9Fdu9P8fejYMfLbD362V4jSWCX4n9kHAce6ctiZGbh22Mf2C7fWkEW409QtaGNtE3NAJ4XxN4RKvqcaBbouIlRv8DfEqfXZUlsLUAAAAASUVORK5CYII=') no-repeat left center;
 $navbarLogoHov: $transparent url('data:image/png;base64,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') no-repeat left center;
 $navbarLogoDisplay: initial;
 $navbarLogoDisplayMobile: none;
-// vars -- navbar -- usermenu
+// vars--navbar--usermenu
 $navbarUsermenuBg: $msWhite;
 $navbarUsermenuText: $msBlack;
 $navbarUsermenuLink: $msBlue;
@@ -191,51 +191,51 @@ $navbarUsermenuLogout: $msRed;
 $navbarUsermenuLogoutHov: darken($msRed,15%);
 
 //
-// vars -- masthead
-// vars -- masthead -- root
+// vars--masthead
+// vars--masthead--root
 $headerBg: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='57.74' height='100' viewBox='0 0 34.64101615137755 60' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'%3E%3Crect width='100%25' height='100%25' fill='rgba(0, 127, 255,1)'/%3E%3Cpath d='M51.96 30L51.96 50L34.64 60L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 30L17.32 50L0 60L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 0L34.64 20L17.32 30L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 60L34.64 80L17.32 90L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 60L17.32 50L17.32 30L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 60L-17.32 50L-17.32 30L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 30L0 20L0 0L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 90L0 80L0 60L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' fill='rgba(85, 86, 86,1)'/%3E%3Cpath d='M34.64 40L34.64 40L34.64 40L34.64 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M0 40L0 40L0 40L0 40z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 10L17.32 10L17.32 10L17.32 10z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3Cpath d='M17.32 70L17.32 70L17.32 70L17.32 70z' stroke-linejoin='miter' background='true' fill='rgba(128, 191, 255,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
 $headerText: $msWhite;
-// vars -- masthead -- mainsearch
+// vars--masthead--mainsearch
 $mainSearchBg: $userHue2;
 $mainSearchText: $userText2;
 $mainSearchLink: $userText2;
 $mainSearchLinkHov: lighten($userText2,15%);
-// vars -- masthead -- moresearches
+// vars--masthead--moresearches
 $moreSearchBg: $userHue2;
 $moreSearchText: $userText2;
 $moreSearchLink: $userText2;
 $moreSearchLinkHov: lighten($userText2,15%);
 
-// vars -- content
-// vars -- content -- breadcrumb
+// vars--content
+// vars--content--breadcrumb
 $breadcrumbBg: $defaultFg;
 $breadcrumbText: $defaultText;
 $breadcrumbDivider: $defaultText;
 $breadcrumbLinkText: $defaultLinkText;
-$breadcrumbLinkTextHov:  $defaultLinkTextHov;
-// vars -- content -- toolbar
-$toolbarBg: darken($defaultBg, 5%);
+$breadcrumbLinkTextHov: $defaultLinkTextHov;
+// vars--content--toolbar
+$toolbarBg: darken($defaultBg,5%);
 $toolbarText: $defaultText;
-// vars -- content -- headliners
+// vars--content--headliners
 $headlinerText: $defaultText;
-$headlinerBg: darken($defaultBg, 5%);
+$headlinerBg: darken($defaultBg,5%);
 
 //
-// vars -- opac
-// vars -- opac -- resource links
+// vars--opac
+// vars--opac--resourcelinks
 $onlineAccessBg: lighten($msGold,33%);
 $onlineAccessText: $defaultText;
 $onlineAccessLink: $defaultLinkText;
 $onlineAccessLinkHov: $defaultLinkTextHov;
 
 //
-// vars -- tables
-// vars -- tables -- striped
-$tableStripedOdd: $white;
-$tableStripedEven: $msWhite;
+// vars--tables
+// vars--tables--striped
+$tableStripedOdd: $defaultFg;
+$tableStripedEven: darken($defaultBg,5%);
 
-// vars -- footer
-// vars -- footer -- root
+// vars--footer
+// vars--footer--root
 $footerBg: $userHue3;
 $footerText: $userText3;
 $footerLink: $footerText;
