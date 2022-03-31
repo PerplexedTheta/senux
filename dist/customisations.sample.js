@@ -1,6 +1,7 @@
 // OPACUserJS, Senux Project, Jake Deery, 2021
 document.addEventListener('DOMContentLoaded', function(event) {
 	// vars
+	var baseLang = $('html').attr('lang');
 	var baseHost = window.location.hostname;
 	var baseUri = window.location.pathname + window.location.search + window.location.hash;
 
