@@ -44,14 +44,25 @@
 	}
 }
 
-#opacheader_logo {
-	margin: 0 1rem 0 0;
-	padding: 0 1rem;
-	max-height: 184px
-}
-@media (min-width: 992px) {
-	#opacheader_logo {
-		padding: 0
+#opacheader_logowrapper {
+	border: 0;
+	margin: 1rem;
+	padding: 0;
+	background: $headerLogoBg;
+	width: $headerLogoWidth;
+
+	a {
+		display: block;
+		height: 0!important;
+		overflow: hidden;
+		padding: $headerLogoHeight 0 0;
+		text-decoration: none;
+
+		&:hover, &:focus,
+		&:active, &.active {
+			text-decoration: none;
+			background-color: transparent!important
+		}
 	}
 }
 

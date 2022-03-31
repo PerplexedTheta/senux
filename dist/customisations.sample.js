@@ -55,6 +55,15 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
+
+
+	//
+	// page-specific logic
+
+
+	//
+	// mobilc-specific logic
+
 });
 
 
