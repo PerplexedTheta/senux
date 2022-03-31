@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// add publication date range to facets
 	facetPublicationDateRange();
 
+	// explorit masthead pulldown handler
+	//mastheadEventHandler();
+	//searchCatalogue();
+
 	// add basket link handler
 	basketLinkHandler();
 
@@ -85,6 +89,128 @@ function externalLinkAriaLabeller() {
 	$('a[target="_blank"]').each(function() {
 		$(this).attr('aria-label', $(this).text() + ' (new window)');
 	});
+}
+
+
+//
+// function to monitor masthead pulldown for changes and act on events
+function mastheadEventHandler() {
+	$("#masthead_search").on('change', function(event) { // this handles dropdown change events
+		if($(this).val() == 'catalogue') {
+			searchCatalogue();
+		} else if ($(this).val() == 'explorit') { // if the user picks explorit . . .
+			searchExplorit();
+		} else if ($(this).val() == 'everything') {
+			$('#fullText').val('');
+		} else if ($(this).val() == 'ftonly') {
+			$('#fullText').val('true');
+		}
+	});
+}
+
+
+//
+// masthead seach pulldown changes -- search catalogue
+function searchCatalogue() {
+	// form config
+	$('#masthead_search').find('option').remove().end(); //remove all masthead options
+	$('#searchform').attr('action', '/cgi-bin/koha/opac-search.pl'); // set form name
+	$('#searchform').attr('name', 'searchform'); // set form name
+	$('#searchform').attr('method', 'get'); // set form method
+	$('#searchform').attr('target', '_self'); // set target
+	$('#translControl1').attr('name', 'q'); // set search box name
+	$('#translControl1').attr('placeholder', 'Find books, e-books, journal titles and films'); // set text field placeholder
+	$('#masthead_search').attr('name', 'limit');
+	$('#fullText').remove(); //
+	$('#formName').remove(); // remove explorit hidden fields
+	$('#select_library').attr('name', 'limit');
+	$('#select_library').parent().css('display', 'initial'); // show library pulldown
+	if($('input[name="weight_search"]').length < 1) $('#searchform').append('<input type=\"hidden\" name=\"weight_search\" value=\"1\">'); // (re)add weight_search
+
+	// dropdown config
+	$('#masthead_search').append($('<option>', { // explorit option
+		value: 'explorit',
+		text: 'Search Articles Plus'
+	}));
+	$('#masthead_search').append($('<option>', { // catalogue option
+		value: '',
+		text: 'Search Catalogue',
+		selected: 'selected'
+	}));
+	$('#masthead_search').append($('<option>', { // search books
+		value: 'mc-ccode:PBK',
+		text: '-- Books'
+	}));
+	$('#masthead_search').append($('<option>', { // search ebooks
+		value: 'mc-ccode:EBK',
+		text: '-- e-Books'
+	}));
+	$('#masthead_search').append($('<option>', { // search journals
+		value: 'mc-ccode:JOUR',
+		text: '-- Journals'
+	}));
+	$('#masthead_search').append($('<option>', { // search ejournals
+		value: 'mc-ccode:EJOURN',
+		text: '-- e-Journals'
+	}));
+	$('#masthead_search').append($('<option>', { // search dvds
+		value: 'mc-ccode:DVD',
+		text: '-- DVDs'
+	}));
+	$('#masthead_search').append($('<option>', { // search streaming media
+		value: 'mc-ccode:ESTREAM',
+		text: '-- Streaming media'
+	}));
+
+	// link config
+	$('#moresearches').html('<li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-search.pl\">Catalogue advanced search<\/a><\/li><li class=\"nav-item\"><a href=\"https:\/\/articlesplus.arts.ac.uk\/search\/desktop\/en\/search.html\" target=\"_blank\">Articles Plus advanced search<\/a><\/li>');
+
+}
+
+
+//
+// masthead seach pulldown changes -- search catalogue
+function searchExplorit() {
+	// form config
+	$('#masthead_search').find('option').remove().end(); //remove all masthead options
+	$('#searchform').attr('action', '//foo.bar/baz/'); // set form name
+	$('#searchform').attr('name', 'dwtform'); // set form name
+	$('#searchform').attr('method', 'post'); // set form method
+	$('#searchform').attr('target', '_blank'); // set target
+	$('#translControl1').attr('name', 'fullRecord'); // set search box name
+	$('#translControl1').attr('placeholder', 'Find full-text articles, reports, images, books and e-books'); // set text field placeholder
+	$('#masthead_search').attr('name', 'formName');
+	$('#masthead_search').before('<input id=\"fullText\" type=\"hidden\" name=\"fullTextOnly\" value=\"\" \/>');
+	$('#masthead_search').after('<input type=\"hidden\" name=\"formName\" value=\"undefined\" \/>');
+	$('#select_library').attr('name', '');
+	$('#select_library').parent().css('display', 'none'); // hide library pulldown
+	$('input[name="weight_search"]').remove(); // nuke weight_search
+
+	// dropdown config
+	$('#masthead_search').append($('<option>', { // catalogue option
+		value: 'catalogue',
+		text: 'Search Catalogue'
+	}));
+	$('#masthead_search').append($('<option>', { // explorit option
+		value: 'everything',
+		text: 'Search Articles Plus',
+		selected: 'selected'
+	}));
+	$('#masthead_search').append($('<option>', { // search fulltext-only
+		value: 'ftonly',
+		text: '-- Search full-text only'
+	}));
+
+	// link config
+	$('#moresearches').html('<li class=\"nav-item\"><a href=\"https:\/\/articlesplus.arts.ac.uk\/search\/desktop\/en\/search.html\" target=\"_blank\">Articles Plus advanced search<\/a><\/li><li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-search.pl\">Catalogue advanced search<\/a><\/li>');
+
+	// explorit link handler
+        $('a[href="#switchSearch"]').on('click', function(event) {
+		event.preventDefault(); // prevent the url from changing
+		if($('#searchform').attr('name') == 'searchform') searchExplorit();
+		else if($('#searchform').attr('name') == 'dwtform') searchCatalogue();
+	});
+
 }
 
 
