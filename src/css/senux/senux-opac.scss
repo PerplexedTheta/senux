@@ -230,7 +230,7 @@
 #search-facets, .search-facets {
 	border: $defaultBorderWidth $defaultBorderType $transparent;
 
-	ul, .menu-collapse {
+	ul .menu-collapse {
 		border: none;
 		padding: 1rem 0 0 0
 	}
