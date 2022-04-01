@@ -31,14 +31,14 @@
 		font-size: 3rem
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	#opacheader {
 		padding: 2.5rem 5rem
 	}
 }
 
 // mobile-only class
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	.mobile_only {
 		display: none
 	}
@@ -72,7 +72,7 @@
 	display: flex;
 	justify-content: center
 }
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	#opacheader_titles {
 		padding: 0
 	}
@@ -110,7 +110,7 @@
 		height: 3rem
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	#searchform {
 		padding: 1.5rem 2.5rem;
 	}

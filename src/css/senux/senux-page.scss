@@ -15,7 +15,7 @@
 	color: $defaultText;
 	background-color: $defaultBg
 }
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	.main {
 		padding: 1rem 5rem
 	}

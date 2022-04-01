@@ -34,7 +34,7 @@
 		}
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: $breakpoint-pc) {
 	#opaccredits, #koha_url, #report_a_problem {
 		padding: 1rem 5rem;
 	}
