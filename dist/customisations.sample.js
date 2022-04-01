@@ -122,6 +122,53 @@ function externalLinkAriaLabeller() {
 
 
 //
+// function to change where we scroll to
+function scrollToThis(element) {
+	// make scroll to content go to search box
+	$('#scrolltocontent').off(); // disable other event listners
+	$("#scrolltocontent").click(function (event) {
+		event.preventDefault();
+
+		var content = $(element); // based on passed param
+		if (content.length > 0) { // jump to element
+			$('html,body').animate({
+				scrollTop: content.first().offset().top
+			}, 'slow');
+
+			content.first().find(':focusable').eq(0).focus(); // focus it
+		}
+	});
+	return;
+}
+
+
+//
+// handle the basked a bit differently
+function basketWindowHandler() {
+	var strCookie = '';
+	var nameCookie = 'bib_list';
+	var valCookie = readCookie(nameCookie);
+	if (valCookie) strCookie = nameCookie + '=' + valCookie;
+	else strCookie = nameCookie + '=';
+
+	var iW = 800;
+	var iH = 500;
+	var optWin = "status=yes,scrollbars=yes,resizable=yes,toolbar=no,location=yes,height="+iH+",width="+iW;
+	var loc = "/cgi-bin/koha/opac-basket.pl?" + strCookie;
+	var basket = open(loc, "basket", optWin);
+	if (window.focus) basket.focus();
+}
+function basketLinkHandler() {
+	// bookbag link handler
+	$('a[href="#openFolder"]').on('click', function(event) {
+		event.preventDefault();
+		basketWindowHandler();
+	});
+	return;
+}
+
+
+//
 // function to monitor masthead pulldown for changes and act on events
 function mastheadEventHandler() {
 	$("#masthead_search").on('change', function(event) { // this handles dropdown change events
@@ -244,48 +291,51 @@ function searchExplorit() {
 
 
 //
-// handle the basked a bit differently
-function basketWindowHandler() {
-	var strCookie = '';
-	var nameCookie = 'bib_list';
-	var valCookie = readCookie(nameCookie);
-	if (valCookie) strCookie = nameCookie + '=' + valCookie;
-	else strCookie = nameCookie + '=';
+// function to add accordeons to search facets
+function facetAccordeons() {
+	// change the labels to be links
+	$('#search-facets .menu-collapse h3').each(function () {
+		// vars
+		var currentText = $(this).text();
 
-	var iW = 800;
-	var iH = 500;
-	var optWin = "status=yes,scrollbars=yes,resizable=yes,toolbar=no,location=yes,height="+iH+",width="+iW;
-	var loc = "/cgi-bin/koha/opac-basket.pl?" + strCookie;
-	var basket = open(loc, "basket", optWin);
-	if (window.focus) basket.focus();
-}
-function basketLinkHandler() {
-	// bookbag link handler
-	$('a[href="#openFolder"]').on('click', function(event) {
-		event.preventDefault();
-		basketWindowHandler();
+		$(this).html('<a href="\#expandFacet"\>' + currentText + ' <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a>');
 	});
-	return;
-}
 
+	// remove the display:none and collapsible facet
+	$('#search-facets .collapsible-facet').each(function() {
+		$(this).removeAttr('style');
+		$(this).removeAttr('class');
+	});
 
-//
-// function to change where we scroll to
-function scrollToThis(element) {
-	// make scroll to content go to search box
-	$('#scrolltocontent').off(); // disable other event listners
-	$("#scrolltocontent").click(function (event) {
+	// remove the toggle links
+	$('#search-facets .moretoggle').each(function() {
+		$(this).remove();
+	});
+
+	// hide the lists
+	$('#search-facets .menu-collapse ul').each(function() {
+		$(this).hide();
+	});
+
+	// facet link handler
+	$('a[href="#expandFacet"]').on('click', function(event) {
 		event.preventDefault();
 
-		var content = $(element); // based on passed param
-		if (content.length > 0) { // jump to element
-			$('html,body').animate({
-				scrollTop: content.first().offset().top
-			}, 'slow');
+		if($(this).parents('h3').siblings('ul').css('display') == 'none') $(this).parents('h3').siblings('ul').show(); // unhide
+		else $(this).parents('h3').siblings('ul').hide(); // else hide
 
-			content.first().find(':focusable').eq(0).focus(); // focus it
-		}
+		$(this).find('i.fa').toggleClass('fa-chevron-down'); // swap the chevrons
+		$(this).find('i.fa').toggleClass('fa-chevron-left');
 	});
+
+	// unhide anything that has been selected
+	$('#search-facets .menu-collapse li').find('li:contains("[x]")').each(function() {
+		$(this).parents('li').find('h3 a').click();
+	});
+	$('#search-facets .menu-collapse li').find('li:contains("Showing only available items")').each(function() {
+		$(this).parents('li').find('h3 a').click();
+	});
+
 	return;
 }
 
@@ -384,56 +434,6 @@ function facetPublicationDateRangeResetHandler() {
 	// do the bulk of the work
 	sessionStorage.removeItem('limit-yr'); // clear the sessionStorage
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
-	return;
-}
-
-
-//
-// function to add accordeons to search facets
-function facetAccordeons() {
-	// change the labels to be links
-	$('#search-facets .menu-collapse h3').each(function () {
-		// vars
-		var currentText = $(this).text();
-
-		$(this).html('<a href="\#expandFacet"\>' + currentText + ' <i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a>');
-	});
-
-	// remove the display:none and collapsible facet
-	$('#search-facets .collapsible-facet').each(function() {
-		$(this).removeAttr('style');
-		$(this).removeAttr('class');
-	});
-
-	// remove the toggle links
-	$('#search-facets .moretoggle').each(function() {
-		$(this).remove();
-	});
-
-	// hide the lists
-	$('#search-facets .menu-collapse ul').each(function() {
-		$(this).hide();
-	});
-
-	// facet link handler
-	$('a[href="#expandFacet"]').on('click', function(event) {
-		event.preventDefault();
-
-		if($(this).parents('h3').siblings('ul').css('display') == 'none') $(this).parents('h3').siblings('ul').show(); // unhide
-		else $(this).parents('h3').siblings('ul').hide(); // else hide
-
-		$(this).find('i.fa').toggleClass('fa-chevron-down'); // swap the chevrons
-		$(this).find('i.fa').toggleClass('fa-chevron-left');
-	});
-
-	// unhide anything that has been selected
-	$('#search-facets .menu-collapse li').find('li:contains("[x]")').each(function() {
-		$(this).parents('li').find('h3 a').click();
-	});
-	$('#search-facets .menu-collapse li').find('li:contains("Showing only available items")').each(function() {
-		$(this).parents('li').find('h3 a').click();
-	});
-
 	return;
 }
 
