@@ -12,6 +12,14 @@
 	color: $footerText;
 	background-color: $footerBg;
 
+	p, h1, h2,
+	h3, h4, h5,
+	h6, .h1, .h2,
+	.h3, .h4, .h5,
+	.h6 {
+		color: $footerText
+	}
+
 	li {
 		list-style-type: none;
 		border-bottom: $defaultBorderWidth $defaultBorderType $footerText;
