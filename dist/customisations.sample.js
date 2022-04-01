@@ -298,19 +298,29 @@ function facetPublicationDateRange() {
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
-	$('#facetcontainer').after('<div class=\"facetcontainer\"><div role=\"region\" aria-label=\"Date range facets\" class=\"search-facets\"><h2><p>Refine date range<\/p><\/h2><div id=\"yr_id\" class=\"container-fluid\"><input name=\"limit-yr\" type=\"text\" class=\"mt-4\"><p class=\"hint pt-2\">For example: 1999-2001<\/p><p id=\"limit-yr-err\" class=\"hint pt-2\" style=\"display:none;color:red\">Please check you entered two valid years<\/p><a href=\"#facetYrRefine\" class=\"btn btn-default mt-2\">Refine date<\/a><\/div><\/div><\/div>');
+	$('#search-facets ul:first').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range<i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3> <div style=\"display:none\"><input name=\"limit-yr\" type=\"text\" class=\"mt-4\"><p class=\"hint pt-2\">For example: 1999-2001<\/p><p id=\"limit-yr-err\" class=\"hint pt-2\" style=\"display:none;color:red\">Please check you entered two valid years<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine by date<\/a><a href=\"#facetYrClear\" class=\"btn btn-danger mt-2\">Clear date refinement<\/a><\/div><\/li>');
 
-	// then, check for and inject, the previous value
-	if(urlParams.get('limit-yr')) {
-		var date = urlParams.get('limit-yr');
-		sessionStorage.setItem('limit-yr');
-	}
+	// then handle clicks
+	$('#facet-yr a').on('click', function(event) {
+		event.preventDefault(); // disable usual behaviour
+		event.stopImmediatePropagation();
 
-	// handle clicks
+		if($(this).parents('h3').siblings('div').css('display') == 'none') $(this).parents('h3').siblings('div').show(); // see facetAccordeon for how this code works
+		else $(this).parents('h3').siblings('div').hide();
+
+		$(this).find('i.fa').toggleClass('fa-chevron-down');
+		$(this).find('i.fa').toggleClass('fa-chevron-left');
+	});
+
 	$('a[href="#facetYrRefine"]').on('click', function(event) {
 		event.preventDefault();
 
 		facetPublicationDateRangeSubmitHandler();
+	});
+	$('a[href="#facetYrClear"]').on('click', function(event) {
+		event.preventDefault();
+
+		facetPublicationDateRangeResetHandler();
 	});
 	$('input[name="limit-yr"]').on('keyup', function(event) {
 		if (event.key === 'Enter' || event.keyCode === 13) {
@@ -322,8 +332,8 @@ function facetPublicationDateRange() {
 
 	if(sessionStorage.getItem('limit-yr')) {
 		$('input[name="limit-yr"]').val(sessionStorage.getItem('limit-yr'));
+		$('#facet-yr a').click(); // we want to show the user the facet, you see
 	}
-	if(urlParams.get('limit-yr')) $('#facet-yr a').click();
 	return;
 }
 
@@ -332,13 +342,47 @@ function facetPublicationDateRange() {
 // function to process publication date range submissions
 function facetPublicationDateRangeSubmitHandler() {
 	// vars
-	var limitYr = $('input[name="limit-yr"]').val();
-	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
+	var limitYr = $('input[name="limit-yr"]').val(); // this value fetches from the input form
+	var urlParams = Array.from(new URLSearchParams(window.location.search.substring(1)).entries()); // this doesnt like question marks
+	var urlParamsFiltered = urlParams.filter(value => { // remove previous limit params
+		if(value[0] == 'limit-yr') return false;
+		else if(value[1].includes('yr,st-numeric')) return false;
+		else return true; // only return true if above conditions are met
+	});
+	var urlParamString = urlParamsFiltered.map(function(value, key) { // generate new string for urlParams
+		return value[0] + '=' + value[1];
+	}).join('&');
 
-	if(urlParams.get('limit-yr')) urlParams.delete('limit-yr'); // if we have a limit-yr already, delete...
-	if(urlParams.get('limit')) urlParams.delete('limit'); // if we have a limit already, delete...
-	urlParams.append('limit-yr', limitYr); // add our years
+	// rebuild urlParams
+	urlParams = new URLSearchParams(urlParamString);
 
+	// do the bulk of the work
+	sessionStorage.setItem('limit-yr', limitYr); // ... store this for reuse
+	urlParams.append('limit', 'yr,st-numeric=' + limitYr); // add our years
+	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
+	return;
+}
+
+
+//
+// function to process publication date range submissions
+function facetPublicationDateRangeResetHandler() {
+	// vars
+	var urlParams = Array.from(new URLSearchParams(window.location.search.substring(1)).entries()); // this doesnt like question marks
+	var urlParamsFiltered = urlParams.filter(value => { // remove previous limit params
+		if(value[0] == 'limit-yr') return false;
+		else if(value[1].includes('yr,st-numeric')) return false;
+		else return true; // only return true if above conditions are met
+	});
+	var urlParamString = urlParamsFiltered.map(function(value, key) { // generate new string for urlParams
+		return value[0] + '=' + value[1];
+	}).join('&');
+
+	// rebuild urlParams
+	urlParams = new URLSearchParams(urlParamString);
+
+	// do the bulk of the work
+	sessionStorage.removeItem('limit-yr'); // clear the sessionStorage
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;
 }
