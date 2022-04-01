@@ -652,7 +652,7 @@ a#ISBDview {
 //
 //
 // error pages
-div[id^="errormsg"] {
+div[id^="errormsg"], #noresultsfound {
 	padding: 1rem;
 	color: $defaultText;
 	background-color: $defaultFg;
