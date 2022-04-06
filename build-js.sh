@@ -38,7 +38,7 @@ fi
 ## begin the main magic
 if [[ $1 == "--init" ]]; then
 	# copy the sample file to the root of the repo
-	cp ${SCRIPT_DIR}/dist/customisations.sample.js ${SCRIPT_DIR}/customisations.js
+	cp ${SCRIPT_DIR}/src/js/customisations.sample.js ${SCRIPT_DIR}/customisations.js
 	# tell the user what to do
 	echo "Copied sample files to "${SCRIPT_DIR}
 	echo "Now, run "${SCRIPT_DIR}"/build-js.sh --build"
