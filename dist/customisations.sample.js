@@ -1,20 +1,5 @@
 /*!
-  Copyright 2021-2022 Jake Deery & PTFS Europe
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
-*/
-/*!
-  WELCOME TO SENUX! VER. 2111-04 -- HAVE A NICE DAY!
+  WELCOME TO SENUX! VER. 2111-04 -- PLEASE READ CAREFULLY!
 
   USER ALERT: DO NOT MODIFY ANY OF THE CONTENT HELD WITHIN THE OPACUSERJS
   SYSPREF. INSTEAD, PLEASE MAKE ALL JS CHANGES WITHIN THE CUSTOMISATIONS.JS
@@ -24,9 +9,9 @@
   THIS RESTRICTION IS IN PLACE BECAUSE A SCRIPT IS USED TO GENERATE THE JS.
   MODIFYING THE JS OUTSIDE OF RUNNING THIS SCRIPT CAN CAUSE ISSUES, AND LOSS
   IN CUSTOMISATIONS FURTHER DOWN THE LINE. YOU HAVE BEEN WARNED!
-*/
 
-// OPACUserJS, Senux Project, Jake Deery, 2021
+  HAVE A GOOD DAY - BUENOS DÍAS - GUTEN TAG - BONNE JOURNÉE - BUONA GIORNATA
+*/
 document.addEventListener('DOMContentLoaded', function(event) {
 	// vars
 	var baseLang = $('html').attr('lang');
