@@ -24,6 +24,8 @@
 // logo
 #logo {
 	display: $navbarLogoDisplayMobile;
+	width: 100px;
+	margin: 0;
 	background: $navbarLogo;
 
 	&:hover, &:focus,
@@ -32,6 +34,9 @@
 	}
 
 	a {
+		width: 100px;
+		padding: 40px 0 0;
+
 		&:focus, &:active,
 		&.active {
 			background-color: $transparent!important

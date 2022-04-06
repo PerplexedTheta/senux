@@ -38,15 +38,15 @@ fi
 ## begin the main magic
 if [[ $1 == "--init" ]]; then
 	# copy the sample file to the root of the repo
-	cp ${SCRIPT_DIR}/src/js/customisations.sample.js ${SCRIPT_DIR}/customisations.js
+	cp -n ${SCRIPT_DIR}/src/js/customisations.sample.js ${SCRIPT_DIR}/customisations.js
 	# tell the user what to do
 	echo "Copied sample files to "${SCRIPT_DIR}
 	echo "Now, run "${SCRIPT_DIR}"/build-js.sh --build"
 elif [[ $1 == "--build" ]]; then
 	# run the linter -- it will output to STDOUT if something is wrong
 	jshint --verbose ${SCRIPT_DIR}/customisations.js
-	# tell the user where to look
 	cp ${SCRIPT_DIR}/customisations.js ${SCRIPT_DIR}/dist/OPACUserJS.js
+	# tell the user where to look
 	echo "File built and outputted to ./dist/OPACUserJS.js"
 elif [[ $1 == "--minify" ]]; then
 	# run the linter -- it will output to STDOUT if something is wrong

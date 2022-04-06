@@ -28,24 +28,24 @@ fi
 ## begin the main magic
 if [[ $1 == "--init" ]]; then
 	# copy the sample files to the dist folder
-	cp ${SCRIPT_DIR}/src/html/ArticleRequestDisclaimerText.sample.html ${SCRIPT_DIR}/dist/ArticleRequestDisclaimerText.html
-	cp ${SCRIPT_DIR}/src/html/OPACCredits.sample.html ${SCRIPT_DIR}/dist/OPACCredits.html
-	cp ${SCRIPT_DIR}/src/html/OPACCustomSearch.sample.html ${SCRIPT_DIR}/dist/OPACCustomSearch.html
-	cp ${SCRIPT_DIR}/src/html/OPACHeader.sample.html ${SCRIPT_DIR}/dist/OPACHeader.html
-	cp ${SCRIPT_DIR}/src/html/OPACLoginInstructions.sample.html ${SCRIPT_DIR}/dist/OPACLoginInstructions.html
-	cp ${SCRIPT_DIR}/src/html/OPACMaintenanceNotice.sample.html ${SCRIPT_DIR}/dist/OPACMaintenanceNotice.html
-	cp ${SCRIPT_DIR}/src/html/OPACMainUserBlock.sample.html ${SCRIPT_DIR}/dist/OPACMainUserBlock.html
-	cp ${SCRIPT_DIR}/src/html/OPACMySummaryHTML.sample.html ${SCRIPT_DIR}/dist/OPACMySummaryHTML.html
-	cp ${SCRIPT_DIR}/src/html/OPACMySummaryNote.sample.html ${SCRIPT_DIR}/dist/OPACMySummaryNote.html
-	cp ${SCRIPT_DIR}/src/html/OPACNav.sample.html ${SCRIPT_DIR}/dist/OPACNav.html
-	cp ${SCRIPT_DIR}/src/html/OPACNavBottom.sample.html ${SCRIPT_DIR}/dist/OPACNavBottom.html
-	cp ${SCRIPT_DIR}/src/html/OPACNavRight.sample.html ${SCRIPT_DIR}/dist/OPACNavRight.html
-	cp ${SCRIPT_DIR}/src/html/OPACNoResultsFound.sample.html ${SCRIPT_DIR}/dist/OPACNoResultsFound.html
-	cp ${SCRIPT_DIR}/src/html/OPACResultsSidebar.sample.html ${SCRIPT_DIR}/dist/OPACResultsSidebar.html
-	cp ${SCRIPT_DIR}/src/html/OPACSearchForTitleIn.sample.html ${SCRIPT_DIR}/dist/OPACSearchForTitleIn.html
-	cp ${SCRIPT_DIR}/src/html/OPACSuggestionInstructions.sample.html ${SCRIPT_DIR}/dist/OPACSuggestionInstructions.html
-	cp ${SCRIPT_DIR}/src/html/PatronSelfRegistrationAdditionalInstructions.sample.html ${SCRIPT_DIR}/dist/PatronSelfRegistrationAdditionalInstructions.html
-	cp ${SCRIPT_DIR}/src/html/RestrictedPageContent.sample.html ${SCRIPT_DIR}/dist/RestrictedPageContent.html
+	cp -n ${SCRIPT_DIR}/src/html/ArticleRequestDisclaimerText.sample.html ${SCRIPT_DIR}/dist/ArticleRequestDisclaimerText.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACCredits.sample.html ${SCRIPT_DIR}/dist/OPACCredits.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACCustomSearch.sample.html ${SCRIPT_DIR}/dist/OPACCustomSearch.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACHeader.sample.html ${SCRIPT_DIR}/dist/OPACHeader.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACLoginInstructions.sample.html ${SCRIPT_DIR}/dist/OPACLoginInstructions.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACMaintenanceNotice.sample.html ${SCRIPT_DIR}/dist/OPACMaintenanceNotice.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACMainUserBlock.sample.html ${SCRIPT_DIR}/dist/OPACMainUserBlock.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACMySummaryHTML.sample.html ${SCRIPT_DIR}/dist/OPACMySummaryHTML.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACMySummaryNote.sample.html ${SCRIPT_DIR}/dist/OPACMySummaryNote.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACNav.sample.html ${SCRIPT_DIR}/dist/OPACNav.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACNavBottom.sample.html ${SCRIPT_DIR}/dist/OPACNavBottom.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACNavRight.sample.html ${SCRIPT_DIR}/dist/OPACNavRight.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACNoResultsFound.sample.html ${SCRIPT_DIR}/dist/OPACNoResultsFound.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACResultsSidebar.sample.html ${SCRIPT_DIR}/dist/OPACResultsSidebar.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACSearchForTitleIn.sample.html ${SCRIPT_DIR}/dist/OPACSearchForTitleIn.html
+	cp -n ${SCRIPT_DIR}/src/html/OPACSuggestionInstructions.sample.html ${SCRIPT_DIR}/dist/OPACSuggestionInstructions.html
+	cp -n ${SCRIPT_DIR}/src/html/PatronSelfRegistrationAdditionalInstructions.sample.html ${SCRIPT_DIR}/dist/PatronSelfRegistrationAdditionalInstructions.html
+	cp -n ${SCRIPT_DIR}/src/html/RestrictedPageContent.sample.html ${SCRIPT_DIR}/dist/RestrictedPageContent.html
 	# tell the user what to do
 	echo "Copied sample files to "${SCRIPT_DIR}"/dist"
 elif [[ ${#} < 1 || $1 == "--help" ]]; then
