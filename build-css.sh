@@ -41,7 +41,7 @@ if [[ $1 == "--init" ]]; then
 	echo "Now, run "${SCRIPT_DIR}"/build-css.sh --build"
 elif [[ $1 == "--build" ]]; then
 	# run the sass compiler -- it will output to STDOUT if something is wrong
-	sass ${SCRIPT_DIR}/src/css/build.scss:${SCRIPT_DIR}/dist/OPACUserCSS.css
+	sass ${SCRIPT_DIR}/src/css/build.scss:${SCRIPT_DIR}/dist/OPACUserCSS.css --style expanded
 	# tell the user where to look
 	echo "File built and outputted to ./dist/OPACUserCSS.css"
 elif [[ $1 == "--minify" ]]; then
