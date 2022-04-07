@@ -12,7 +12,11 @@
 
   HAVE A GOOD DAY - BUENOS DIAS - GUTEN TAG - BONNE JOURNEE - BUONA GIORNATA
 */
+
 document.addEventListener('DOMContentLoaded', function(event) {
+	// Insert your user customisations for JavaScript below this line
+	// Some useful custom values and functions have been included for you
+
 	// vars
 	var baseLang = $('html').attr('lang');
 	var baseHost = window.location.hostname;
