@@ -34,8 +34,8 @@ fi
 ## begin the main magic
 if [[ $1 == "--init" ]]; then
 	# copy the sample files to the root of the repo
-	cp -n ${SCRIPT_DIR}/src/css/variables.sample.scss ${SCRIPT_DIR}/variables.scss
-	cp -n ${SCRIPT_DIR}/src/css/customisations.sample.scss ${SCRIPT_DIR}/customisations.scss
+	cp -i ${SCRIPT_DIR}/src/css/variables.sample.scss ${SCRIPT_DIR}/variables.scss
+	cp -i ${SCRIPT_DIR}/src/css/customisations.sample.scss ${SCRIPT_DIR}/customisations.scss
 	# tell the user what to do
 	echo "Copied sample files to "${SCRIPT_DIR}
 	echo "Now, run "${SCRIPT_DIR}"/build-css.sh --build"
