@@ -149,17 +149,17 @@
 
 	a {
 		color: $moreSearchLink;
-		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationCol $defaultDecorationThickness;
 
 		&:hover {
 			color: $moreSearchLinkHov;
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 
 		&:focus, &:active,
 		&.active {
 			color: $moreSearchLinkHov;
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
 

@@ -179,7 +179,9 @@ $mainSearchLinkHov: darken($userText1,15%);
 $moreSearchBg: $userHue2;
 $moreSearchText: $userText2;
 $moreSearchLink: $userText2;
+$moreSearchLinkDecorationCol: $moreSearchLink;
 $moreSearchLinkHov: lighten($userText2,15%);
+$moreSearchLinkDecorationColHov: $moreSearchLinkHov;
 
 //
 // vars--content
