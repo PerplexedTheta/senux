@@ -393,6 +393,18 @@
 
 	a {
 		color: $onlineAccessLinkText;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $onlineAccessLinkDecorationCol $defaultDecorationThickness;
+
+		&:hover {
+			color: $onlineAccessLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $onlineAccessLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus, &:active,
+		&.active {
+			color: $onlineAccessLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $onlineAccessLinkDecorationColHov $defaultDecorationThickness
+		}
 	}
 }
 

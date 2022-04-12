@@ -54,14 +54,22 @@
 
 	a {
 		color: $breadcrumbLinkText;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationCol $defaultDecorationThickness;
 
 		&:link, &:visited {
-			color: $breadcrumbLinkText
+			color: $breadcrumbLinkText;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationCol $defaultDecorationThickness
 		}
 
-		&:hover, &:focus,
+		&:hover {
+			color: $breadcrumbLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus,
 		&:active, &.active {
-			color: $breadcrumbLinkTextHov
+			color: $breadcrumbLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
 }
