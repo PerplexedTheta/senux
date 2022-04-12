@@ -71,16 +71,16 @@
 		height: 0!important;
 		overflow: hidden;
 		padding: $headerLogoHeight 0 0;
-		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
 		&:hover {
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
 			background-color: transparent!important
 		}
 
 		&:focus, &:active,
 		&.active {
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness;
 			background-color: transparent!important
 		}
 	}
@@ -143,14 +143,23 @@
 	width: 100%;
 	margin: 0;
 	padding: 1rem;
+
 	color: $moreSearchText;
 	background-color: $moreSearchBg;
 
 	a {
 		color: $moreSearchLink;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
-		&:hover, &:focus {
+		&:hover {
 			color: $moreSearchLinkHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus, &:active,
+		&.active {
+			color: $moreSearchLinkHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 		}
 	}
 
