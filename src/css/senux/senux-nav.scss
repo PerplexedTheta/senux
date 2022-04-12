@@ -26,11 +26,11 @@
 	display: $navbarLogoDisplayMobile;
 	width: 100px;
 	margin: 0;
-	background: $navbarLogo;
+	background: $navbarLogoBg;
 
 	&:hover, &:focus,
 	&:active, &.active {
-		background: $navbarLogoHov
+		background: $navbarLogoBgHov
 	}
 
 	a {
