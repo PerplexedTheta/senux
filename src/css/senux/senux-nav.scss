@@ -75,28 +75,30 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 #cart-list-nav, #members, #header_langmenu {
 	li {
 		a {
-			color: $navbarLink;
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
+			color: $navbarLinkText;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLinkDecorationCol $defaultDecorationThickness;
 			text-shadow: none;
 
 			i.fa {
-				color: $navbarLink
+				color: $navbarLinkText
 			}
 
 			&:hover {
-				color: $navbarLinkHov;
+				color: $navbarLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLinkDecorationColHov $defaultDecorationThickness;
 
 				i.fa {
-					color: $navbarLinkHov
+					color: $navbarLinkTextHov
 				}
 			}
 
-			&:focus,
-			&:active, &.active {
-				color: $navbarLinkHov;
+			&:focus, &:active,
+			&.active {
+				color: $navbarLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLinkDecorationColHov $defaultDecorationThickness;
 
 				i.fa {
-					color: $navbarLinkHov
+					color: $navbarLinkTextHov
 				}
 			}
 		}
@@ -104,15 +106,27 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 		a.dropdown-item {
 			background-color: $dropdownLinkBg;
 			color: $dropdownLinkText;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationCol $defaultDecorationThickness;
 
 			i.fa {
 				color: $dropdownLinkText;
 			}
 
-			&:hover, &:focus,
-			&:active, &.active {
+			&:hover {
 				background-color: $dropdownLinkBgHov;
 				color: $dropdownLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationColHov $defaultDecorationThickness;
+
+				i.fa {
+					color: $dropdownLinkTextHov;
+				}
+			}
+
+			&:focus, &:active,
+			&.active {
+				background-color: $dropdownLinkBgHov;
+				color: $dropdownLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationColHov $defaultDecorationThickness;
 
 				i.fa {
 					color: $dropdownLinkTextHov;
@@ -140,21 +154,21 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 
 	p {
 		a.login-link {
-			color: $navbarUsermenuLink;
+			color: $navbarUsermenuLinkText;
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $navbarUsermenuLinkHov
+				color: $navbarUsermenuLinkTextHov
 			}
 		}
 	}
 
 	a#logout.logout {
-		color: $navbarUsermenuLogout;
+		color: $navbarUsermenuLogoutText;
 
 		&:hover, &:focus,
 		&:active, &.active {
-			color: $navbarUsermenuLogoutHov
+			color: $navbarUsermenuLogoutTextHov
 		}
 	}
 }

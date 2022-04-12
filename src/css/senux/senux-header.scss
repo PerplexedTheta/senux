@@ -107,10 +107,18 @@
 	background-color: $mainSearchBg;
 
 	a {
-		color: $mainSearchLink;
+		color: $mainSearchLinkText;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $mainSearchLinkDecorationCol $defaultDecorationThickness;
 
-		&:hover, &:focus {
-			color: $mainSearchLinkHov
+		&:hover {
+			color: $mainSearchLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $mainSearchLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus, &:active,
+		&.active {
+			color: $mainSearchLinkTextHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $mainSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
 
@@ -148,17 +156,17 @@
 	background-color: $moreSearchBg;
 
 	a {
-		color: $moreSearchLink;
+		color: $moreSearchLinkText;
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationCol $defaultDecorationThickness;
 
 		&:hover {
-			color: $moreSearchLinkHov;
+			color: $moreSearchLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 
 		&:focus, &:active,
 		&.active {
-			color: $moreSearchLinkHov;
+			color: $moreSearchLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
@@ -173,8 +181,18 @@
 //
 // dropdown items
 .dropdown-item {
-	&:hover, &:focus {
+	color: $dropdownLinkText;
+	text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationCol $defaultDecorationThickness;
+
+	&:hover {
 		color: $dropdownLinkTextHov;
-		background-color: $dropdownLinkBgHov
+		background-color: $dropdownLinkBgHov;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationColHov $defaultDecorationThickness
 	}
+
+	&:hover {
+		color: $dropdownLinkTextHov;
+		background-color: $dropdownLinkBgHov;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $dropdownLinkDecorationColHov $defaultDecorationThickness
+        }
 }

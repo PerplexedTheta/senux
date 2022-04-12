@@ -41,17 +41,17 @@
 	}
 
 	a {
-		color: $footerLink;
+		color: $footerLinkText;
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationCol $defaultDecorationThickness;
 
 		&:hover {
-			color: $footerLinkHov;
+			color: $footerLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
 		}
 
 		&:focus, &:active,
 		&.active {
-			color: $footerLinkHov;
+			color: $footerLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
