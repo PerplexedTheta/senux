@@ -42,9 +42,17 @@
 
 	a {
 		color: $footerLink;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationCol $defaultDecorationThickness;
 
-		&:hover, &:focus {
+		&:hover {
+			color: $footerLinkHov;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus, &:active,
+		&.active {
 			color: $footerLinkHov
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
 }

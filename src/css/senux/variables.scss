@@ -218,4 +218,6 @@ $tableStripedEven: darken($defaultBg,5%);
 $footerBg: $msBlack;
 $footerText: $msWhite;
 $footerLink: $footerText;
+$footerLinkDecorationCol: $transparent;
 $footerLinkHov: darken($footerLink,15%);
+$footerLinkDecorationColHov: $footerLinkHov;

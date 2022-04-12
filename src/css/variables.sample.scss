@@ -173,7 +173,9 @@
 //$moreSearchBg: $userHue2;
 //$moreSearchText: $userText2;
 //$moreSearchLink: $userText2;
+//$moreSearchLinkDecorationCol: $moreSearchLink;
 //$moreSearchLinkHov: lighten($userText2,15%);
+//$moreSearchLinkDecorationColHov: $moreSearchLinkHov;
 
 //
 // vars--content
@@ -210,4 +212,6 @@
 //$footerBg: $msBlack;
 //$footerText: $msWhite;
 //$footerLink: $footerText;
+//$footerLinkDecorationCol: $transparent;
 //$footerLinkHov: darken($footerLink,15%);
+//$footerLinkDecorationColHov: $footerLinkHov;
