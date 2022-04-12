@@ -51,7 +51,7 @@
 
 		&:focus, &:active,
 		&.active {
-			color: $footerLinkHov
+			color: $footerLinkHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
 		}
 	}
