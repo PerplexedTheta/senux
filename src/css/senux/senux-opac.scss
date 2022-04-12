@@ -107,10 +107,15 @@
 
 .newsheader {
 	a {
-		text-decoration: $defaultLinkDecoration;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
-		&:hover, &:focus {
-			text-decoration: $defaultLinkDecorationHov
+		&:hover {
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
+		}
+
+		&:focus, &:active,
+		&.active {
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 		}
 	}
 }
@@ -277,10 +282,15 @@
 		}
 
 		a, a:link, a:visited {
-			text-decoration: $defaultLinkDecoration;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
-			&:hover, &:focus {
-				text-decoration: $defaultLinkDecorationHov
+			&:hover {
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
+			}
+
+			&:focus, &:active,
+			&.active {
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 			}
 		}
 	}
@@ -337,11 +347,15 @@
 .CheckAll, .CheckNone,
 #menu a, .menu a,
 #search-facets a {
-	text-decoration: $defaultLinkDecoration;
+	text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		text-decoration: $defaultLinkDecorationHov
+	&:hover {
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
+	}
+
+	&:focus, &:active,
+	&.active {
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness;
 	}
 }
 
@@ -505,11 +519,15 @@
 // view tabs
 a#Normalview, a#MARCview,
 a#ISBDview {
-	text-decoration: $defaultLinkDecoration;
+	text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
-	&:hover, &:focus,
-	&:active, &.active {
-		text-decoration: $defaultLinkDecorationHov
+	&:hover {
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
+	}
+
+	&:focus, &:active,
+	&.active {
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 	}
 }
 
@@ -696,8 +714,8 @@ div[id^="errormsg"], #noresultsfound {
 
 	color: $btnPriText!important;
 	background-color: $btnPriBg!important;
-	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol!important;
-	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol!important;
+	border: $defaultBorderWidth $defaultBorderType $btnPriBorderCol!important;
+	outline: $defaultBorderWidth $defaultBorderType $btnPriOutlineCol!important;
 
 	border-radius: $defaultRadius!important;
 	outline-offset: $defaultOffset!important;
@@ -710,7 +728,7 @@ div[id^="errormsg"], #noresultsfound {
 
 		color: $btnPriTextHov!important;
 		background-color: $btnPriBgHov!important;
-		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov!important;
-		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov!important;
+		border: $defaultBorderWidth $defaultBorderType $btnPriBorderColHov!important;
+		outline: $defaultBorderWidth $defaultBorderType $btnPriOutlineColHov!important;
 	}
 }

@@ -76,14 +76,22 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 	li {
 		a {
 			color: $navbarLink;
-			text-decoration: none;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
 			text-shadow: none;
 
 			i.fa {
 				color: $navbarLink
 			}
 
-			&:hover, &:focus,
+			&:hover {
+				color: $navbarLinkHov;
+
+				i.fa {
+					color: $navbarLinkHov
+				}
+			}
+
+			&:focus,
 			&:active, &.active {
 				color: $navbarLinkHov;
 

@@ -157,18 +157,18 @@
 .table .sorting, .table .sorting_asc,
 .table .sorting_desc {
 	background: $defaultBg;
-	text-decoration: $defaultLinkDecoration;
+	text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
 	&:hover {
-		text-decoration: $defaultLinkDecorationHov;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
 	}
 
 	&:focus, &:active,
 	&.active {
 		background: $defaultLinkBgFoc;
 		color: $defaultLinkTextFoc;
-		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc;
-		text-decoration: $defaultLinkDecorationFoc;
+		outline: $defaultOutlineWidth $defaultOutlineType $defaultLinkOutlineColFoc;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness;
 	}
 }
 
@@ -259,16 +259,16 @@ td.overdue {
 
 			color: $btnSecText;
 			background-color: $btnSecBg;
-			border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
-			outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+			border: $defaultBorderWidth $defaultBorderType $btnSecBorderCol;
+			outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineCol;
 
 
 			&:hover, &:focus,
 			&:active, &.active {
 				color: $btnSecTextHov;
 				background-color: $btnSecBgHov;
-				border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
-				outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov
+				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov;
+				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov
 			}
 		}
 
@@ -281,8 +281,8 @@ td.overdue {
 			&:active, &.active {
 				color: $btnSecTextHov;
 				background-color: $btnSecBgHov;
-				border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
-				outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov
+				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov;
+				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov
 			}
 		}
 	}

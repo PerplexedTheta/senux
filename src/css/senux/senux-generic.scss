@@ -56,10 +56,10 @@ h4, h5, h6,
 a {
 	background: $defaultLinkBg;
 	color: $defaultLinkText;
-	outline: $defaultLinkOutlineWidth $defaultLinkOutlineType $defaultLinkOutlineCol;
-	box-shadow: none!important;
-	text-decoration: $defaultLinkDecoration;
+	outline: $defaultOutlineWidth $defaultOutlineType $defaultLinkOutlineCol;
+	text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
+	box-shadow: none!important;
 	border-radius: $defaultRadius;
 	outline-offset: $defaultOffset;
 
@@ -70,8 +70,8 @@ a {
 	&:link, &:visited {
 		background: $defaultLinkBg;
 		color: $defaultLinkText;
-		outline: $defaultLinkOutlineWidth $defaultLinkOutlineType $defaultLinkOutlineCol;
-		text-decoration: $defaultLinkDecoration;
+		outline: $defaultOutlineWidth $defaultOutlineType $defaultLinkOutlineCol;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
 		i.fa {
 			color: $defaultLinkText
@@ -81,8 +81,8 @@ a {
 	&:hover {
 		background: $defaultLinkBgHov;
 		color: $defaultLinkTextHov;
-		outline: $defaultLinkOutlineWidthHov $defaultLinkOutlineTypeHov $defaultLinkOutlineColHov;
-		text-decoration: $defaultLinkDecorationHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $defaultLinkOutlineColHov;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
 
 		i.fa {
 			color: $defaultLinkTextHov
@@ -93,8 +93,8 @@ a {
 	&.active {
 		background: $defaultLinkBgFoc!important;
 		color: $defaultLinkTextFoc!important;
-		outline: $defaultLinkOutlineWidthFoc $defaultLinkOutlineTypeFoc $defaultLinkOutlineColFoc!important;
-		text-decoration: $defaultLinkDecorationFoc!important;
+		outline: $defaultOutlineWidth $defaultOutlineType $defaultLinkOutlineColFoc!important;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness!important;
 
 		i.fa {
 			color: $defaultLinkTextFoc!important
@@ -172,8 +172,8 @@ hr {
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
-	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $btnPriBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
@@ -188,8 +188,8 @@ hr {
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov;
-		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov;
+		border: $defaultBorderWidth $defaultBorderType $btnPriBorderColHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineColHov;
 
 		i.fa {
 			color: $btnPriTextHov
@@ -204,12 +204,12 @@ hr {
 .btn-primary:disabled {
 	background-image: none;
 	text-shadow: none;
-	text-decoration: none;
+	text-decoration: none!important;
 
 	color: $btnPriText;
 	background-color: $btnPriBg;
-	border: $btnPriBorderWidth $btnPriBorderType $btnPriBorderCol;
-	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $btnPriBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
@@ -220,12 +220,12 @@ hr {
 	&:active, &.active {
 		background-image: none;
 		text-shadow: none;
-		text-decoration: none;
+		text-decoration: none!important;
 
 		color: $btnPriTextHov;
 		background-color: $btnPriBgHov;
-		border: $btnPriBorderWidthHov $btnPriBorderTypeHov $btnPriBorderColHov;
-		outline: $btnPriOutlineWidthHov $btnPriOutlineTypeHov $btnPriOutlineColHov;
+		border: $defaultBorderWidth $defaultBorderType $btnPriBorderColHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineColHov;
 
 		i.fa {
 			color: $btnPriTextHov
@@ -247,8 +247,8 @@ hr {
 
 	color: $btnSecText;
 	background-color: $btnSecBg;
-	border: $btnSecBorderWidth $btnSecBorderType $btnSecBorderCol;
-	outline: $btnSecOutlineWidth $btnSecOutlineType $btnSecOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $btnSecBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineCol;
 	box-shadow: none!important;
 
 	i.fa {
@@ -262,8 +262,8 @@ hr {
 
 		color: $btnSecTextHov;
 		background-color: $btnSecBgHov;
-		border: $btnSecBorderWidthHov $btnSecBorderTypeHov $btnSecBorderColHov;
-		outline: $btnSecOutlineWidthHov $btnSecOutlineTypeHov $btnSecOutlineColHov;
+		border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov;
 
 		i.fa {
 			color: $btnSecTextHov
@@ -284,8 +284,8 @@ hr {
 
 	color: $btnLinkText;
 	background-color: $btnLinkBg;
-	border: $btnLinkBorderWidth $btnLinkBorderType $btnLinkBorderCol;
-	outline: $btnLinkOutlineWidth $btnLinkOutlineType $btnLinkOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $btnLinkBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $btnLinkOutlineCol;
 
 	i.fa {
 		color: $btnLinkText
@@ -298,8 +298,8 @@ hr {
 
 		color: $btnLinkTextHov;
 		background-color: $btnLinkBgHov;
-		border: $btnLinkBorderWidthHov $btnLinkBorderTypeHov $btnLinkBorderColHov;
-		outline: $btnLinkOutlineWidthHov $btnLinkOutlineTypeHov $btnLinkOutlineColHov;
+		border: $defaultBorderWidth $defaultBorderType $btnLinkBorderColHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $btnLinkOutlineColHov;
 
 		i.fa {
 			color: $btnLinkTextHov
@@ -327,8 +327,8 @@ hr {
 
 	color: $msWhite;
 	background-color: $msRed;
-	border: $btnPriBorderWidth $btnPriBorderType $msRed;
-	outline: $btnPriOutlineWidth $btnPriOutlineType $btnPriOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $msRed;
+	outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineCol;
 
 	i.fa {
 		color: $msWhite
@@ -341,8 +341,8 @@ hr {
 
 		color: $msWhite;
 		background-color: darken($msRed, 15%);
-		border: $btnPriBorderWidth $btnPriBorderType darken($msRed, 10%);
-		outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%);
+		border: $defaultBorderWidth $defaultBorderType darken($msRed, 10%);
+		outline: $defaultOutlineWidth $defaultOutlineType darken($msRed, 10%);
 
 		i.fa {
 			color: $msWhite
@@ -358,8 +358,8 @@ hr {
 .input-append .btn-group:last-child > .dropdown-toggle {
 	color: $msWhite;
 	background-color: darken($msRed, 15%);
-	border: $btnPriBorderWidth $btnPriBorderType darken($msRed, 10%);
-	outline: $btnPriOutlineWidth $btnPriOutlineType darken($msRed, 10%);
+	border: $defaultBorderWidth $defaultBorderType darken($msRed, 10%);
+	outline: $defaultOutlineWidth $defaultOutlineType darken($msRed, 10%);
 }
 
 //
@@ -383,8 +383,8 @@ input[type="search"], select, textarea,
 
 	color: $inputText;
 	background-color: $inputBg;
-	border: $inputBorderWidth $inputBorderType $inputBorderCol;
-	outline: $inputOutlineWidth $inputOutlineType $inputOutlineCol;
+	border: $defaultBorderWidth $defaultBorderType $inputBorderCol;
+	outline: $defaultOutlineWidth $defaultOutlineType $inputOutlineCol;
 	box-shadow: none!important;
 
 	&:hover {
@@ -393,8 +393,8 @@ input[type="search"], select, textarea,
 
 		color: $inputTextHov;
 		background-color: $inputBgHov;
-		border: $inputBorderWidthHov $inputBorderTypeHov $inputBorderColHov;
-		outline: $inputOutlineWidthHov $inputOutlineTypeHov $inputOutlineColHov
+		border: $defaultBorderWidth $defaultBorderType $inputBorderColHov;
+		outline: $defaultOutlineWidth $defaultOutlineType $inputOutlineColHov
 	}
 
 	&:focus, &:active,
@@ -404,15 +404,15 @@ input[type="search"], select, textarea,
 
 		color: $inputTextFoc;
 		background-color: $inputBgFoc;
-		border: $inputBorderWidthFoc $inputBorderTypeFoc $inputBorderColFoc;
-		outline: $inputOutlineWidthFoc $inputOutlineTypeFoc $inputOutlineColFoc
+		border: $defaultBorderWidth $defaultBorderType $inputBorderColFoc;
+		outline: $defaultOutlineWidth $defaultOutlineType $inputOutlineColFoc
 	}
 
 	&:disabled {
 		color: $inputDisabledText;
 		background-color: $inputDisabledBg;
-		border: $inputDisabledBorderWidth $inputDisabledBorderType $inputDisabledBorderCol;
-		outline: $inputDisabledOutlineWidth $inputDisabledOutlineType $inputDisabledOutlineCol
+		border: $defaultBorderWidth $defaultBorderType $inputDisabledBorderCol;
+		outline: $defaultOutlineWidth $defaultOutlineType $inputDisabledOutlineCol
 	}
 }
 
@@ -426,8 +426,8 @@ input[type="search"] {
 	&:read-only {
 		color: $inputDisabledText;
 		background-color: $inputDisabledBg;
-		border: $inputDisabledBorderWidth $inputDisabledBorderType $inputDisabledBorderCol;
-		outline: $inputDisabledOutlineWidth $inputDisabledOutlineType $inputDisabledOutlineCol
+		border: $defaultBorderWidth $defaultBorderType $inputDisabledBorderCol;
+		outline: $defaultOutlineWidth $defaultOutlineType $inputDisabledOutlineCol
 	}
 }
 

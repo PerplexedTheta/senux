@@ -67,4 +67,6 @@ elif [[ ${#} < 1 || $1 == "--help" ]]; then
 	echo "--init		run with this flag to prep this repository clone for a build"
 	echo "--build		run with this flag to build the css to 'dist'"
 	echo "--minify	run with this flag to build the minified css to 'dist'"
+else
+	echo "Unknown argument: "${1}
 fi

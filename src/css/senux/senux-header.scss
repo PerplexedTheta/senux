@@ -70,11 +70,16 @@
 		height: 0!important;
 		overflow: hidden;
 		padding: $headerLogoHeight 0 0;
-		text-decoration: none;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
 
-		&:hover, &:focus,
-		&:active, &.active {
-			text-decoration: none;
+		&:hover {
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
+			background-color: transparent!important
+		}
+
+		&:focus, &:active,
+		&.active {
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultDecorationCol $defaultDecorationThickness;
 			background-color: transparent!important
 		}
 	}

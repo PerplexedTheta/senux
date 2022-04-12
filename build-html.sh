@@ -55,4 +55,6 @@ elif [[ ${#} < 1 || $1 == "--help" ]]; then
 	echo "available arguments:"
 	echo "--help		show this message"
 	echo "--init		run with this flag to prep this repository clone"
+else
+	echo "Unknown argument: "${1}
 fi
