@@ -81,6 +81,21 @@
 	}
 }
 
+#user_summary {
+	margin: 0 0 .5rem 0;
+	padding: 1rem;
+	background-color: $defaultFg;
+	border: $defaultBorderWidth $defaultBorderType $defaultBorderCol;
+	border-radius: $defaultRadius;
+	max-width: none;
+
+	h2 {
+		color: $headlinerText;
+		background-color: $headlinerBg;
+		border-radius: $defaultRadius
+	}
+}
+
 #nologininstructions {
 	display: none
 }
