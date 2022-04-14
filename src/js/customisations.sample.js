@@ -51,7 +51,17 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 	// login modal - shibboleth
 	// comment this out if you don't use saml
-	//$('#loginModal').html('<div class=\"modal-dialog\"> <div class=\"modal-content\"> <div class=\"modal-header\"> <h2 class=\"modal-title\" id=\"modalLoginLabel\">Log in to your account<\/h2> <button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button> <\/div><div id=\"modalAuth\" class=\"modal-body\"> <h3>Academic student or staff?<\/h3> <p><a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to institution login &raquo;<\/a><\/p><h3>Academic associate?<\/h3> <p><a href=\"\/cgi-bin\/koha\/opac-user.pl\" class=\"btn btn-primary\">Go to local Koha login &raquo;<\/a><\/p><\/div><\/div><\/div>');
+	/*
+	$('#opac-auth > h2:contains("Shibboleth Login")').text('Academic student or staff?');
+	$('#opac-auth > p:contains("Log in using a Shibboleth account.")').html('<a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to Institutional login &raquo;<\/a>');
+	$('#opac-auth > h2:contains("Local login")').text('Academic partner or public user?');
+	$('#opac-auth > p:contains("If you do not have a Shibboleth account")').text('If you do not have an Institution account, then you may login below.');
+	$('#loginModal').html('<div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h2 class=\"modal-title\" id=\"modalLoginLabel\">Log in to your account<\/h2><button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button><\/div><div id=\"modalAuth\" class=\"modal-body\"><h3>Academic student or staff?<\/h3><p><a href=\"\/Shibboleth.sso\/Login?target=https:\/\/' + window.location.hostname + window.location.pathname + window.location.search + '\" class=\"btn btn-primary\">Go to Institutional login &raquo;<\/a><\/p><h3>Academic partner or public user?<\/h3><p><a href=\"\/cgi-bin\/koha\/opac-user.pl\" class=\"btn btn-primary\">Go to local Koha login &raquo;<\/a><\/p><\/div><\/div><\/div>');
+	*/
+
+	// relabel & swap go search button type
+	$('#searchsubmit').html('Go \u00BB');
+	//$('#searchsubmit').toggleClass('btn-primary btn-default');
 
 	// disable borrower contact method dropdown if it is readonly
 	if($('select[name="borrower_primary_contact_method"]').attr('readonly') == "readonly") {
