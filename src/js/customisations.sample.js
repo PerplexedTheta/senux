@@ -79,6 +79,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	//mastheadEventHandler();
 	//searchCatalogue();
 
+	// wiki autocompletion api
+	wikiAutocomplete();
+
 	// add basket link handler
 	basketLinkHandler();
 
@@ -286,6 +289,28 @@ function searchExplorit() {
 		else if($('#searchform').attr('name') == 'dwtform') searchCatalogue();
 	});
 
+}
+
+
+//
+// function to enable autocompletion from wikipedia
+function wikiAutocomplete() {
+    $("#translControl1").autocomplete({
+        source: function(request, response) {
+            $.ajax({
+                url: "https://en.wikipedia.org/w/api.php",
+                dataType: "jsonp",
+                data: {
+                    'action': "opensearch",
+                    'format': "json",
+                    'search': request.term
+                },
+                success: function(data) {
+                    response(data[1]);
+                }
+            });
+        }
+    });
 }
 
 
