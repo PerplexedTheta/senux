@@ -64,10 +64,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	//$('#searchsubmit').toggleClass('btn-primary btn-default');
 
 	// disable borrower contact method dropdown if it is readonly
-	if($('select[name="borrower_primary_contact_method"]').attr('readonly') == "readonly") {
-		$('select[name="borrower_primary_contact_method"]').removeAttr('readonly');
-		$('select[name="borrower_primary_contact_method"]').attr('disabled', 'disabled');
-	}
+	$('select[name="borrower_primary_contact_method"]').removeAttr('readonly');
+	$('select[name="borrower_primary_contact_method"]').attr('disabled', 'disabled');
 
 	// hide search facets under menus
 	facetAccordeons();
