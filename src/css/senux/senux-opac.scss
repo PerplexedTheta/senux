@@ -660,7 +660,8 @@ a#ISBDview {
 //
 //
 // auths
-#userauthhome {
+#userauthhome, #userauthsearchresults,
+#userauthdetails {
 	padding: 1rem;
 	color: $defaultText;
 	background-color: $defaultFg;
