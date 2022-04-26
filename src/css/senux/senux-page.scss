@@ -281,16 +281,16 @@ td.overdue {
 		}
 
 		&.active a {
-			color: $defaultLinkTextFoc;
-			background-color: $defaultLinkBgFoc;
-			border: $defaultBorderWidth $defaultBorderType $defaultLinkOutlineColFoc;
+			color: $btnPriText;
+			background-color: $btnPriBg;
+			border: $defaultBorderWidth $defaultBorderType $btnPriBorderCol;
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $btnSecTextHov;
-				background-color: $btnSecBgHov;
-				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov;
-				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov
+				color: $btnSecTextHov!important;
+				background-color: $btnSecBgHov!important;
+				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov!important;
+				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov!important
 			}
 		}
 	}
