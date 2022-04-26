@@ -61,7 +61,7 @@ $breakpoint-pc: 992px;
 $defaultBg: $msWhite;
 $defaultFg: $white;
 $defaultText: $msBlack;
-$defaultFonts: 'SegoeUI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+$defaultFonts: 'SegoeUI','Roboto','Helvetica Neue','Arial',sans-serif;
 $defaultBullet: disc;
 // vars--generic--bordersandoutlines
 $defaultRadius: .198rem;
@@ -218,9 +218,14 @@ $onlineAccessLinkDecorationColHov: $onlineAccessLinkTextHov;
 
 //
 // vars--tables
+// vars--tables--root
+$tableHeadText: $defaultText;
+$tableHeadBg: darken($defaultBg,5%);
+$tableRowText: $defaultText;
+$tableRowBg: $defaultBg;
 // vars--tables--striped
-$tableStripedOdd: $defaultFg;
-$tableStripedEven: darken($defaultBg,5%);
+$tableRowOddBg: $defaultFg;
+$tableRowEvenBg: $defaultBg;
 
 //
 // vars--footer

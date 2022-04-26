@@ -152,19 +152,23 @@
 }
 
 .table thead th {
-	background-color: darken($defaultBg, 5%);
+	color: $tableHeadText;
+	background-color: $tableHeadBg;
 	border-bottom: none
 }
 
-.table tbody tr {
-	background-color: $white
+.table tbody tr, .table tbody td {
+	color: $tableRowText;
+	background-color: $tableRowBg
 }
 
 .table .nosort, .table .nosort.sorting,
 .table .nosort.sorting_asc, .table .nosort.sorting_desc,
 .table .sorting, .table .sorting_asc,
 .table .sorting_desc {
-	background: $defaultBg;
+	color: $tableHeadText;
+	background: none;
+	background-color: $tableHeadBg;
 	text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationCol $defaultDecorationThickness;
 
 	&:hover {
@@ -203,7 +207,8 @@
 // striped
 .table-striped tbody > tr > td,
 .table-striped tbody > tr > th {
-	background-color: $tableStripedEven;
+	color: $tableRowText;
+	background-color: $tableRowEvenBg;
 
 	a, a:link, a:visited, a.btn.btn-link {
 		color: $defaultLinkText;
@@ -216,7 +221,8 @@
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
-	background-color: $tableStripedOdd;
+	color: $tableRowText;
+	background-color: $tableRowOddBg;
 
 	a, a:link, a:visited, a.btn.btn-link {
 		color: $defaultLinkText;
