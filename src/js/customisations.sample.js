@@ -86,6 +86,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// reservation link handler
 	reservationLinkHandler();
 
+	// add authority record alt text & tooltips
+	$('a.authlink').attr('alt','View authority record');
+	$('a.authlink').attr('title','View authority record');
+
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
 
@@ -293,22 +297,22 @@ function searchExplorit() {
 //
 // function to enable autocompletion from wikipedia
 function wikiAutocomplete() {
-    $("#translControl1").autocomplete({
-        source: function(request, response) {
-            $.ajax({
-                url: "https://en.wikipedia.org/w/api.php",
-                dataType: "jsonp",
-                data: {
-                    'action': "opensearch",
-                    'format': "json",
-                    'search': request.term
-                },
-                success: function(data) {
-                    response(data[1]);
-                }
-            });
-        }
-    });
+	$('#translControl1').autocomplete({
+		source: function(request, response) {
+			$.ajax({
+				url: 'https://en.wikipedia.org/w/api.php',
+				dataType: 'jsonp',
+				data: {
+					'action': 'opensearch',
+					'format': 'json',
+					'search': request.term
+				},
+				success: function(data) {
+					response(data[1]);
+				}
+			});
+		}
+	});
 }
 
 
