@@ -277,6 +277,7 @@ hr {
 }
 
 .btn-link, .dt-button,
+.table-striped tbody > tr:nth-child(2n+1) > td a.btn.btn-link, .table-striped tbody > tr:nth-child(2n+1) > th a.btn.btn-link,
 .btn-link:not(:disabled):not(.disabled), .btn-link.disabled,
 .btn-link:disabled {
 	background-image: none;
