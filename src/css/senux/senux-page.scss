@@ -208,29 +208,13 @@
 .table-striped tbody > tr > td,
 .table-striped tbody > tr > th {
 	color: $tableRowText;
-	background-color: $tableRowEvenBg;
-
-	a, a:link, a:visited, a.btn.btn-link {
-		color: $defaultLinkText;
-
-		&:hover, &:focus {
-			color: darken($defaultLinkText, 15%)
-		}
-	}
+	background-color: $tableRowEvenBg
 }
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
 	color: $tableRowText;
-	background-color: $tableRowOddBg;
-
-	a, a:link, a:visited, a.btn.btn-link {
-		color: $defaultLinkText;
-
-		&:hover, &:focus {
-			color: darken($defaultLinkText, 15%)
-		}
-	}
+	background-color: $tableRowOddBg
 }
 
 // table lables
