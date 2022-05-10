@@ -480,6 +480,7 @@ function reservationLinkHandler() {
 /*
   PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE
 */
+
 document.addEventListener('DOMContentLoaded', function(event) {
   // you may proceed
 }
