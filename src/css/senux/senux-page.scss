@@ -214,7 +214,11 @@
 		color: $defaultLinkText;
 
 		&.btn {
-			color: $defaultLinkText
+			color: $btnPriText
+		}
+
+		&.btn-default, &.btn-secondary {
+			color: $btnSecText
 		}
 
 		&.btn-link {
@@ -232,7 +236,11 @@
 		color: $defaultLinkText;
 
 		&.btn {
-			color: $defaultLinkText
+			color: $btnPriText
+		}
+
+		&.btn-default, &.btn-secondary {
+			color: $btnSecText
 		}
 
 		&.btn-link {

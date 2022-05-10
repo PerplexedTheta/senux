@@ -198,8 +198,7 @@ hr {
 }
 
 .btn-primary, #loginModal input[type="submit"],
-.btn-primary:not(:disabled):not(.disabled), .table-striped tbody > tr:nth-child(2n+1) > td a.btn,
-.table-striped tbody > tr:nth-child(2n+1) > th a.btn, .btn-success,
+.btn-primary:not(:disabled):not(.disabled), .btn-success,
 .btn-success:not(:disabled):not(.disabled), #searchsubmit.btn.btn-primary,
 .btn-primary.disabled, .btn-primary:disabled {
 	background-image: none;
@@ -277,7 +276,6 @@ hr {
 }
 
 .btn-link, .dt-button,
-.table-striped tbody > tr:nth-child(2n+1) > td a.btn.btn-link, .table-striped tbody > tr:nth-child(2n+1) > th a.btn.btn-link,
 .btn-link:not(:disabled):not(.disabled), .btn-link.disabled,
 .btn-link:disabled {
 	background-image: none;
