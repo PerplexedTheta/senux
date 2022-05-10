@@ -208,13 +208,21 @@
 .table-striped tbody > tr > td,
 .table-striped tbody > tr > th {
 	color: $tableRowText;
-	background-color: $tableRowEvenBg
+	background-color: $tableRowEvenBg;
+
+	a, a:visited {
+		color: $defaultLinkText
+	}
 }
 
 .table-striped tbody > tr:nth-child(2n+1) > td,
 .table-striped tbody > tr:nth-child(2n+1) > th {
 	color: $tableRowText;
-	background-color: $tableRowOddBg
+	background-color: $tableRowOddBg;
+
+	a, a:visited {
+		color: $defaultLinkText
+	}
 }
 
 // table lables
