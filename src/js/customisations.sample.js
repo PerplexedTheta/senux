@@ -90,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	$('a.authlink').attr('alt','View authority record');
 	$('a.authlink').attr('title','View authority record');
 
+	// remove ics links
+	//$('a[href="opac-ics.pl"]').remove();
+
 	// remove 'powered by koha' regardless of syspref
 	$('#koha_url').remove();
 
