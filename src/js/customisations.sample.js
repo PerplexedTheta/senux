@@ -483,4 +483,4 @@ function reservationLinkHandler() {
 
 document.addEventListener('DOMContentLoaded', function(event) {
   // you may proceed
-}
+});
