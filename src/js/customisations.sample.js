@@ -1,14 +1,14 @@
 /*!
   WELCOME TO SENUX! VER. 2111-04 -- PLEASE READ CAREFULLY!
 
-  USER ALERT: DO NOT MODIFY ANY OF THE CONTENT HELD WITHIN THE OPACUSERJS
-  SYSPREF. INSTEAD, PLEASE MAKE ALL JS CHANGES WITHIN THE CUSTOMISATIONS.JS
-  FILE HOUSED WITHIN THE SENUX GIT REPOSITORY. THEN, RUN THE BUILD SCRIPT(S)
-  AND FETCH THE OUTPUT FROM THE DIST DIRECTORY.
+  USER ALERT: PLEASE DO NOT MODIFY ANYTHING BELOW THIS LINE! INSTEAD, PLEASE
+  GO TO THE END OF THIS SCRIPT FILE / OPACUSERJS, AND PLACE CUSTOMISATIONS
+  BELOW THE LINE THAT SAYS 'PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE'.
 
-  THIS RESTRICTION IS IN PLACE BECAUSE A SCRIPT IS USED TO GENERATE THE JS.
-  MODIFYING THE JS OUTSIDE OF RUNNING THIS SCRIPT CAN CAUSE ISSUES, AND LOSS
-  IN CUSTOMISATIONS FURTHER DOWN THE LINE. YOU HAVE BEEN WARNED!
+  THIS RESTRICTION EXISTS BECAUSE THE CONTENTS OF THIS FILE / SYSPREF ARE
+  GENERATED USING A SCRIPT. IF YOU MAKE ARBITRARY CHANGES HERE, THEY WILL IN
+  ALL LIKELINESS BE OVERWRITTEN IN THE NEAR FUTURE BY A REGENERATION OF THE
+  SCRIPTS. THANK YOU!
 
   HAVE A GOOD DAY - BUENOS DIAS - GUTEN TAG - BONNE JOURNEE - BUONA GIORNATA
 */
@@ -474,4 +474,12 @@ function reservationLinkHandler() {
 	});
 
 	$('#loginModal').after('<div class=\"modal show\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalLoginLabel\" id=\"reserveModal\" aria-modal=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h2 class=\"modal-title\" id=\"modalReserveLabel\">Place a reservation on this item?<\/h2><button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button><\/div><div class=\"modal-body\"><p id=\"modalReserveDesc\">Please click Ok to progress with this reservation. Be sure to await an email from your local Library branch, before coming in!<\/p><\/div><div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel<\/button><a id=\"modalReserveOk\" href=\"#\" class=\"btn btn-primary\" aria-describedby=\"modalReserveDesc\">Ok<\/a><\/div><\/div><\/div><\/div>');
+}
+
+
+/*
+  PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE
+*/
+document.addEventListener('DOMContentLoaded', function(event) {
+  // you may proceed
 }
