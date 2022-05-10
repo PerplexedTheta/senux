@@ -213,15 +213,15 @@
 	a, a:visited {
 		color: $defaultLinkText;
 
-		&.btn {
+		&.btn, &.btn.btn-primary {
 			color: $btnPriText
 		}
 
-		&.btn-default, &.btn-secondary {
+		&.btn.btn-default, &.btn.btn-secondary {
 			color: $btnSecText
 		}
 
-		&.btn-link {
+		&.btn.btn-link {
 			color: $defaultLinkText
 		}
 	}
@@ -235,15 +235,15 @@
 	a, a:visited {
 		color: $defaultLinkText;
 
-		&.btn {
+		&.btn, &.btn.btn-primary {
 			color: $btnPriText
 		}
 
-		&.btn-default, &.btn-secondary {
+		&.btn.btn-default, &.btn.btn-secondary {
 			color: $btnSecText
 		}
 
-		&.btn-link {
+		&.btn.btn-link {
 			color: $defaultLinkText
 		}
 	}
