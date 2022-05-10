@@ -211,7 +211,15 @@
 	background-color: $tableRowEvenBg;
 
 	a, a:visited {
-		color: $defaultLinkText
+		color: $defaultLinkText;
+
+		&.btn {
+			color: $defaultLinkText
+		}
+
+		&.btn-link {
+			color: $defaultLinkText
+		}
 	}
 }
 
@@ -221,7 +229,15 @@
 	background-color: $tableRowOddBg;
 
 	a, a:visited {
-		color: $defaultLinkText
+		color: $defaultLinkText;
+
+		&.btn {
+			color: $defaultLinkText
+		}
+
+		&.btn-link {
+			color: $defaultLinkText
+		}
 	}
 }
 
