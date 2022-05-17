@@ -760,3 +760,8 @@ div[id^="errormsg"], #noresultsfound {
 		outline: $defaultBorderWidth $defaultBorderType $btnPriOutlineColHov!important;
 	}
 }
+
+
+#inlibro-carrousel .slider hr + div {
+	background-color: $transparent!important
+}
