@@ -333,7 +333,9 @@ td.overdue {
 }
 
 .logout {
-	color: $navbarUsermenuLogoutText;
+	&:link, &:visited {
+		color: $navbarUsermenuLogoutText
+	}
 
 	&:hover, &:focus,
 	&:active, &.active {
