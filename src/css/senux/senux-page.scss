@@ -332,6 +332,15 @@ td.overdue {
 	}
 }
 
+.logout {
+	color: $navbarUsermenuLogoutText;
+
+	&:hover, &:focus,
+	&:active, &.active {
+		color: $navbarUsermenuLogoutTextHov
+	}
+}
+
 //
 // recolour things
 legend, .legend {
