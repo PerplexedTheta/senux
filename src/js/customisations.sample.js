@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// add publication date range to facets
 	facetPublicationDateRange();
 
+	// add a link to clear all search facets
+	facetClearAllHandler();
+
 	// explorit masthead pulldown handler
 	//mastheadEventHandler();
 	//searchCatalogue();
@@ -366,6 +369,29 @@ function facetAccordeons() {
 	});
 	$('#search-facets .menu-collapse li').find('li:contains("Showing only available items")').each(function() {
 		$(this).parents('li').find('h3 a').click();
+	});
+
+	return;
+}
+
+
+//
+// function to add a button which, on click, clears all search facets
+function facetClearAllHandler() {
+	// vars
+	var urlParams = new URLSearchParams(window.location.search.substring(1));
+	var q = urlParams.get('q');
+	var currentUrl = window.location.href;
+	var targetUrl = 'https://' + window.location.hostname + '/cgi-bin/koha/opac-search.pl?limit=&q=' + q + '&limit=&weight_search=1';
+
+	// add the clear link
+	if(currentUrl != targetUrl) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all facets <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
+
+	// handle any clicks
+	$('a[href="#facetAllClear"]').on('click', function(event) {
+		event.preventDefault();
+
+		window.location.href = 'https://' + window.location.hostname + '/cgi-bin/koha/opac-search.pl?limit=&q=' + q + '&limit=&weight_search=1';
 	});
 
 	return;
