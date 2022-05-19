@@ -1,17 +1,38 @@
+//
+// Part of the Senux Project
+// Copyright 2021-2022 Jake Deery
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
 /*!
-  WELCOME TO SENUX! VER. 2111-04 -- PLEASE READ CAREFULLY!
+  WELCOME TO SENUX! VER. 2111-05 -- PLEASE READ CAREFULLY!
 
-  USER ALERT: PLEASE DO NOT MODIFY ANYTHING BELOW THIS LINE! INSTEAD, PLEASE
-  GO TO THE END OF THIS SCRIPT FILE / OPACUSERJS, AND PLACE CUSTOMISATIONS
-  BELOW THE LINE THAT SAYS 'PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE'.
-
-  THIS RESTRICTION EXISTS BECAUSE THE CONTENTS OF THIS FILE / SYSPREF ARE
-  GENERATED USING A SCRIPT. IF YOU MAKE ARBITRARY CHANGES HERE, THEY WILL IN
-  ALL LIKELINESS BE OVERWRITTEN IN THE NEAR FUTURE BY A REGENERATION OF THE
-  SCRIPTS. THANK YOU!
+  THIS FILE EXISTS AS A TEMPLATE FOR YOU TO COPY INTO THE OPACUSERJS AND
+  CUSTOMISE AS YOU SEE FIT. PLEASE DISREGARD THE LICENCE ABOVE - THIS EXISTS
+  ONLY TO PROTECT THE FILE IN THE GIT REPOSITORY. COPY EVERYTHING FROM LINE 37
+  ONWARDS INTO OPACUSERJS AND HAVE AT IT!
 
   HAVE A GOOD DAY - BUENOS DIAS - GUTEN TAG - BONNE JOURNEE - BUONA GIORNATA
 */
+
+/*!
+  -----------------------------------------
+  PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE
+  -----------------------------------------
+*/
+
+// you may proceed
 
 document.addEventListener('DOMContentLoaded', function(event) {
 	// Insert your user customisations for JavaScript below this line
@@ -519,11 +540,3 @@ function renameSaveRecord() {
 		$(this).text('Save to ' + thisText);
 	});
 }
-
-/*
-  PLACE YOUR OPACUSERJS CUSTOMISATIONS HERE
-*/
-
-document.addEventListener('DOMContentLoaded', function(event) {
-  // you may proceed
-});
