@@ -44,15 +44,30 @@
 		color: $footerLinkText;
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationCol $defaultDecorationThickness;
 
+		i.fa {
+			color: $footerLinkText;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationCol $defaultDecorationThickness;
+		}
+
 		&:hover {
 			color: $footerLinkTextHov;
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness;
+
+			i.fa {
+				color: $footerLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness;
+			}
 		}
 
 		&:focus, &:active,
 		&.active {
 			color: $footerLinkTextHov;
-			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness;
+
+			i.fa {
+				color: $footerLinkTextHov;
+				text-decoration: $defaultDecorationLine $defaultDecorationStyle $footerLinkDecorationColHov $defaultDecorationThickness;
+			}
 		}
 	}
 }
