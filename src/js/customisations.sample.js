@@ -402,17 +402,15 @@ function facetClearAllHandler() {
 	// vars
 	var urlParams = new URLSearchParams(window.location.search.substring(1));
 	var q = urlParams.get('q');
-	var currentUrl = window.location.href;
-	var targetUrl = 'https://' + window.location.hostname + '/cgi-bin/koha/opac-search.pl?limit=&q=' + q + '&limit=&weight_search=1';
 
-	// add the clear link
-	if(currentUrl != targetUrl) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all facets <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
+	// detect if [x] exists
+	if($('#search-facets .menu-collapse li:contains("[x]")').length > 0) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all facets <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
 
 	// handle any clicks
 	$('a[href="#facetAllClear"]').on('click', function(event) {
 		event.preventDefault();
 
-		window.location.href = 'https://' + window.location.hostname + '/cgi-bin/koha/opac-search.pl?limit=&q=' + q + '&limit=&weight_search=1';
+		window.location.href = 'https://' + window.location.hostname + '/cgi-bin/koha/opac-search.pl?q=' + q;
 	});
 
 	return;
@@ -423,7 +421,18 @@ function facetClearAllHandler() {
 // function to add date ranges to search facets
 function facetPublicationDateRange() {
 	// vars
-	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like the questionmark
+	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like question marks
+	var urlParamsFiltered = Array.from(urlParams.entries()).filter(value => { // remove previous limit params
+		if(!value[1].includes('yr,st-numeric')) return false;
+		else return true; // only return true if above conditions are met
+	});
+	if(urlParamsFiltered[0]) {
+		var urlFacetSet = true;
+		var urlFacet = urlParamsFiltered[0][1];
+	} else {
+		var urlFacetSet = false;
+		var urlFacet = '';
+	}
 	var currentYear = new Date().getFullYear();
 
 	// first, inject the markup
@@ -459,8 +468,9 @@ function facetPublicationDateRange() {
 		}
 	});
 
-	if(sessionStorage.getItem('limit-yr')) {
-		$('input[name="limit-yr"]').val(sessionStorage.getItem('limit-yr'));
+	if(urlFacetSet) {
+		$('input[name="limit-yr"]').val(urlFacet);
+		$('a[href="#facetYrRefine"]').after('<a href=\"#facetYrClear\" class=\"btn btn-default mt-2\">Clear date refinement [x]<\/a>'); // add clear button
 		$('#facet-yr a').click(); // we want to show the user the facet, you see
 	}
 	return;
@@ -471,9 +481,8 @@ function facetPublicationDateRange() {
 // function to process publication date range submissions
 function facetPublicationDateRangeSubmitHandler() {
 	// vars
-	var limitYr = $('input[name="limit-yr"]').val(); // this value fetches from the input form
-	var urlParams = Array.from(new URLSearchParams(window.location.search.substring(1)).entries()); // this doesnt like question marks
-	var urlParamsFiltered = urlParams.filter(value => { // remove previous limit params
+	var urlParams = new URLSearchParams(window.location.search.substring(1)); // this doesnt like question marks
+	var urlParamsFiltered = Array.from(urlParams.entries()).filter(value => { // remove previous limit params
 		if(value[0] == 'limit-yr') return false;
 		else if(value[1].includes('yr,st-numeric')) return false;
 		else return true; // only return true if above conditions are met
@@ -481,14 +490,15 @@ function facetPublicationDateRangeSubmitHandler() {
 	var urlParamString = urlParamsFiltered.map(function(value, key) { // generate new string for urlParams
 		return value[0] + '=' + value[1];
 	}).join('&');
+	var inputFacet = $('input[name="limit-yr"]').val();
 
 	// rebuild urlParams
 	urlParams = new URLSearchParams(urlParamString);
 
-	// do the bulk of the work
-	sessionStorage.setItem('limit-yr', limitYr); // ... store this for reuse
-	urlParams.append('limit', 'yr,st-numeric=' + limitYr); // add our years
+	// do it
+	urlParams.append('limit', 'yr,st-numeric=' + inputFacet); // add our years
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
+
 	return;
 }
 
@@ -510,8 +520,7 @@ function facetPublicationDateRangeResetHandler() {
 	// rebuild urlParams
 	urlParams = new URLSearchParams(urlParamString);
 
-	// do the bulk of the work
-	sessionStorage.removeItem('limit-yr'); // clear the sessionStorage
+	// do it
 	window.location.href = 'https://' + window.location.hostname + window.location.pathname + '?' + urlParams.toString(); // lets go
 	return;
 }
