@@ -404,7 +404,7 @@ function facetClearAllHandler() {
 	var q = urlParams.get('q');
 
 	// detect if [x] exists
-	if($('#search-facets .menu-collapse li:contains("[x]")').length > 0) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all refinements <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
+	if($('#search-facets .menu-collapse li:contains("[x]")').length > 0) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all facets <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
 
 	// handle any clicks
 	$('a[href="#facetAllClear"]').on('click', function(event) {
@@ -437,10 +437,6 @@ function facetPublicationDateRange() {
 
 	// first, inject the markup
 	$('#search-facets ul:first').append('<li id=\"yr_id\"><h3 id=\"facet-yr\"><a href=\"#expandFacet\">Publication date range<i class=\"fa fa-chevron-down\" aria-hidden=\"true\"><\/i><\/a><\/h3> <div style=\"display:none\"><input name=\"limit-yr\" type=\"text\" class=\"mt-4\"><p class=\"hint pt-2\">For example: 1999-2001<\/p><p id=\"limit-yr-err\" class=\"hint pt-2\" style=\"display:none;color:red\">Please check you entered two valid years<\/p><a href=\"#facetYrRefine\" class=\"btn btn-primary mt-2\">Refine by date<\/a><\/div><\/li>');
-	if(urlFacetSet) {
-		$('input[name="limit-yr"]').val(urlFacet);
-		$('a[href="#facetYrRefine"]').after('<a href=\"#facetYrClear\" class=\"btn btn-danger mt-2\">Clear date refinement [x]<\/a>'); // add clear button
-	}
 
 	// then handle clicks
 	$('#facet-yr a').on('click', function(event) {
@@ -453,9 +449,6 @@ function facetPublicationDateRange() {
 		$(this).find('i.fa').toggleClass('fa-chevron-down');
 		$(this).find('i.fa').toggleClass('fa-chevron-left');
 	});
-	if(urlFacetSet) {
-		$('#facet-yr a').click(); // we want to show the user the facet, you see
-	}
 
 	$('a[href="#facetYrRefine"]').on('click', function(event) {
 		event.preventDefault();
@@ -474,6 +467,12 @@ function facetPublicationDateRange() {
 			facetPublicationDateRangeSubmitHandler();
 		}
 	});
+
+	if(urlFacetSet) {
+		$('input[name="limit-yr"]').val(urlFacet);
+		$('a[href="#facetYrRefine"]').after('<a href=\"#facetYrClear\" class=\"btn btn-danger mt-2\">Clear date refinement [x]<\/a>'); // add clear button
+		$('#facet-yr a').click(); // we want to show the user the facet, you see
+	}
 	return;
 }
 

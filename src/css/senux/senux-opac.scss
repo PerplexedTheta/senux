@@ -439,6 +439,28 @@
 	display: none
 }
 
+.bookcover {
+	margin: 0;
+	padding: 0;
+	float: none;
+	text-align: left;
+
+	img {
+		margin: 1rem 0
+	}
+
+	#biblio-cover-slider {
+		margin: 0;
+		padding: 0;
+		border: none;
+		border-radius: none
+	}
+
+	.hint {
+		display: none
+	}
+}
+
 #catalogue_detail_biblio {
 	padding: 1rem;
 	overflow: auto; // clearfix
