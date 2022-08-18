@@ -287,18 +287,18 @@ td.overdue {
 			padding: .4rem .6rem;
 
 
-			color: $btnSecText;
-			background-color: $btnSecBg;
-			border: $defaultBorderWidth $defaultBorderType $btnSecBorderCol;
-			outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineCol;
+			color: $btnMenuText;
+			background-color: $btnMenuBg;
+			border: $defaultBorderWidth $defaultBorderType $btnMenuBorderCol;
+			outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineCol;
 
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $btnSecTextHov;
-				background-color: $btnSecBgHov;
-				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov;
-				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov
+				color: $btnMenuTextHov;
+				background-color: $btnMenuBgHov;
+				border: $defaultBorderWidth $defaultBorderType $btnMenuBorderColHov;
+				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov
 			}
 		}
 
@@ -309,10 +309,10 @@ td.overdue {
 
 			&:hover, &:focus,
 			&:active, &.active {
-				color: $btnSecTextHov!important;
-				background-color: $btnSecBgHov!important;
-				border: $defaultBorderWidth $defaultBorderType $btnSecBorderColHov!important;
-				outline: $defaultOutlineWidth $defaultOutlineType $btnSecOutlineColHov!important
+				color: $btnMenuTextHov!important;
+				background-color: $btnMenuBgHov!important;
+				border: $defaultBorderWidth $defaultBorderType $btnMenuBorderColHov!important;
+				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov!important
 			}
 		}
 	}
