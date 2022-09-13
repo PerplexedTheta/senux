@@ -101,6 +101,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	//mastheadEventHandler();
 	//searchCatalogue();
 
+	// enable tooltipping on the search pulldown
+	searchDropdownTooltipHandler();
+
 	// wiki autocompletion api
 	wikiAutocomplete();
 
@@ -321,6 +324,19 @@ function searchExplorit() {
 		else if($('#searchform').attr('name') == 'dwtform') searchCatalogue();
 	});
 
+}
+
+
+// search dropdown tooltip function
+function searchDropdownTooltipHandler() {
+	$('#masthead_search').on('change', function() {
+		if($('#masthead_search option:selected').val() == 'everything' || $('#masthead_search option:selected').val() == '') {
+			$('#masthead_search').tooltip({title: "Click to refine further", placement: "left"});
+			$('#masthead_search').tooltip('show');
+		} else {
+			$('#masthead_search').tooltip('dispose');
+		}
+	});
 }
 
 
