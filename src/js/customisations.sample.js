@@ -116,6 +116,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// rename 'save records'
 	renameSaveRecord();
 
+	// add tooltips
+	addBootstrapTooltips();
+
 	// add authority record alt text & tooltips
 	$('a.authlink').attr('alt','View authority record');
 	$('a.authlink').attr('title','View authority record');
@@ -552,6 +555,14 @@ function reservationLinkHandler() {
 	});
 
 	$('#loginModal').after('<div class=\"modal show\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalLoginLabel\" id=\"reserveModal\" aria-modal=\"true\"><div class=\"modal-dialog\"><div class=\"modal-content\"><div class=\"modal-header\"><h2 class=\"modal-title\" id=\"modalReserveLabel\">Place a reservation on this item?<\/h2><button type=\"button\" class=\"closebtn\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">\u00D7<\/span><\/button><\/div><div class=\"modal-body\"><p id=\"modalReserveDesc\">Please click Ok to progress with this reservation. Be sure to await an email from your local Library branch, before coming in!<\/p><\/div><div class=\"modal-footer\"><button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Cancel<\/button><a id=\"modalReserveOk\" href=\"#\" class=\"btn btn-primary\" aria-describedby=\"modalReserveDesc\">Ok<\/a><\/div><\/div><\/div><\/div>');
+}
+
+
+// function to add proper tooltips to things
+function addBootstrapTooltips() {
+	$('body').find('*').each(function () {
+		if($(this).attr('title') != undefined) $(this).tooltip();
+	});
 }
 
 
