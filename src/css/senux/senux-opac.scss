@@ -376,6 +376,11 @@
 
 //
 // results text of importance
+.available.reallyavailable, .available.reference,
+.unavailable {
+	display: block
+}
+
 .results_summary.online_resources {
 	background: $onlineAccessBg;
 	color: onlineAccessText;
