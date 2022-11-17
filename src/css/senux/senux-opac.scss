@@ -470,6 +470,10 @@
 	border-radius: $defaultRadius
 }
 
+.contents .r, .contents .t {
+	font-weight: normal
+}
+
 #action, .actions,
 .toolbar, .view{
 	color: $defaultText;
