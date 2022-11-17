@@ -376,26 +376,6 @@
 
 //
 // results text of importance
-.available, .intransit, .unavailable,
-.notforloan, .damaged, .withdrawn,
-.checkedout {
-	font-weight: bold
-}
-
-.results_summary.availability,
-.results_summary.online_resources {
-	font-weight: bold;
-	border-radius: $defaultRadius;
-
-	.label {
-		font-weight: bold
-	}
-
-	a {
-		font-weight: bold
-	}
-}
-
 .results_summary.online_resources {
 	background: $onlineAccessBg;
 	color: onlineAccessText;
