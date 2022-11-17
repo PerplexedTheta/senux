@@ -379,6 +379,7 @@
 .available, .intransit, .unavailable,
 .notforloan, .damaged, .withdrawn,
 .checkedout {
+	display: block;
 	font-weight: bold
 }
 
