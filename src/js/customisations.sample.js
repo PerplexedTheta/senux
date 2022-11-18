@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// enable tooltipping on the search pulldown
 	searchDropdownTooltipHandler();
 
+	// enable proper dropdown selection
+	searchDropdownBranchHandler();
+
 	// wiki autocompletion api
 	wikiAutocomplete();
 
@@ -330,7 +333,8 @@ function searchExplorit() {
 }
 
 
-// search dropdown tooltip function
+//
+// function to improve search dropdown tooltip
 function searchDropdownTooltipHandler() {
 	$('#masthead_search').on('change', function() {
 		if($('#masthead_search option:selected').val() == 'everything' || $('#masthead_search option:selected').val() == '') {
@@ -340,6 +344,21 @@ function searchDropdownTooltipHandler() {
 			$('#masthead_search').tooltip('dispose');
 		}
 	});
+}
+
+
+//
+// function to always select correct branch
+function searchDropdownBranchHandler() {
+	// vars
+	var urlParams = new URLSearchParams(window.location.search.substring(1));
+	var urlParamsFiltered = Array.from(urlParams.entries()).filter(value => { // remove previous limit params
+		if(!value[1].includes('branch:')) return false;
+		else return true; // only return true if above conditions are met
+	});
+
+	// select the right value
+	if(urlParamsFiltered[0][1]) $('option[value="' + urlParamsFiltered[0][1] + '"]').attr('selected','selected');
 }
 
 
