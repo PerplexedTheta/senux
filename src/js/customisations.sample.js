@@ -119,9 +119,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// rename 'save records'
 	renameSaveRecord();
 
-	// add tooltips
-	addBootstrapTooltips();
-
 	// add authority record alt text & tooltips
 	$('a.authlink').attr('alt','View authority record');
 	$('a.authlink').attr('title','View authority record');
@@ -140,6 +137,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	//
 	// mobilc-specific logic
 
+});
+
+
+window.addEventListener("load", (event) => {
+	// add tooltips
+	addBootstrapTooltips();
 });
 
 
