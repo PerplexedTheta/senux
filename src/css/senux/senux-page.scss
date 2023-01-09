@@ -291,6 +291,7 @@ td.overdue {
 			background-color: $btnMenuBg;
 			border: $defaultBorderWidth $defaultBorderType $btnMenuBorderCol;
 			outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineCol;
+			text-decoration: none;
 
 
 			&:hover, &:focus,
@@ -298,7 +299,8 @@ td.overdue {
 				color: $btnMenuTextHov;
 				background-color: $btnMenuBgHov;
 				border: $defaultBorderWidth $defaultBorderType $btnMenuBorderColHov;
-				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov
+				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov;
+				text-decoration: none
 			}
 		}
 
@@ -306,13 +308,16 @@ td.overdue {
 			color: $btnPriText;
 			background-color: $btnPriBg;
 			border: $defaultBorderWidth $defaultBorderType $btnPriBorderCol;
+			outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineCol;
+			text-decoration: none;
 
 			&:hover, &:focus,
 			&:active, &.active {
 				color: $btnMenuTextHov!important;
 				background-color: $btnMenuBgHov!important;
 				border: $defaultBorderWidth $defaultBorderType $btnMenuBorderColHov!important;
-				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov!important
+				outline: $defaultOutlineWidth $defaultOutlineType $btnMenuOutlineColHov!important;
+				text-decoration: none!important
 			}
 		}
 	}
