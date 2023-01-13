@@ -443,6 +443,7 @@ function facetClearAllHandler() {
 	// vars
 	var urlParams = new URLSearchParams(window.location.search.substring(1));
 	var q = urlParams.get('q');
+	if(q == NULL) q = '';
 
 	// detect if [x] exists
 	if($('#search-facets .menu-collapse li:contains("[x]")').length > 0) $('#search-facets ul:first').prepend('<li id=\"cls_id\"><h3 id=\"facet-cls\"><a href=\"#facetAllClear\" class=\"logout\">Clear all facets <i class=\"fa fa-times\" aria-hidden=\"true\"><\/i><\/a><\/h3><\/li>');
