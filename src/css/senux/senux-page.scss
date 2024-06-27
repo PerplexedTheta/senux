@@ -190,9 +190,9 @@
 
 .table .sorting_asc {
 	&::after {
-		font-family: "FontAwesome";
+		font-family: var(--fa-style-family,"Font Awesome 6 Free");
+		font-weight: var(--fa-style,900);
 		font-size: 0.75em;
-		font-weight: normal;
 		text-rendering: auto;
 		content: " \f077"
 	}
@@ -200,9 +200,9 @@
 
 .table .sorting_desc {
 	&::after {
-		font-family: "FontAwesome";
+		font-family: var(--fa-style-family,"Font Awesome 6 Free");
+		font-weight: var(--fa-style,900);
 		font-size: 0.75em;
-		font-weight: normal;
 		text-rendering: auto;
 		content: " \f078"
 	}
