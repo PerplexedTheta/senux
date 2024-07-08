@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 	// add a link to clear all search facets
 	facetClearAllHandler();
 
-	// explorit masthead pulldown handler
-	//mastheadEventHandler();
-	//searchCatalogue();
+	// explorit / ebsco masthead pulldown handler
+	//mastheadEventHandler('explorit');
+	//searchCatalogue('explorit');
 
 	// enable tooltipping on the search pulldown
 	searchDropdownTooltipHandler();
@@ -216,15 +216,17 @@ function basketLinkHandler() {
 
 //
 // function to monitor masthead pulldown for changes and act on events
-function mastheadEventHandler() {
+function mastheadEventHandler(altSearchName) {
 	$("#masthead_search").on('change', function(event) { // this handles dropdown change events
 		if($(this).val() == 'catalogue') {
-			searchCatalogue();
+			searchCatalogue(altSearchName);
 		} else if ($(this).val() == 'explorit') { // if the user picks explorit . . .
 			searchExplorit();
-		} else if ($(this).val() == 'everything') {
+		} else if ($(this).val() == 'ebsco') { // if the user picks ebsco . . .
+			searchEbsco();
+		} else if ($(this).val() == 'everything') { // for explorit full search
 			$('#fullText').val('');
-		} else if ($(this).val() == 'ftonly') {
+		} else if ($(this).val() == 'ftonly') { // for explorit text-only search
 			$('#fullText').val('true');
 		}
 	});
@@ -233,9 +235,10 @@ function mastheadEventHandler() {
 
 //
 // masthead seach pulldown changes -- search catalogue
-function searchCatalogue() {
+function searchCatalogue(altSearchName) {
 	// form config
-	$('#masthead_search').find('option').remove().end(); //remove all masthead options
+	$('#masthead_search').find('option').remove().end(); // remove all masthead options
+	$('#searchform').find('input[type="hidden"]').remove().end(); // remove all masthead hidden inputs
 	$('#searchform').attr('action', '/cgi-bin/koha/opac-search.pl'); // set form name
 	$('#searchform').attr('name', 'searchform'); // set form name
 	$('#searchform').attr('method', 'get'); // set form method
@@ -250,10 +253,18 @@ function searchCatalogue() {
 	if($('input[name="weight_search"]').length < 1) $('#searchform').append('<input type=\"hidden\" name=\"weight_search\" value=\"1\">'); // (re)add weight_search
 
 	// dropdown config
-	$('#masthead_search').append($('<option>', { // explorit option
-		value: 'explorit',
-		text: 'Search Articles Plus'
-	}));
+	if(altSearchName == 'explorit') {
+		$('#masthead_search').append($('<option>', { // explorit option
+			value: 'explorit',
+			text: 'Search Articles Plus'
+		}));
+	}
+	if(altSearchName == 'ebsco') {
+		$('#masthead_search').append($('<option>', { // explorit option
+			value: 'ebsco',
+			text: 'Search EBSCO'
+		}));
+	}
 	$('#masthead_search').append($('<option>', { // catalogue option
 		value: '',
 		text: 'Search Catalogue',
@@ -283,10 +294,6 @@ function searchCatalogue() {
 		value: 'mc-ccode:ESTREAM',
 		text: '-- Streaming media'
 	}));
-
-	// link config
-	$('#moresearches').html('<li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-search.pl\">Catalogue advanced search<\/a><\/li><li class=\"nav-item\"><a href=\"https:\/\/articlesplus.arts.ac.uk\/search\/desktop\/en\/search.html\" target=\"_blank\">Articles Plus advanced search<\/a><\/li>');
-
 }
 
 
@@ -294,7 +301,8 @@ function searchCatalogue() {
 // masthead seach pulldown changes -- search catalogue
 function searchExplorit() {
 	// form config
-	$('#masthead_search').find('option').remove().end(); //remove all masthead options
+	$('#masthead_search').find('option').remove().end(); // remove all masthead options
+	$('#searchform').find('input[type="hidden"]').remove().end(); // remove all masthead hidden inputs
 	$('#searchform').attr('action', '//foo.bar/baz/'); // set form name
 	$('#searchform').attr('name', 'dwtform'); // set form name
 	$('#searchform').attr('method', 'post'); // set form method
@@ -306,7 +314,6 @@ function searchExplorit() {
 	$('#masthead_search').after('<input type=\"hidden\" name=\"formName\" value=\"undefined\" \/>');
 	$('#select_library').attr('name', '');
 	$('#select_library').parent().css('display', 'none'); // hide library pulldown
-	$('input[name="weight_search"]').remove(); // nuke weight_search
 
 	// dropdown config
 	$('#masthead_search').append($('<option>', { // catalogue option
@@ -323,14 +330,55 @@ function searchExplorit() {
 		text: '-- Search full-text only'
 	}));
 
-	// link config
-	$('#moresearches').html('<li class=\"nav-item\"><a href=\"https:\/\/articlesplus.arts.ac.uk\/search\/desktop\/en\/search.html\" target=\"_blank\">Articles Plus advanced search<\/a><\/li><li class=\"nav-item\"><a href=\"\/cgi-bin\/koha\/opac-search.pl\">Catalogue advanced search<\/a><\/li>');
-
 	// explorit link handler
-        $('a[href="#switchSearch"]').on('click', function(event) {
+	$('a[href="#switchSearch"]').on('click', function(event) {
 		event.preventDefault(); // prevent the url from changing
 		if($('#searchform').attr('name') == 'searchform') searchExplorit();
-		else if($('#searchform').attr('name') == 'dwtform') searchCatalogue();
+		else if($('#searchform').attr('name') == 'dwtform') searchCatalogue('explorit');
+	});
+
+}
+
+
+//
+// masthead seach pulldown changes -- search catalogue
+function searchEbsco() {
+	// form config
+	$('#masthead_search').find('option').remove().end(); // remove all masthead options
+	$('#searchform').find('input[type="hidden"]').remove().end(); // remove all masthead hidden inputs
+	$('#searchform').attr('action', 'https://searchbox.ebsco.com/search/'); // set form name
+	$('#searchform').attr('name', ''); // set form name
+	$('#searchform').attr('method', 'get'); // set form method
+	$('#searchform').attr('target', '_blank'); // set target
+	$('#translControl1').attr('name', 'bquery'); // set search box name
+	$('#translControl1').attr('placeholder', 'Find full-text articles, reports, images, books and e-books'); // set text field placeholder
+	$('#masthead_search').attr('name', '');
+	$('#masthead_search').before('<input name=\"schemaId\" value=\"search\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"custid\" value=\"sxxxxxxx\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"groupid\" value=\"main\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"profid\" value=\"eds\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"scope\" value=\"site\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"site\" value=\"eds-live\" type=\"hidden\" \/>');
+	$('#masthead_search').before('<input name=\"direct\" value=\"true\" type=\"hidden\" \/>');
+	$('#select_library').attr('name', '');
+	$('#select_library').parent().css('display', 'none'); // hide library pulldown
+
+	// dropdown config
+	$('#masthead_search').append($('<option>', { // catalogue option
+		value: 'catalogue',
+		text: 'Search Catalogue'
+	}));
+	$('#masthead_search').append($('<option>', { // ebsco option
+		value: 'ebsco',
+		text: 'Search EBSCO',
+		selected: 'selected'
+	}));
+
+	// ebsco link handler
+	$('a[href="#switchSearch"]').on('click', function(event) {
+		event.preventDefault(); // prevent the url from changing
+		if($('#searchform').attr('name') == 'searchform') searchExplorit();
+		else if($('#searchform').attr('name') == '') searchCatalogue('ebsco');
 	});
 
 }
