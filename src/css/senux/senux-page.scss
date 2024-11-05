@@ -66,8 +66,8 @@
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationColHov $defaultDecorationThickness
 		}
 
-		&:focus,
-		&:active, &.active {
+		&:focus-visible, &:active,
+		&.active {
 			color: $breadcrumbLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $breadcrumbLinkDecorationColHov $defaultDecorationThickness
 		}
@@ -96,7 +96,7 @@
 			font-weight: bold
 		}
 
-		&:hover, &:focus,
+		&:hover, &:focus-visible,
 		&:active, &.active {
 			color: $breadcrumbText;
 			font-weight: bold
@@ -139,7 +139,7 @@
 	a, a:link, a:visited {
 		color: $defaultLinkText;
 
-		&:hover, &:focus {
+		&:hover, &:focus-visible {
 			background: $defaultBg;
 			border-color: $defaultBorderCol;
 			color: $defaultLinkTextHov
@@ -179,7 +179,7 @@
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
 	}
 
-	&:focus, &:active,
+	&:focus-visible, &:active,
 	&.active {
 		background: $defaultLinkBgFoc;
 		color: $defaultLinkTextFoc;
@@ -298,7 +298,7 @@ td.overdue {
 			text-decoration: none;
 
 
-			&:hover, &:focus,
+			&:hover, &:focus-visible,
 			&:active, &.active {
 				color: $btnMenuTextHov;
 				background-color: $btnMenuBgHov;
@@ -315,7 +315,7 @@ td.overdue {
 			outline: $defaultOutlineWidth $defaultOutlineType $btnPriOutlineCol;
 			text-decoration: none;
 
-			&:hover, &:focus,
+			&:hover, &:focus-visible,
 			&:active, &.active {
 				color: $btnMenuTextHov!important;
 				background-color: $btnMenuBgHov!important;
@@ -350,7 +350,7 @@ td.overdue {
 		}
 	}
 
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		color: $navbarUsermenuLogoutTextHov;
 

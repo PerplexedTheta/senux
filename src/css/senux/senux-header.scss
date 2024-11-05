@@ -78,7 +78,7 @@
 			background-color: transparent!important
 		}
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness;
 			background-color: transparent!important
@@ -115,7 +115,7 @@
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $mainSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			color: $mainSearchLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $mainSearchLinkDecorationColHov $defaultDecorationThickness
@@ -164,7 +164,7 @@
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness
 		}
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			color: $moreSearchLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $moreSearchLinkDecorationColHov $defaultDecorationThickness

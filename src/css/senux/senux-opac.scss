@@ -128,7 +128,7 @@
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
 		}
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 		}
@@ -158,7 +158,7 @@
 	opacity: 1;
 	color: $msRed;
 
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		opacity: 1;
 		color: lighten($msRed, 15%)
@@ -215,7 +215,7 @@
 		color: $defaultLinkText;
 		border: none;
 
-		&:hover, &:focus,
+		&:hover, &:focus-visible,
 		&:active, &.active {
 			background-color: $defaultLinkText;
 			color: $defaultBg;
@@ -303,7 +303,7 @@
 				text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
 			}
 
-			&:focus, &:active,
+			&:focus-visible, &:active,
 			&.active {
 				text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 			}
@@ -367,7 +367,7 @@
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness;
 	}
 
-	&:focus, &:active,
+	&:focus-visible, &:active,
 	&.active {
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness;
 	}
@@ -400,7 +400,7 @@
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $onlineAccessLinkDecorationColHov $defaultDecorationThickness
 		}
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			color: $onlineAccessLinkTextHov;
 			text-decoration: $defaultDecorationLine $defaultDecorationStyle $onlineAccessLinkDecorationColHov $defaultDecorationThickness
@@ -474,7 +474,7 @@
 			color: $defaultLinkText
 		}
 
-		&:hover, &:focus {
+		&:hover, &:focus-visible {
 			color: darken($defaultLinkText, 33%);
 
 			i.fa {
@@ -546,7 +546,7 @@
 	a {
 		border-radius: $defaultRadius;
 
-		&:hover, &:focus,
+		&:hover, &:focus-visible,
 		&:active, &.active {
 			border-color: $defaultBorderCol
 		}
@@ -563,7 +563,7 @@ a#ISBDview {
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColHov $defaultDecorationThickness
 	}
 
-	&:focus, &:active,
+	&:focus-visible, &:active,
 	&.active {
 		text-decoration: $defaultDecorationLine $defaultDecorationStyle $defaultLinkDecorationColFoc $defaultDecorationThickness
 	}
@@ -587,7 +587,7 @@ a#ISBDview {
 
 .pg_menu .pg_link a,
 .pg_menu .pg_link span {
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		background-color: $defaultLinkText;
 		color: $defaultFg
@@ -601,7 +601,7 @@ a#ISBDview {
 		color: $defaultLinkText;
 	}
 
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		background-color: $defaultLinkText;
 		color: $defaultFg;
@@ -772,7 +772,7 @@ div[id^="errormsg"], #noresultsfound {
 	border-radius: $defaultRadius!important;
 	outline-offset: $defaultOffset!important;
 
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		background-image: none!important;
 		text-shadow: none!important;

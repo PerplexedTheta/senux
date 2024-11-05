@@ -28,7 +28,7 @@
 	margin: 0;
 	background: $navbarLogoBg;
 
-	&:hover, &:focus,
+	&:hover, &:focus-visible,
 	&:active, &.active {
 		background: $navbarLogoBgHov
 	}
@@ -37,7 +37,7 @@
 		width: 100px;
 		padding: 40px 0 0;
 
-		&:focus, &:active,
+		&:focus-visible, &:active,
 		&.active {
 			background-color: $transparent!important
 		}
@@ -92,7 +92,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 				}
 			}
 
-			&:focus, &:active,
+			&:focus-visible, &:active,
 			&.active {
 				color: $navbarLinkTextHov;
 				text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLinkDecorationColHov $defaultDecorationThickness;
@@ -122,7 +122,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 				}
 			}
 
-			&:focus, &:active,
+			&:focus-visible, &:active,
 			&.active {
 				background-color: $dropdownLinkBgHov;
 				color: $dropdownLinkTextHov;
@@ -156,7 +156,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 		a.login-link {
 			color: $navbarUsermenuLinkText;
 
-			&:hover, &:focus,
+			&:hover, &:focus-visible,
 			&:active, &.active {
 				color: $navbarUsermenuLinkTextHov
 			}
@@ -166,7 +166,7 @@ img[src="/opac-tmpl/bootstrap/images/koha-green-logo.png?raw=1"] {
 	a#logout.logout {
 		color: $navbarUsermenuLogoutText;
 
-		&:hover, &:focus,
+		&:hover, &:focus-visible,
 		&:active, &.active {
 			color: $navbarUsermenuLogoutTextHov
 		}
