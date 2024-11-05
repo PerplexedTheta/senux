@@ -1,2 +1,4 @@
 dist/OPACUserCSS.*
 dist/OPACUserJS.*
+node_modules/
+package-lock.json
