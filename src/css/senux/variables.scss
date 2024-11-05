@@ -65,7 +65,7 @@ $defaultFonts: 'SegoeUI','Roboto','Helvetica Neue','Arial',sans-serif;
 $defaultBullet: disc;
 // vars--generic--bordersandoutlines
 $defaultRadius: .198rem;
-$defaultOffset: .066rem;
+$defaultOffset: 0;
 $defaultBorderWidth: .066rem;
 $defaultBorderType: solid;
 $defaultBorderCol: darken($defaultFg,15%);
