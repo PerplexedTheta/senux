@@ -26,20 +26,35 @@
 	display: $navbarLogoDisplayMobile;
 	width: 100px;
 	margin: 0;
+
+	color: $navbarLogoText;
 	background: $navbarLogoBg;
 
 	&:hover, &:focus-visible,
 	&:active, &.active {
-		background: $navbarLogoBgHov
+		color: $navbarLinkTextHov;
+		background: $navbarLogoBgHov;
 	}
 
 	a {
 		width: 100px;
 		padding: 40px 0 0;
 
+		background-color: transparent!important;
+		color: $navbarLogoText;
+		border: $defaultBorderWidth $defaultBorderType $navbarLogoBorderCol;
+		outline: $defaultOutlineWidth $defaultOutlineType $navbarLogoOutlineCol;
+		box-shadow: 0 0 0 $defaultBoxShadowWidth $navbarLogoBoxShadowCol;
+		text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLogoDecorationCol $defaultDecorationThickness;
+
 		&:focus-visible, &:active,
 		&.active {
-			background-color: $transparent!important
+			background-color: $transparent!important;
+			color: $navbarLogoTextFoc;
+			border: $defaultBorderWidth $defaultBorderType $navbarLogoBorderColFoc;
+			outline: $defaultOutlineWidth $defaultOutlineType $navbarLogoOutlineColFoc;
+			box-shadow: 0 0 0 $defaultBoxShadowWidth $navbarLogoBoxShadowColFoc;
+			text-decoration: $defaultDecorationLine $defaultDecorationStyle $navbarLogoDecorationColFoc $defaultDecorationThickness;
 		}
 	}
 }
