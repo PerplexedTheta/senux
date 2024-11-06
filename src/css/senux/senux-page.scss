@@ -106,8 +106,19 @@
 
 //
 // ui tabs
-.nav-tabs .nav-link.active {
-	outline: none!important
+.nav-tabs .nav-link {
+	color: $defaultLinkText;
+	background-color: $defaultFg;
+
+	&:hover {
+		color: $defaultLinkTextHov;
+		background-color: lighten($msWhite, 100%);
+	}
+
+	&.active {
+		outline: none!important;
+		box-shadow: 0 0 0 0!important;
+	}
 }
 
 .ui-tabs .ui-tabs-nav li {
