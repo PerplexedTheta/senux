@@ -598,7 +598,8 @@ a#ISBDview {
 	}
 }
 
-#a_listResults {
+#a_listResults,
+#listResults li a {
 	color: $defaultLinkText;
 
 	i.fa {
@@ -614,6 +615,11 @@ a#ISBDview {
 			color: $defaultFg
 		}
 	}
+}
+
+#listResults li a {
+	background-color: $transparent;
+	color: $defaultLinkText;
 }
 
 //
