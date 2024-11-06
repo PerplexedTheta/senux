@@ -580,6 +580,10 @@ a#ISBDview {
 	border-radius: $defaultRadius
 }
 
+.table.dataTable thead .sorting {
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2bW0iIGhlaWdodD0iMi41NTFtbSIgdmlld0JveD0iMCAwIDYuMDAwMDAwMyAyLjU1MDY2MTQiPjxwYXRoIGZpbGw9IiM1NzU3NTciIGQ9Ik00LjA1IDEuNDVoLTIuMUwzIDIuNTV6Ii8+PHBhdGggZmlsbD0iIzU3NTc1NyIgZD0iTTQuMDUgMS4xaC0yLjFMMyAweiIvPjwvc3ZnPg==") no-repeat scroll 100% 75% #e2e8e8;
+}
+
 .dataTables_filter input,
 .dataTables_filter label {
 	font-size: 1rem
