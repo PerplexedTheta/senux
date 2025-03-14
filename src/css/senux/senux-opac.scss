@@ -594,7 +594,11 @@ a#ISBDview {
 	&:hover, &:focus-visible,
 	&:active, &.active {
 		background-color: $defaultLinkText;
-		color: $defaultFg
+		color: $defaultFg;
+
+                i.fa {
+                  color: $defaultFg
+                }
 	}
 }
 
