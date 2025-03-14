@@ -595,6 +595,7 @@ a#ISBDview {
 	&:active, &.active {
 		background-color: $defaultLinkText;
 		color: $defaultFg;
+		text-decoration: none;
 
                 i.fa {
                   color: $defaultFg
